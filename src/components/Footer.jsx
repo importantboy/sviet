@@ -58,7 +58,7 @@ export default function Footer() {
                         className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors bg-transparent"
                         asChild
                     >
-                        <Link href="/apply">Apply</Link>
+                        <Link to="/apply">Apply</Link>
                     </Button>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export default function Footer() {
                                 {quickLinks.map(link => (
                                     <Link
                                         key={link.href}
-                                        href={link.href}
+                                        to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
@@ -150,7 +150,7 @@ export default function Footer() {
                                 {importantLinks.map(link => (
                                     <Link
                                         key={link.href}
-                                        href={link.href}
+                                        to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
@@ -168,7 +168,7 @@ export default function Footer() {
                                 {statutoryCells.map(link => (
                                     <Link
                                         key={link.href}
-                                        href={link.href}
+                                        to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
@@ -191,7 +191,7 @@ export default function Footer() {
                                     return (
                                         <Link
                                             key={social.href}
-                                            href={social.href}
+                                            to={social.href}
                                             className="p-2 rounded-full bg-slate-700 hover:bg-blue-600 transition-colors"
                                             aria-label={social.label}
                                         >
