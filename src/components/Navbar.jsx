@@ -35,42 +35,14 @@ const navigationItems = [
             { title: "About SVGOI", href: "/about-svgoi" },
             { title: "About SVIET", href: "/about-sviet" },
             { title: "Vision and Mission", href: "/vision-mission" },
-            { title: "Strategic Plan", href: "/strategic-plan" },
+            { title: "Strategic Plan", href: "https://sviet.org.in/wp-content/uploads/Strategic-Plan_0001-3.pdf", target: "_blank" },
             {
                 title: "Board of Management",
                 href: "/board-of-management",
                 subItems: [
                     { title: "Governing Council", href: "/governing-council-2" },
                     { title: "Finance Committee", href: "/finance-committee-2" },
-                    {
-                        title: "Executive Committee",
-                        href: "/executive-committee",
-                        subItems: [
-                            { title: "Chairman", href: "/executive-committee/chairman" },
-                            {
-                                title: "Vice Chairman",
-                                href: "/executive-committee/vice-chairman"
-                            },
-                            {
-                                title: "Board Members",
-                                href: "/executive-committee/board-members",
-                                subItems: [
-                                    {
-                                        title: "Academic Board",
-                                        href: "/executive-committee/board-members/academic"
-                                    },
-                                    {
-                                        title: "Finance Board",
-                                        href: "/executive-committee/board-members/finance"
-                                    },
-                                    {
-                                        title: "Infrastructure Board",
-                                        href: "/executive-committee/board-members/infrastructure"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
+                    
                 ]
             },
             { title: "From The Management Desk", href: "/from-the-management" },
@@ -248,7 +220,9 @@ function DropdownMenuItems({ items }) {
                     return (
                         <DropdownMenuSub key={item.title}>
                             <DropdownMenuSubTrigger>
-                                <Link to={item.href} className="flex items-center w-full">
+                                <Link
+                                    to={item.href}
+                                    className="flex items-center w-full">
                                     {item.title}
                                 </Link>
                             </DropdownMenuSubTrigger>
@@ -260,7 +234,8 @@ function DropdownMenuItems({ items }) {
                 }
                 return (
                     <DropdownMenuItem key={item.title} asChild>
-                        <Link to={item.href}>{item.title}</Link>
+                        <Link target={item.target ? "_blank" : undefined}
+                            rel={item.target ? "noopener noreferrer" : undefined} to={item.href}>{item.title}</Link>
                     </DropdownMenuItem>
                 )
             })}

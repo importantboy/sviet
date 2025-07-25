@@ -2,51 +2,51 @@ import React, { useEffect, useState } from 'react'
 const excellenceData = [
     {
         id: 1,
-        title: "Giving Wings to Your Career",
+        title: "Special Initiatives",
         shortTitle: "Career Development",
         description:
-            "Under the guidance of our trained faculty and alumni network, we supplement careers through government services, MNC placements, and entrepreneurship opportunities.",
-        image: "/placeholder.svg?height=200&width=400&text=Career+Development",
+            "Special batches like TheUniques, SUPER-60 and ALLIED-30 assure 100% placement for students.",
+        image: "/super60.JPG",
     },
     {
         id: 2,
         title: "Research",
         shortTitle: "Research Excellence",
         description:
-            "Students lead knowledge discovery with highly equipped research facilities. Over 100 research articles published at national and international stages.",
-        image: "/placeholder.svg?height=200&width=400&text=Research+Lab",
+            "Students lead research with state-of-the-art facilities. Over 100 articles published nationally and internationally.",
+        image: "/research.JPG",
     },
     {
         id: 3,
         title: "Project Based Learning",
         shortTitle: "Project Learning",
         description:
-            "Investigate and respond to authentic challenges through project-based learning while experiencing enriching, hands-on experiences.",
-        image: "/placeholder.svg?height=200&width=400&text=Project+Learning",
+            "Engage in authentic challenges with project-based learning, fostering practical skills.",
+        image: "/projectbased.JPG",
     },
     {
         id: 4,
         title: "Sporting Excellence",
         shortTitle: "Sports Excellence",
         description:
-            "Compete and achieve excellence with passion in our excellent sporting environment. Over 30 sports tournament participations yearly.",
-        image: "/placeholder.svg?height=200&width=400&text=Sports+Complex",
+            "Excel in sports with over 30 tournament participations annually, fostering passion and skill.",
+        image: "/sports.jpg",
     },
     {
         id: 5,
         title: "Start-Ups",
         shortTitle: "Innovation Hub",
         description:
-            "Incubation environment for innovative student entrepreneurship. More than 15 successful companies have started their journey at SVIET.",
-        image: "/placeholder.svg?height=200&width=400&text=Innovation+Hub",
+            "Incubate innovative entrepreneurship with more than 15 successful startups launched at SVGOI.",
+        image: "/startups.JPG",
     },
     {
         id: 6,
         title: "Global Exposure",
         shortTitle: "Global Programs",
         description:
-            "International collaborations and exchange programs provide students with global perspectives and cross-cultural learning experiences.",
-        image: "/placeholder.svg?height=200&width=400&text=Global+Programs",
+            "Expand horizons with international tie-ups, hosting students from over 10 countries.",
+        image: "/international.JPG",
     },
 ]
 
@@ -103,7 +103,7 @@ const ExcellenceSection = () => {
                             {excellenceData.map((item) => (
                                 <Card
                                     key={item.id}
-                                    className="group mx-2 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm flex-shrink-0"
+                                    className="group mx-2 py-0 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm flex-shrink-0"
                                     style={{ width: `calc(${100 / getCardsPerView()}% - 1rem)` }}
                                 >
                                     <div className="relative overflow-hidden">
@@ -119,7 +119,7 @@ const ExcellenceSection = () => {
                                     </div>
                                     <CardContent className="p-6">
                                         <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                                        
+
                                     </CardContent>
                                 </Card>
                             ))}

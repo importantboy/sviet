@@ -93,37 +93,35 @@ const Notice = () => {
                                 <div className="overflow-y-auto h-96 scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-gray-100">
                                     <div>
                                         {/* Repeat notices multiple times for infinite effect */}
-                                        {Array.from({ length: 10 }).map((_, repeatIndex) =>
-                                            notices.map((notice, index) => (
-                                                <div
-                                                    key={`${notice.id}-${repeatIndex}-${index}`}
-                                                    className={`p-4 border-b hover:bg-gray-50 transition-colors ${index < 2 ? "bg-blue-50/30" : ""
-                                                        }`}
-                                                >
-                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                                        <h3 className="font-semibold text-gray-900 flex-1">{notice.title}</h3>
-                                                        <div className="flex items-center space-x-2">
-                                                            {notice.isNew && (
-                                                                <Badge variant="destructive" className="text-xs">
-                                                                    NEW
-                                                                </Badge>
-                                                            )}
-                                                            <Badge variant="outline" className="text-xs">
-                                                                {notice.type}
+                                        {notices.map((notice, index) => (
+                                            <div
+                                                key={`${notice.id}`}
+                                                className={`p-4 border-b hover:bg-gray-50 transition-colors ${index < 2 ? "bg-blue-50/30" : ""
+                                                    }`}
+                                            >
+                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                                    <h3 className="font-semibold text-gray-900 flex-1">{notice.title}</h3>
+                                                    <div className="flex items-center space-x-2">
+                                                        {notice.isNew && (
+                                                            <Badge variant="destructive" className="text-xs">
+                                                                NEW
                                                             </Badge>
-                                                        </div>
-                                                    </div>
-                                                    <div className="flex items-center text-sm text-gray-500">
-                                                        <Calendar className="mr-1 h-4 w-4" />
-                                                        {new Date(notice.date).toLocaleDateString("en-IN", {
-                                                            year: "numeric",
-                                                            month: "long",
-                                                            day: "numeric",
-                                                        })}
+                                                        )}
+                                                        <Badge variant="outline" className="text-xs">
+                                                            {notice.type}
+                                                        </Badge>
                                                     </div>
                                                 </div>
-                                            )),
-                                        )}
+                                                <div className="flex items-center text-sm text-gray-500">
+                                                    <Calendar className="mr-1 h-4 w-4" />
+                                                    {new Date(notice.date).toLocaleDateString("en-IN", {
+                                                        year: "numeric",
+                                                        month: "long",
+                                                        day: "numeric",
+                                                    })}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </CardContent>

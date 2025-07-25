@@ -2,20 +2,12 @@
 import { Link } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 import Notice from "@/components/Home/Notice"
 import ExcellenceSection from "@/components/Home/ExcellenceSection"
 import Videos from "@/components/Home/Videos"
 import Review from "@/components/Home/Review"
 import Stats from "@/components/Home/Stats"
-import OppertunitiesPage from "@/components/Home/Oppertunities"
-
-
-
-
-
-
 
 
 export default function HomePage() {
@@ -171,7 +163,6 @@ export default function HomePage() {
             </section>
 
 
-            <OppertunitiesPage />
             <Review />
             {/* Stats Section */}
             <Stats />

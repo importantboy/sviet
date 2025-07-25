@@ -181,9 +181,6 @@ export default function Footer() {
                     {/* Social Media Links */}
                     <div className="mt-12 pt-8 border-t border-slate-700">
                         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                            <div className="text-sm text-slate-400">
-                                © 2024 SVIET. All rights reserved.
-                            </div>
 
                             <div className="flex space-x-4">
                                 {socialLinks.map(social => {
