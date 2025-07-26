@@ -3,8 +3,7 @@ import { CheckCircle } from "lucide-react"
 import { Helmet } from "react-helmet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Masonry from "react-responsive-masonry";
-
-
+import Ms from "react-masonry-css"
 export default function BestPractices() {
 
     const images = ["/ankur.jpg", "/library.jpeg", "/international.JPG", "/research.JPG", "/placeholder.svg"]
@@ -51,11 +50,7 @@ export default function BestPractices() {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto">
                             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Gallery</h2>
-                            {/* 
 
-                                    className="rounded-lg shadow-md w-full h-full object-top object-cover"
-                                    wrapperClassName=' w-full h-[30rem] '
-*/}
                             <Masonry columnsCount={3} gutter="10px">
                                 {images.map((image, i) => (
                                     <LazyLoadImage
@@ -70,6 +65,74 @@ export default function BestPractices() {
                     </div>
                 </section>
 
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Gallery</h2>
+
+                            <Masonry
+                                breakpointCols={{
+                                    default: 4,
+                                    1100: 3,
+                                    700: 2,
+                                    500: 1,
+                                }}
+                                className="flex w-auto -ml-4"
+                                columnClassName="pl-4 bg-clip-padding"
+                            >
+                                {images.map(image => (<div className="mb-4">
+                                    <img
+                                        src={image}
+                                        className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                    />
+                                </div>))}
+                            </Masonry>
+                        </div>
+                    </div>
+                </section>
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Gallery</h2>
+
+                            <Ms columnsCount={3} gutter="10px">
+                                {images.map((image, i) => (
+                                    <LazyLoadImage
+                                        key={i}
+                                        effect='blur'
+                                        src={image || "/placeholder.svg"}
+                                        style={{ width: "100%", display: "block" }}
+                                    />
+                                ))}
+                            </Ms>
+                        </div>
+                    </div>
+                </section>
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Gallery</h2>
+
+                            <Ms
+                                breakpointCols={{
+                                    default: 4,
+                                    1100: 3,
+                                    700: 2,
+                                    500: 1,
+                                }}
+                                className="flex w-auto -ml-4"
+                                columnClassName="pl-4 bg-clip-padding"
+                            >
+                                {images.map(image => (<div className="mb-4">
+                                    <img
+                                        src={image}
+                                        className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                    />
+                                </div>))}
+                            </Ms>
+                        </div>
+                    </div>
+                </section>
             </div>
         </>
     )
