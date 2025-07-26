@@ -1,44 +1,69 @@
-import { Link } from "react-router-dom"
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom";
+import {
+    MapPin,
+    Phone,
+    Mail,
+    Facebook,
+    Instagram,
+    Youtube,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const quickLinks = [
     { title: "About", href: "/about" },
-    { title: "Courses", href: "/courses" },
+    { title: "Courses", href: "/" },
     { title: "Contact Us", href: "/contact" },
-    { title: "Student ERP Login", href: "/student-erp" },
-    { title: "Faculty ERP Login", href: "/faculty-erp" },
-    { title: "E-Governance", href: "/e-governance" },
-    { title: "SVGOI", href: "/svgoi" },
-    { title: "Examination Cell", href: "/examination-cell" },
-    { title: "Mandatory Disclosure", href: "/mandatory-disclosure" }
-]
+    {
+        title: "Student ERP Login",
+        href: "http://uj.servergi.com:8089/iSIMSVIET/Login",
+    },
+    {
+        title: "Faculty ERP Login",
+        href: "http://uj.servergi.com:8089/SIMWEBSVIET/Login",
+    },
+    {
+        title: "E-Governance",
+        href: "https://sviet.org.in/wp-content/uploads/E-Governance-Policy-_SVIET.pdf",
+    },
+    { title: "SVGOI", href: "http://sviet.ac.in/" },
+    { title: "Examination Cell", href: "/exam-committee" },
+    {
+        title: "Mandatory Disclosure",
+        href: "https://sviet.org.in/wp-content/uploads/Mandatory-Disclosure-SVIET-1-1.pdf",
+    },
+];
 
 const importantLinks = [
     { title: "RTI", href: "/rti" },
-    { title: "IQAC", href: "/iqac" },
-    { title: "NAAC", href: "/naac" },
-    { title: "SSR", href: "/ssr" },
-    { title: "NAD", href: "/nad" },
-    { title: "AISHIE", href: "/aishie" },
-    { title: "ABC", href: "/abc" }
-]
+    {
+        title: "IQAC",
+        href: "https://sviet.org.in/wp-content/uploads/Composition-of-IQAC.pdf",
+    },
+    { title: "NAAC", href: "http://naac.gov.in/index.php/en/" },
+    {
+        title: "SSR",
+        href: "https://sviet.org.in/wp-content/uploads/PBCOGN114641-Latest.pdf",
+    },
+    { title: "NAD", href: "https://nad.gov.in/" },
+    { title: "AISHE", href: "https://aishe.gov.in/" },
+    { title: "ABC", href: "https://www.abc.gov.in/about.php" },
+];
 
 const statutoryCells = [
-    { title: "SC/ST Committee", href: "/sc-st-committee" },
-    { title: "Grievance Redressal Committee", href: "/grievance-redressal" },
-    { title: "Women Grievances Cell", href: "/women-grievances" },
-    { title: "Anti-ragging Committee", href: "/anti-ragging" },
-    { title: "OBC Cell", href: "/obc-cell" },
-    { title: "Internal Complaints Cell", href: "/internal-complaints" },
-    { title: "Women Helpline", href: "/women-helpline" }
-]
+    { title: "SC/ST Committee", href: '/sc-st-committee' },
+    { title: "Grievance Redressal Committee", href: "/grievance-redressal-committee" },
+    { title: "Women Grievances Cell", href: "/womens-cell" },
+    { title: "Anti-ragging Committee", href: "/anti-ragging-policy" },
+    { title: "OBC Cell", href: "/obc-cell-2" },
+    { title: "Internal Complaints Cell", href: "/examination-cell" },
+    { title: "Women Helpline", href: "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-04-09-at-19.17.31_881ebde6.jpg" },
+];
 
 const socialLinks = [
-    { icon: Facebook, href: "/facebook", label: "Facebook" },
-    { icon: Instagram, href: "/instagram", label: "Instagram" },
-    { icon: Youtube, href: "/youtube", label: "YouTube" }
-]
+    { icon: Facebook, href: "https://www.facebook.com/svietofficial.com", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/svietofficial", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@svietchandigarh3067", label: "YouTube" },
+];
 
 export default function Footer() {
     return (
@@ -84,7 +109,8 @@ export default function Footer() {
                                             Address:
                                         </p>
                                         <p className="text-sm text-slate-300">
-                                            Chandigarh - Patiala Highway, Ram Nagar, Banur 140601
+                                            Chandigarh - Patiala Highway, Ram
+                                            Nagar, Banur 140601
                                         </p>
                                     </div>
                                 </div>
@@ -95,7 +121,9 @@ export default function Footer() {
                                         <p className="text-sm font-medium text-slate-200">
                                             Mobile:
                                         </p>
-                                        <p className="text-sm text-slate-300">+91- 94652 33333</p>
+                                        <p className="text-sm text-slate-300">
+                                            +91- 94652 33333
+                                        </p>
                                     </div>
                                 </div>
 
@@ -105,14 +133,18 @@ export default function Footer() {
                                         <p className="text-sm font-medium text-slate-200">
                                             Toll Free:
                                         </p>
-                                        <p className="text-sm text-slate-300">1800 120 1200</p>
+                                        <p className="text-sm text-slate-300">
+                                            1800 120 1200
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-3">
                                     <Mail className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                                     <div>
-                                        <p className="text-sm font-medium text-slate-200">Email:</p>
+                                        <p className="text-sm font-medium text-slate-200">
+                                            Email:
+                                        </p>
                                         <div className="text-sm text-slate-300 space-y-1">
                                             <p>info@sviet.org.in</p>
                                             <p>admission@sviet.org.in</p>
@@ -129,7 +161,7 @@ export default function Footer() {
                                 Quick Links
                             </h3>
                             <nav className="space-y-2">
-                                {quickLinks.map(link => (
+                                {quickLinks.map((link) => (
                                     <Link
                                         key={link.href}
                                         to={link.href}
@@ -147,7 +179,7 @@ export default function Footer() {
                                 Important Links
                             </h3>
                             <nav className="space-y-2">
-                                {importantLinks.map(link => (
+                                {importantLinks.map((link) => (
                                     <Link
                                         key={link.href}
                                         to={link.href}
@@ -165,7 +197,7 @@ export default function Footer() {
                                 Statutory Cells
                             </h3>
                             <nav className="space-y-2">
-                                {statutoryCells.map(link => (
+                                {statutoryCells.map((link) => (
                                     <Link
                                         key={link.href}
                                         to={link.href}
@@ -181,10 +213,9 @@ export default function Footer() {
                     {/* Social Media Links */}
                     <div className="mt-12 pt-8 border-t border-slate-700">
                         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-
                             <div className="flex space-x-4">
-                                {socialLinks.map(social => {
-                                    const Icon = social.icon
+                                {socialLinks.map((social) => {
+                                    const Icon = social.icon;
                                     return (
                                         <Link
                                             key={social.href}
@@ -194,7 +225,7 @@ export default function Footer() {
                                         >
                                             <Icon className="h-5 w-5 text-white" />
                                         </Link>
-                                    )
+                                    );
                                 })}
                             </div>
                         </div>
@@ -202,5 +233,5 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
-    )
+    );
 }
