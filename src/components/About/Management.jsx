@@ -1,5 +1,7 @@
 import React from 'react'
 import { Badge } from '../ui/badge'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 const managementTeam = [
     {
         name: "Mr. Ashwani Garg",
@@ -93,10 +95,13 @@ const Management = () => {
                                 className={`relative ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
                                     }`}
                             >
-                                <img
+                                <LazyLoadImage
                                     src={member.image || "/placeholder.svg"}
                                     alt={member.name}
-                                    className="rounded-lg shadow-xl w-full h-[30rem]  object-top object-cover"
+                                    className="rounded-lg shadow-md w-full h-full object-top object-cover"
+                                    wrapperClassName=' w-full h-[30rem] '
+                                    effect='blur'
+                                    placeholderSrc={"/placeholder.svg"}
                                 />
                                 <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
                                     <div className="text-center">
@@ -115,4 +120,4 @@ const Management = () => {
     )
 }
 
-export default Management
+export default React.memo(Management)

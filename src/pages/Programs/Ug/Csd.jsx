@@ -1,7 +1,7 @@
 import Layout from '@/components/Programs/Layout'
 import React from 'react'
 
-const ComputerScienceEngineering = () => {
+const Csd = () => {
     const eligibilityCriteria = [
         {
             id: 1,
@@ -60,17 +60,13 @@ const ComputerScienceEngineering = () => {
         { title: "Network Engineering", },
         { title: "Database Administrator", },
         { title: "Web Developer", },
-        { title: "Database Management", },
-        { title: "Software Engineering", },
-        { title: "Computer Networks", },
-        { title: "Operating Systems", }
     ]
     const programEducationalObjectives = [
         {
             id: "PEO1",
             title: "Technical Excellence",
             description:
-                "Graduates will demonstrate strong technical competence in computer science and engineering principles, enabling them to solve complex problems and contribute to technological advancement.",
+                "Graduates will demonstrate strong technical competence in Computer Science & Design principles, enabling them to solve complex problems and contribute to technological advancement.",
         },
         {
             id: "PEO2",
@@ -84,18 +80,7 @@ const ComputerScienceEngineering = () => {
             description:
                 "Graduates will engage in continuous learning and professional development to adapt to evolving technologies and maintain relevance in their chosen career paths.",
         },
-        {
-            id: "PEO4",
-            title: "Social Responsibility",
-            description:
-                "Graduates will demonstrate ethical behavior, social responsibility, and awareness of the impact of engineering solutions on society and the environment.",
-        },
-        {
-            id: "PEO5",
-            title: "Innovation and Research",
-            description:
-                "Graduates will contribute to innovation and research in computer science and engineering, developing new technologies and solutions for societal benefit.",
-        },
+
     ]
     const programOutcomes = [
         {
@@ -190,24 +175,14 @@ const ComputerScienceEngineering = () => {
             description:
                 "Ability to innovate thinking and ability to design and/or improve products market systems for the society and industry for better education, human safety and reduced cost.",
         },
+
         {
             id: "PSO4",
-            title: "Fundamental Knowledge",
-            description:
-                "Ability to demonstrate fundamental domain knowledge with working with electronic equipment/systems to handle engineering problems in professional environment.",
-        },
-        {
-            id: "PSO5",
             title: "Modern Technologies",
             description:
                 "Ability to get profound knowledge of modern technologies, ECE tools and to acquire sufficient skills to innovate manufacturing solutions in engineering problems.",
         },
-        {
-            id: "PSO6",
-            title: "Leadership Skills",
-            description:
-                "Graduates will be chosen leaders in Electronics and Comm. Engineering and interrelated domains of engineering due their ability solve real world large disciplinary problems.",
-        },
+
     ]
     const programHighlights = [
         "Learn by doing: Hands-on learning through state-of-the-art software and projects",
@@ -220,10 +195,9 @@ const ComputerScienceEngineering = () => {
         "Entrepreneurship Support: Incubation center support for student startup initiatives"
     ]
 
-
     const laboratories = [
         {
-            name: "C Programming Lab",
+            name: "Software Development Lab",
             description:
                 "State-of-the-art lab with latest c programming language tools and IDEs for programming.",
             image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
@@ -247,23 +221,23 @@ const ComputerScienceEngineering = () => {
         <>
 
             <Layout
-                laboratories={laboratories}
+laboratories={laboratories}
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
                 programOutcomes={programOutcomes}
                 programSpecificOutcomes={programSpecificOutcomes}
                 programTopics={programTopics}
                 eligibilityCriteria={eligibilityCriteria}
-                fee={"52,500/- INR Per Semester"}
-                courseName={"B. Tech Computer Science Engineering"}
-                overview={"Computer science is currently one of the most crucial elements of development in the numerous commercial, technological, and administrative organisations. Users that gather information in computer science are exposed to a variety of trends’ capabilities. The Department of Computer Engineering at the Faculty of Engineering offers a four-year bachelor’s degree curriculum in computer science and engineering. The course material was specifically designed to provide students with a strong background in the field as well as analysis and in-depth understanding. In order to expose students to in-depth technical processes, the department is equipped with computer facilities and laboratories that allow students to be engaged on a personal level and in real-time processing.The department is equipped with computer labs and resources that let students participate personally and in the actual processing of the technological processes involved, exposing them to in-depth learning."}
+                fee={"52,500/-INR Per Semester"}
+                courseName={"Computer Science & Design"}
+                overview={"Computer Science and Design programs aims to integrate principles from both computer science and design. This could include merging technical knowledge with creative and user-centered design concepts.The curriculum might include courses from computer science, such as programming, algorithms, and data structures.            It would also encompass design-related courses, such as user experience (UX) design, graphic design, and human-computer interaction (HCI)."}
                 duration={4}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://sviet.org.in/wp-content/uploads/BTech-CSE-2021-1.pdf"
-                degree={"B.Tech CSE"}
+                degree={"B.Tech CSD"}
             />
         </>
     )
 }
 
-export default ComputerScienceEngineering
+export default Csd

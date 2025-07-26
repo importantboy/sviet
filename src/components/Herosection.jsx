@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button } from './ui/button'
+import { Target, Award, } from "lucide-react"
 import { Link } from 'react-router-dom'
-const Herosection = ({ btn1Target = false, btn2Target = false, heading, shortDescription, btnText1, btn1Href, btn2Href, btnText2, imgSrc }) => {
+const Herosection = ({ isIqac = false, btn1Target = false, btn2Target = false, heading, shortDescription, btnText1, btn1Href, btn2Href, btnText2, imgSrc }) => {
     return (
         <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 md:py-24">
             <div className="container mx-auto px-4">
@@ -12,7 +13,7 @@ const Herosection = ({ btn1Target = false, btn2Target = false, heading, shortDes
                         <p className="text-xl text-blue-100 leading-relaxed">
                             {shortDescription}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        {!isIqac ? <div className="flex flex-col sm:flex-row gap-4">
                             <Link className='cursor-pointer' to={btn1Href ? btn1Href : "/"} {...(btn1Target ? { target: "_blank" } : {})}>
                                 <Button
                                     size="lg"
@@ -31,7 +32,16 @@ const Herosection = ({ btn1Target = false, btn2Target = false, heading, shortDes
                                     {btnText2}
                                 </Button>}
                             </Link>
-                        </div>
+                        </div> : <div className="flex flex-wrap gap-4">
+                            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                                <Award className="w-5 h-5" />
+                                <span>Quality Excellence</span>
+                            </div>
+                            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                                <Target className="w-5 h-5" />
+                                <span>Continuous Improvement</span>
+                            </div>
+                        </div>}
                     </div>
                     <div className="relative">
                         <img

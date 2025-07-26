@@ -1,76 +1,42 @@
 import Layout from '@/components/Programs/Layout'
 import React from 'react'
 
-const ComputerScienceEngineering = () => {
+const MtechMechanical = () => {
     const eligibilityCriteria = [
+
         {
             id: 1,
-            title: "10+2 Examination Route",
-            description: "Standard academic pathway for B.Tech admission",
+            title: "Postgraduate Admission (ME/M.Tech)",
+            description: "Eligibility criteria for admission into ME/M.Tech programs",
             requirements: [
-                "Passed 10+2 examination with Physics and Mathematics as compulsory subjects",
-                "One of the following subjects: Chemistry/Biotechnology/Computer Science/Biology",
-            ],
-            icon: "📚",
-            color: "from-blue-500 to-blue-600",
-            borderColor: "border-blue-500",
-        },
-        {
-            id: 2,
-            title: "Diploma Route (Lateral Entry)",
-            description: "For diploma holders seeking lateral entry to B.Tech",
-            requirements: [
-                "Passed Diploma in Engineering/Technology with 50% marks in aggregate (40% for SC/ST)",
-                "Candidates who have only passed Diploma in any branch of Engineering/Technology are eligible",
-                "Diploma from recognized institutions:",
-                "• Punjab State Board of Technical Education, Chandigarh",
-                "• Sant Longowal Institute of Engineering and Technology (SLIET)",
-                "• Any other recognized State Board of Technical Education",
+                "Passed BE/B.Tech or equivalent examination",
+                "Minimum 50% marks in the qualifying exam (45% for SC/ST/SEBC candidates)"
             ],
             icon: "🎓",
-            color: "from-green-500 to-green-600",
-            borderColor: "border-green-500",
-        },
-        {
-            id: 3,
-            title: "Certificate Course Route",
-            description: "Alternative pathway through specialized certification",
-            requirements: [
-                "Completed two years certificate course from Sant Longowal Institute of Engineering and Technology, Longowal (SLIET)",
-            ],
-            icon: "📜",
-            color: "from-purple-500 to-purple-600",
-            borderColor: "border-purple-500",
-        },
-        {
-            id: 4,
-            title: "B.Sc Degree Route (Lateral Entry)",
-            description: "For B.Sc degree holders seeking lateral entry to B.Tech",
-            requirements: [
-                "Passed B.Sc Degree in any discipline",
-                "Minimum 50% marks in aggregate (40% for SC/ST candidates)",
-            ],
-            icon: "🔬",
             color: "from-orange-500 to-orange-600",
             borderColor: "border-orange-500",
         },
     ]
     const programTopics = [
-        { title: "System Administrator", },
-        { title: "Network Engineering", },
-        { title: "Database Administrator", },
-        { title: "Web Developer", },
-        { title: "Database Management", },
-        { title: "Software Engineering", },
-        { title: "Computer Networks", },
-        { title: "Operating Systems", }
-    ]
+        {
+
+            title: "DESIGN ENGINEER"
+
+        }
+        ,
+        {
+            title: "PURCHASE AND QUALITY CONTROL EXECUTIVE",
+        },
+        {
+            title: "ASSISTANT MECHANICAL ENGINEER",
+        }, { title: "MECHANICAL ENGINEER" }]
+
     const programEducationalObjectives = [
         {
             id: "PEO1",
             title: "Technical Excellence",
             description:
-                "Graduates will demonstrate strong technical competence in computer science and engineering principles, enabling them to solve complex problems and contribute to technological advancement.",
+                "Graduates will demonstrate strong technical competence in Mechanical Engineering principles, enabling them to solve complex problems and contribute to technological advancement.",
         },
         {
             id: "PEO2",
@@ -84,18 +50,7 @@ const ComputerScienceEngineering = () => {
             description:
                 "Graduates will engage in continuous learning and professional development to adapt to evolving technologies and maintain relevance in their chosen career paths.",
         },
-        {
-            id: "PEO4",
-            title: "Social Responsibility",
-            description:
-                "Graduates will demonstrate ethical behavior, social responsibility, and awareness of the impact of engineering solutions on society and the environment.",
-        },
-        {
-            id: "PEO5",
-            title: "Innovation and Research",
-            description:
-                "Graduates will contribute to innovation and research in computer science and engineering, developing new technologies and solutions for societal benefit.",
-        },
+
     ]
     const programOutcomes = [
         {
@@ -190,25 +145,18 @@ const ComputerScienceEngineering = () => {
             description:
                 "Ability to innovate thinking and ability to design and/or improve products market systems for the society and industry for better education, human safety and reduced cost.",
         },
+
         {
             id: "PSO4",
-            title: "Fundamental Knowledge",
-            description:
-                "Ability to demonstrate fundamental domain knowledge with working with electronic equipment/systems to handle engineering problems in professional environment.",
-        },
-        {
-            id: "PSO5",
             title: "Modern Technologies",
             description:
                 "Ability to get profound knowledge of modern technologies, ECE tools and to acquire sufficient skills to innovate manufacturing solutions in engineering problems.",
         },
-        {
-            id: "PSO6",
-            title: "Leadership Skills",
-            description:
-                "Graduates will be chosen leaders in Electronics and Comm. Engineering and interrelated domains of engineering due their ability solve real world large disciplinary problems.",
-        },
+
     ]
+
+
+
     const programHighlights = [
         "Learn by doing: Hands-on learning through state-of-the-art software and projects",
         "Industry Integration: Regular guest lectures and workshops by industry experts",
@@ -219,28 +167,24 @@ const ComputerScienceEngineering = () => {
         "Innovation Labs: Access to specialized labs for AI, ML, IoT, and emerging technologies",
         "Entrepreneurship Support: Incubation center support for student startup initiatives"
     ]
-
-
     const laboratories = [
         {
-            name: "C Programming Lab",
+            name: "Kinematics and Dynamics of Machine Laboratory",
             description:
-                "State-of-the-art lab with latest c programming language tools and IDEs for programming.",
+                "Advanced lab equipped with modern mechanisms and experimental setups for analyzing motion, forces, and dynamics in mechanical systems.",
             image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
         },
         {
-            name: "Networking Lab",
-            description:
-                "Advanced networking lab with Cisco equipment for hands-on experience in network configuration and management.",
-            image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
+            name: "Fluid Mechanics Laboratory",
+            description: "Well-equipped lab designed for studying fluid behavior, flow dynamics, and hydraulic systems through hands-on experiments and models.", image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
         },
         {
-            name: "Python",
-            description:
-                "Specialized laboratory equipped with high-performance computing systems for Pyhton.",
+            name: "Heat and Mass Transfer Laboratory",
+            description: "Modern lab featuring experimental setups to study conduction, convection, radiation, and diffusion in thermal and mass transfer processes.",
             image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
         }
     ]
+
 
 
     return (
@@ -248,22 +192,23 @@ const ComputerScienceEngineering = () => {
 
             <Layout
                 laboratories={laboratories}
-                programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
+                programHighlights={programHighlights}
                 programOutcomes={programOutcomes}
-                programSpecificOutcomes={programSpecificOutcomes}
+                isPg={true}
                 programTopics={programTopics}
                 eligibilityCriteria={eligibilityCriteria}
-                fee={"52,500/- INR Per Semester"}
-                courseName={"B. Tech Computer Science Engineering"}
-                overview={"Computer science is currently one of the most crucial elements of development in the numerous commercial, technological, and administrative organisations. Users that gather information in computer science are exposed to a variety of trends’ capabilities. The Department of Computer Engineering at the Faculty of Engineering offers a four-year bachelor’s degree curriculum in computer science and engineering. The course material was specifically designed to provide students with a strong background in the field as well as analysis and in-depth understanding. In order to expose students to in-depth technical processes, the department is equipped with computer facilities and laboratories that allow students to be engaged on a personal level and in real-time processing.The department is equipped with computer labs and resources that let students participate personally and in the actual processing of the technological processes involved, exposing them to in-depth learning."}
-                duration={4}
+                fee={"37,500/- INR Per Semester"}
+                programSpecificOutcomes={programSpecificOutcomes}
+                courseName={"M.tech Mechanical Engineering"}
+                overview={"The Mechanical Engineering program is one of the SVIET flagship programs which is centred on the understanding of the mechanics, dynamics and structural analysis of mechanical systems. The Faculty of Engineering offers a four year Bachelors degree in Mechanical Engineering, a program that is designed to equip every student with the fundamental of mechanics on various levels. The department has adopted a unique approach to the scope of this program, which provides the students with a comprehensive understanding of core mechanical principles such thermodynamics, material science, structural analysis and electricity. The study is made possible through the use of effective tools such as Computer Aided Design (CAD) and Computer Aided Manufacturing (CAM) amongst others."}
+                duration={2}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
-                syllabusLink="https://sviet.org.in/wp-content/uploads/BTech-CSE-2021-1.pdf"
-                degree={"B.Tech CSE"}
+                syllabusLink="https://ptu.ac.in/wp-content/uploads/2020/10/10-1-18%20M%20Tech%20ME%202017%20Final.pdf"
+                degree={"M.Tech ME"}
             />
         </>
     )
 }
 
-export default ComputerScienceEngineering
+export default MtechMechanical

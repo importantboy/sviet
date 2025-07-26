@@ -12,6 +12,20 @@ import FinanceCommittee from "./pages/About/FinanceCommittee"
 import FromTheDeskOfMangmnt from "./pages/About/FromTheDeskOfMangmnt"
 import AwardsAndRecog from "./pages/About/AwardsAndRecog"
 import ComputerScienceEngineering from "./pages/Programs/Ug/ComputerScienceEngineering"
+import CivilEngineering from "./pages/Programs/Ug/CivilEngineering"
+import MechanicalEngineering from "./pages/Programs/Ug/MechanicalEngineering"
+import ElectricalEngineering from "./pages/Programs/Ug/ElectricalEngineering"
+import Ece from "./pages/Programs/Ug/Ece"
+import Csd from "./pages/Programs/Ug/Csd"
+import Mtech from "./pages/Programs/Pg/Mtech"
+import MtechElec from "./pages/Programs/Pg/MtechElec"
+import MtechMechanical from "./pages/Programs/Pg/MtechMachanical"
+import Mca from "./pages/Programs/Pg/Mca"
+import Mba from "./pages/Programs/Pg/Mba"
+import MeDiploma from "./pages/Programs/Diploma/MechanicalEng"
+import CivilEngineeringDiploma from "./pages/Programs/Diploma/CivilEngineering"
+import Iqac from "./pages/NAAC/Iqac"
+import BestPractices from "./pages/NAAC/BestPractices"
 
 function App() {
   return (
@@ -30,6 +44,20 @@ function App() {
           <Route path="/from-the-management" element={<FromTheDeskOfMangmnt />} />
           <Route path="/awards-and-recognitions" element={<AwardsAndRecog />} />
           <Route path="/computer-science-engineering" element={<ComputerScienceEngineering />} />
+          <Route path="/civil-engineering" element={<CivilEngineering />} />
+          <Route path="/mechanical-engineering" element={<MechanicalEngineering />} />
+          <Route path="/electrical-engineering" element={<ElectricalEngineering />} />
+          <Route path="/ece" element={<Ece />} />
+          <Route path="/csd" element={<Csd />} />
+          <Route path="/m-tech" element={<Mtech />} />
+          <Route path="/m-tech-electronics" element={<MtechElec />} />
+          <Route path="/mtech-me" element={<MtechMechanical />} />
+          <Route path="/mca" element={<Mca />} />
+          <Route path="/business-administration" element={<Mba />} />
+          <Route path="/mechanical-engineering-diploma" element={<MeDiploma />} />
+          <Route path="/civil-engineering-diploma" element={<CivilEngineeringDiploma />} />
+          <Route path="/iqac" element={<Iqac />} />
+          <Route path="/best-practices-distinctiveness" element={<BestPractices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

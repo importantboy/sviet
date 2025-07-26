@@ -1,7 +1,7 @@
 import Layout from '@/components/Programs/Layout'
 import React from 'react'
 
-const ComputerScienceEngineering = () => {
+const CivilEngineering = () => {
     const eligibilityCriteria = [
         {
             id: 1,
@@ -56,21 +56,17 @@ const ComputerScienceEngineering = () => {
         },
     ]
     const programTopics = [
-        { title: "System Administrator", },
-        { title: "Network Engineering", },
-        { title: "Database Administrator", },
-        { title: "Web Developer", },
-        { title: "Database Management", },
-        { title: "Software Engineering", },
-        { title: "Computer Networks", },
-        { title: "Operating Systems", }
+        { title: "CIVIL ENGINEER", },
+        { title: "SITE ENGINEER", },
+        { title: "ASSISTANT PROJECT MANAGER", },
+        { title: "PROJECT MANAGER", },
     ]
     const programEducationalObjectives = [
         {
             id: "PEO1",
             title: "Technical Excellence",
             description:
-                "Graduates will demonstrate strong technical competence in computer science and engineering principles, enabling them to solve complex problems and contribute to technological advancement.",
+                "Graduates will demonstrate strong technical competence in Civil Engineering principles, enabling them to solve complex problems and contribute to technological advancement.",
         },
         {
             id: "PEO2",
@@ -84,18 +80,7 @@ const ComputerScienceEngineering = () => {
             description:
                 "Graduates will engage in continuous learning and professional development to adapt to evolving technologies and maintain relevance in their chosen career paths.",
         },
-        {
-            id: "PEO4",
-            title: "Social Responsibility",
-            description:
-                "Graduates will demonstrate ethical behavior, social responsibility, and awareness of the impact of engineering solutions on society and the environment.",
-        },
-        {
-            id: "PEO5",
-            title: "Innovation and Research",
-            description:
-                "Graduates will contribute to innovation and research in computer science and engineering, developing new technologies and solutions for societal benefit.",
-        },
+
     ]
     const programOutcomes = [
         {
@@ -190,24 +175,14 @@ const ComputerScienceEngineering = () => {
             description:
                 "Ability to innovate thinking and ability to design and/or improve products market systems for the society and industry for better education, human safety and reduced cost.",
         },
+        
         {
             id: "PSO4",
-            title: "Fundamental Knowledge",
-            description:
-                "Ability to demonstrate fundamental domain knowledge with working with electronic equipment/systems to handle engineering problems in professional environment.",
-        },
-        {
-            id: "PSO5",
             title: "Modern Technologies",
             description:
                 "Ability to get profound knowledge of modern technologies, ECE tools and to acquire sufficient skills to innovate manufacturing solutions in engineering problems.",
         },
-        {
-            id: "PSO6",
-            title: "Leadership Skills",
-            description:
-                "Graduates will be chosen leaders in Electronics and Comm. Engineering and interrelated domains of engineering due their ability solve real world large disciplinary problems.",
-        },
+       
     ]
     const programHighlights = [
         "Learn by doing: Hands-on learning through state-of-the-art software and projects",
@@ -221,49 +196,30 @@ const ComputerScienceEngineering = () => {
     ]
 
 
-    const laboratories = [
-        {
-            name: "C Programming Lab",
-            description:
-                "State-of-the-art lab with latest c programming language tools and IDEs for programming.",
-            image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
-        },
-        {
-            name: "Networking Lab",
-            description:
-                "Advanced networking lab with Cisco equipment for hands-on experience in network configuration and management.",
-            image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
-        },
-        {
-            name: "Python",
-            description:
-                "Specialized laboratory equipped with high-performance computing systems for Pyhton.",
-            image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
-        }
-    ]
+   
 
 
     return (
         <>
 
             <Layout
-                laboratories={laboratories}
+                
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
                 programOutcomes={programOutcomes}
                 programSpecificOutcomes={programSpecificOutcomes}
                 programTopics={programTopics}
                 eligibilityCriteria={eligibilityCriteria}
-                fee={"52,500/- INR Per Semester"}
-                courseName={"B. Tech Computer Science Engineering"}
-                overview={"Computer science is currently one of the most crucial elements of development in the numerous commercial, technological, and administrative organisations. Users that gather information in computer science are exposed to a variety of trends’ capabilities. The Department of Computer Engineering at the Faculty of Engineering offers a four-year bachelor’s degree curriculum in computer science and engineering. The course material was specifically designed to provide students with a strong background in the field as well as analysis and in-depth understanding. In order to expose students to in-depth technical processes, the department is equipped with computer facilities and laboratories that allow students to be engaged on a personal level and in real-time processing.The department is equipped with computer labs and resources that let students participate personally and in the actual processing of the technological processes involved, exposing them to in-depth learning."}
+                fee={"45,000/-INR Per Semester"}
+                courseName={"Civil Engineering"}
+                overview={"Civil engineering deals with the design, construction & maintenance of man-made structures and naturally built environment, including works like roads, bridges, canals, dams, and buildings. From Transportation to Hydrology, Environmental to Construction, Civil Engineering is an area with a lot of diversity.Ranked among the best Civil Engineering College in Punjab, India.With expert faculty with intellectually stimulating environment and course curriculum widely spread over practical training, project work, expert lectures and more. While theory gives you opportunity to understand the intricacies of the subject, the well-equipped laboratories provide enriched practical understanding and real-time exposure. Pursue engineering course from best civil engineering college in Punjab, India."}
                 duration={4}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
-                syllabusLink="https://sviet.org.in/wp-content/uploads/BTech-CSE-2021-1.pdf"
-                degree={"B.Tech CSE"}
+                syllabusLink="https://ptu.ac.in/wp-content/uploads/2021/12/BTech-CE-2021.pdf"
+                degree={"B.Tech Civil Engineering"}
             />
         </>
     )
 }
 
-export default ComputerScienceEngineering
+export default CivilEngineering

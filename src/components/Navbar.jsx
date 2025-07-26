@@ -110,7 +110,7 @@ const navigationItems = [
                     },
                     {
                         title: "Master of Computer Applications",
-                        href: "/computer-application",
+                        href: "/mca",
 
                     },
                     {
