@@ -2,7 +2,7 @@ import Herosection from "@/components/Herosection";
 import { CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Ms from "react-masonry-css";
+import Masonry from "react-masonry-css";
 export default function BestPractices() {
     const images = [
         "/ankur.jpg",
@@ -70,7 +70,7 @@ export default function BestPractices() {
                                 Our Gallery
                             </h2>
 
-                            <Ms
+                            <Masonry
                                 breakpointCols={{
                                     default: 4,
                                     1100: 3,
@@ -89,7 +89,7 @@ export default function BestPractices() {
                                         />
                                     </div>
                                 ))}
-                            </Ms>
+                            </Masonry>
                         </div>
                     </div>
                 </section>
