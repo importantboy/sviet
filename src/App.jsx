@@ -26,6 +26,9 @@ import MeDiploma from "./pages/Programs/Diploma/MechanicalEng"
 import CivilEngineeringDiploma from "./pages/Programs/Diploma/CivilEngineering"
 import Iqac from "./pages/NAAC/Iqac"
 import BestPractices from "./pages/NAAC/BestPractices"
+import Books from "./pages/Research/Books"
+import ResearchProject from "./pages/Research/ResearchProject"
+import Nss from "./pages/Outreach/Nss"
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
           <Route path="/civil-engineering-diploma" element={<CivilEngineeringDiploma />} />
           <Route path="/iqac" element={<Iqac />} />
           <Route path="/best-practices-distinctiveness" element={<BestPractices />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/research-projects" element={<ResearchProject />} />
+          <Route path="/nss" element={<Nss/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
