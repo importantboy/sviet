@@ -15,6 +15,57 @@ import Herosection from '@/components/Herosection'
 import ExcellenceSection from '@/components/Home/ExcellenceSection'
 import OppertunitiesPage from '@/components/About/Oppertunities'
 import Recruter from '@/components/About/Recruter'
+const opportunitiesData = [
+  {
+    id: 1,
+    title: "Cutting-Edge Laboratories",
+    shortTitle: "Cutting-Edge Laboratories",
+    description:
+      "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
+    image: "/projectbased.JPG",
+  },
+  {
+    id: 2,
+    title: "Central Library",
+    shortTitle: "Central Library",
+    description:
+      "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
+    image: "/library.jpeg",
+  },
+  {
+    id: 3,
+    title: "Research Laboratories",
+    shortTitle: "Research Laboratories",
+    description:
+      "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
+    image: "/research.JPG",
+  },
+  {
+    id: 4,
+    title: "Scholarship Opportunities",
+    shortTitle: "Scholarship Opportunities",
+    description:
+      "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
+    image: "/scholership.JPG",
+  },
+  {
+    id: 5,
+    title: "Sports Facilities",
+    shortTitle: "Sports Facilities",
+    description:
+      "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
+    image: "/sports.jpg",
+  },
+  {
+    id: 6,
+    title: "Industrial Collaboration",
+    shortTitle: "Industrial Collaboration",
+    description:
+      "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
+    image: "/collabs.jpeg",
+  },
+
+]
 const keyHighlights = [
   {
     title: "Academic Excellence",
@@ -146,7 +197,7 @@ const AboutSviet = () => {
         {/* Excellence */}
         <ExcellenceSection />
         {/* oppertunities */}
-        <OppertunitiesPage />
+        <OppertunitiesPage opportunitiesData={opportunitiesData} heading={"SVIET"} />
         {/* recruter */}
         <Recruter />
 

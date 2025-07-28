@@ -1,69 +1,19 @@
 import React, { useEffect, useState } from 'react'
-const opportunitiesData = [
-    {
-        id: 1,
-        title: "Cutting-Edge Laboratories",
-        shortTitle: "Cutting-Edge Laboratories",
-        description:
-            "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
-        image: "/projectbased.JPG",
-    },
-    {
-        id: 2,
-        title: "Central Library",
-        shortTitle: "Central Library",
-        description:
-            "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
-        image: "/library.jpeg",
-    },
-    {
-        id: 3,
-        title: "Research Laboratories",
-        shortTitle: "Research Laboratories",
-        description:
-            "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
-        image: "/research.JPG",
-    },
-    {
-        id: 4,
-        title: "Scholarship Opportunities",
-        shortTitle: "Scholarship Opportunities",
-        description:
-            "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
-        image: "/scholership.JPG",
-    },
-    {
-        id: 5,
-        title: "Sports Facilities",
-        shortTitle: "Sports Facilities",
-        description:
-            "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
-        image: "/sports.jpg",
-    },
-    {
-        id: 6,
-        title: "Industrial Collaboration",
-        shortTitle: "Industrial Collaboration",
-        description:
-            "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
-        image: "/collabs.jpeg",
-    },
 
-]
 
 import { Card, CardContent, } from "@/components/ui/card"
 
 import { ChevronRight, ChevronLeft } from 'lucide-react'
-const OppertunitiesPage = () => {
+const OppertunitiesPage = ({ bigText = false, heading = false, opportunitiesData, isInternational = false, description }) => {
     const [currentExcellenceSlide, setCurrentExcellenceSlide] = useState(0)
 
     const getCardsPerView = () => {
         if (typeof window !== "undefined") {
             if (window.innerWidth < 768) return 1 // Mobile: 1 card
-            if (window.innerWidth < 1024) return 2 // Tablet: 2 cards
-            return 3 // Desktop: 3 cards
+            if (window.innerWidth < 1024) return bigText ? 1 : 2 // Tablet: 2 cards
+            return bigText ? 2 : 3 // Desktop: 3 cards
         }
-        return 3 // Default for SSR
+        return bigText ? 2 : 3 // Default for SSR
     }
     const nextSlide = () => {
         const maxSlide = opportunitiesData.length - getCardsPerView()
@@ -89,10 +39,13 @@ const OppertunitiesPage = () => {
         <section className="py-12 md:py-16 bg-gradient-to-br  from-blue-50 to-indigo-100">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Unlocking Opportunities at SVGOI</h2>
-                    <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                        SVGOI opens doors to growth, innovation, and career success through hands-on experience and industry partnerships.
-                    </p>
+                    {!isInternational ? <> <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Unlocking Opportunities {heading && `at ${heading}`}</h2>
+                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                            {heading ? heading : "We"} opens doors to growth, innovation, and career success through hands-on experience and industry partnerships.
+                        </p> </> : <><h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">{heading}</h2>
+                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                            {description}
+                        </p></>}
                 </div>
 
                 <div className="relative ">
@@ -111,7 +64,7 @@ const OppertunitiesPage = () => {
                                         <img
                                             src={item.image || "/placeholder.svg"}
                                             alt={item.shortTitle}
-                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                            className={`w-full ${bigText ? "h-64" :"h-48"} object-cover group-hover:scale-110 transition-transform duration-300`}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                                         <div className="absolute bottom-4 left-4 text-white">
@@ -119,7 +72,7 @@ const OppertunitiesPage = () => {
                                         </div>
                                     </div>
                                     <CardContent className="p-6">
-                                        <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                                        <p className={`text-gray-600 ${bigText ? "text-md font-medium " : "text-sm"} leading-relaxed`}>{item.description}</p>
 
                                     </CardContent>
                                 </Card>

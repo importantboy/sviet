@@ -51,7 +51,8 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                     heading={courseName}
                     shortDescription={`Shape the future with our comprehensive ${courseName} program. Gain hands-on experience, master industry-relevant skills, and prepare to lead in your field with confidence, innovation, and impact.`}
                     btnText1={"Apply Now"}
-                    btn1Href={"/apply"}
+                    btn1Target={true}
+                    btn1Href={"https://admission.sviet.ac.in/"}
                     imgSrc={"/placeholder.svg"}
                 />
                 {/* Sticky Navigation Bar */}
@@ -204,7 +205,7 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                                     <CardContent className="p-4">
                                         <div className="space-y-3">
                                             <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
-                                                <Link to="/apply">Apply Online</Link>
+                                                <Link target="_blank" to="https://admission.sviet.ac.in/">Apply Online</Link>
                                             </Button>
                                             <Button variant="outline" className="w-full bg-transparent" asChild>
                                                 <Link to={syllabusLink} target="_blank">View Syllabus</Link>

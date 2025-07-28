@@ -1,6 +1,6 @@
 
 import * as React from "react"
-import { Link } from "react-router-dom"
+import { href, Link } from "react-router-dom"
 import { ChevronDown, Menu, Phone, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -35,14 +35,15 @@ const navigationItems = [
             { title: "About SVGOI", href: "/about-svgoi" },
             { title: "About SVIET", href: "/about-sviet" },
             { title: "Vision and Mission", href: "/vision-mission" },
-            { title: "Strategic Plan", href: "https://sviet.org.in/wp-content/uploads/Strategic-Plan_0001-3.pdf", target: "_blank" },
+            { title: "Strategic Plan", href: "https://sviet.org.in/wp-content/uploads/Strategic-Plan_0001-3.pdf", target: true },
             {
                 title: "Board of Management",
-                href: "/board-of-management",
                 subItems: [
+
+                    { title: "Overview", href: "/board-of-management", },
                     { title: "Governing Council", href: "/governing-council-2" },
                     { title: "Finance Committee", href: "/finance-committee-2" },
-                    
+
                 ]
             },
             { title: "From The Management Desk", href: "/from-the-management" },
@@ -183,15 +184,15 @@ const navigationItems = [
                     { title: "Alumini Feedback", href: "/alumini-feedback-form" },
                     { title: "Faculty Feedback", href: "/faculty-feedback" },
                     { title: "Employer Feedback Form", href: "/employer-feedback-form" },
-                    { title: "Action Taken Report", },
+                    { title: "Action Taken Report", href: "https://sviet.org.in/wp-content/uploads/ATR.pdf", target: true },
                 ]
             },
-            { title: "Contact Us", href: "/contact" },
+            { title: "Contact Us", href: "https://www.sviet.ac.in/contact-us", target: true },
             {
                 title: "Green & Clean Campus", subItems: [
-                    { title: "Waste Management Policy", href: "/student-feedback" },
-                    { title: "Green Policy", href: "/alumini-feedback-form" },
-                    { title: "Waste Management Policy", href: "/faculty-feedback" },
+                    { title: "Waste Management Policy", href: "https://sviet.org.in/wp-content/uploads/Waste_0001.pdf", target: true },
+                    { title: "Green Policy", href: "https://sviet.org.in/wp-content/uploads/Green-policy1_0001.pdf", target: true },
+                    { title: "Waste Management Policy", href: "https://sviet.org.in/wp-content/uploads/Water_0001.pdf", target: true },
                 ]
             },
             {
@@ -199,7 +200,7 @@ const navigationItems = [
                     { title: "International Students", href: "/international-students" },
                 ]
             },
-            { title: "HR Manual", },
+            { title: "HR Manual", href: "https://sviet.org.in/wp-content/uploads/HR-Manual.pdf", target: true },
         ]
     }
 ]
@@ -207,8 +208,8 @@ const navigationItems = [
 const topNavLinks = [
     { title: "Sviet In Media", href: "/media" },
     { title: "Gallery", href: "/gallery" },
-    { title: "Scholarships", href: "/scholarships" },
-    { title: "Apply Online", href: "/apply", highlight: true }
+    { title: "Scholarships", href: "https://sviet.org.in/wp-content/uploads/2023/12/SS-FORM.pdf", target: true },
+    { title: "Apply Online", href: "https://admission.sviet.ac.in/", highlight: true, target: true }
 ]
 
 // Recursive component for dropdown menu items
@@ -221,6 +222,8 @@ function DropdownMenuItems({ items }) {
                         <DropdownMenuSub key={item.title}>
                             <DropdownMenuSubTrigger>
                                 <Link
+                                    target={item.target ? "_blank" : undefined}
+                                    rel={item.target ? "noopener noreferrer" : undefined}
                                     to={item.href}
                                     className="flex items-center w-full">
                                     {item.title}
@@ -293,7 +296,9 @@ export default function Navbar() {
                         </span>
                         <span className="flex items-center">
                             <Mail className="h-4 w-4 mr-1" />
-                            info@sviet.org.in
+                            <a href="mailto:info@sviet.org.in">
+                                info@sviet.org.in
+                            </a>
                         </span>
                     </div>
                     <div className="hidden md:block">
@@ -302,6 +307,8 @@ export default function Navbar() {
                                 <Link
                                     key={link.href}
                                     to={link.href}
+                                    target={link.target ? "_blank" : undefined}
+                                    rel={link.target ? "noopener noreferrer" : undefined}
                                     className={cn(
                                         "hover:border-b border-white transition-colors",
                                         link.highlight && "text-yellow-300 hover:border-yellow-300"
@@ -384,6 +391,8 @@ export default function Navbar() {
                                         <div className="space-y-1">
                                             {topNavLinks.map(link => (
                                                 <Link
+                                                    target={link.target ? "_blank" : undefined}
+                                                    rel={link.target ? "noopener noreferrer" : undefined}
                                                     key={link.href}
                                                     to={link.href}
                                                     className={cn(
@@ -403,13 +412,7 @@ export default function Navbar() {
                                         <MobileNavItem key={item.title} item={item} />
                                     ))}
 
-                                    <Link
-                                        to="/contact"
-                                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        Contact
-                                    </Link>
+
                                 </div>
                             </SheetContent>
                         </Sheet>

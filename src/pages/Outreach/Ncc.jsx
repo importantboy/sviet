@@ -1,10 +1,6 @@
-import Herosection from "@/components/Herosection";
-import React from "react";
-import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Masonry from "react-masonry-css";
-const Books = () => {
-  const images = [
+import React from 'react'
+import Layout from './Layout'
+const images = [
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.35-PM-1-e1708253473241-768x946.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.03-PM-e1708253519281.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.05-PM-e1708253554757-768x945.jpeg",
@@ -42,57 +38,18 @@ const Books = () => {
     "https://sviet.org.in/wp-content/uploads/handbook-ml.png",
     "https://sviet.org.in/wp-content/uploads/cloud.png",
     "https://sviet.org.in/wp-content/uploads/big-data.png",
-  ];
-  return (
-    <>
-      <Helmet>
-        <title>Books - SVIET</title>
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-
-        <Herosection
-          isIqac={false}
-          heading={"Books and Edited Chapters"}
-          shortDescription={`Books and edited chapters are compilations where individual authors contribute specific sections, curated and organized by editors.
-`}
-          imgSrc={"/placeholder.svg"}
+];
+const Ncc = () => {
+    return (
+        <Layout
+            heading={"NCC"}
+            shortDescription={"The NCC wing at SVIET, Chandigarh, is a dynamic and disciplined organization dedicated to fostering leadership, discipline, and a sense of national pride among our students."}
+            imgSrc={"https://sviet.org.in/wp-content/uploads/2023/12/16.webp"}
+            secondImg={"https://sviet.org.in/wp-content/uploads/2023/12/Emblem_of_National_Cadet_Corps_India-200x300.png"}
+            about={"The NCC wing at SVIET, Chandigarh, is a dynamic and disciplined organization dedicated to fostering leadership, discipline, and a sense of national pride among our students. Committed to shaping future leaders, the NCC wing provides a platform for holistic development through various military training programs, adventure activities, and community service initiatives. At SVIET, we believe in instilling values of patriotism, responsibility, and camaraderie, preparing our students not just for academic success but also for a fulfilling and responsible role in society. Join the NCC wing at SVIET and embark on a journey of self-discovery, leadership, and service to the nation."}
+            images={images}
         />
+    )
+}
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-                Books and Edited Chapters
-              </h2>
-
-              <Masonry
-                breakpointCols={{
-                  default: 4,
-                  1100: 3,
-                  700: 2,
-                  500: 1,
-                }}
-                className="flex w-auto -ml-4"
-                columnClassName="pl-4 bg-clip-padding"
-              >
-                {images.map((image) => (
-                  <div className="mb-4">
-                    <LazyLoadImage
-                      effect="blur"
-                      src={image}
-                      className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                    />
-                  </div>
-                ))}
-              </Masonry>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default Books;
+export default Ncc

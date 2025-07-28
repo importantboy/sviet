@@ -29,6 +29,26 @@ import BestPractices from "./pages/NAAC/BestPractices"
 import Books from "./pages/Research/Books"
 import ResearchProject from "./pages/Research/ResearchProject"
 import Nss from "./pages/Outreach/Nss"
+import NotFound from "./pages/NotFound"
+import Placements from "./pages/Placements"
+import EarnWhileLearn from "./pages/Research/EarnWhileLearn"
+import Ncc from "./pages/Outreach/Ncc"
+import Activity from "./pages/Outreach/Activites"
+import SvietInMedia from "./pages/TopNav/SvietInMedia"
+import Gallery from "./pages/TopNav/Gallery"
+import International from "./pages/International"
+import StudentFeedbackForm from "./pages/Feedback/StudentForm"
+import AlumaniFeedback from "./pages/Feedback/AlumaniFeedback"
+import FacultyFeedback from "./pages/Feedback/FacultyFeedback"
+import EmployeeFeedback from "./pages/Feedback/EmployeeFeedback"
+import ExamComittee from "./pages/ExamComittee"
+import Rti from "./pages/FooterPages/Rti"
+import ScSt from "./pages/FooterPages/ScSt"
+import Grivence from "./pages/FooterPages/Grivence"
+import WomenCell from "./pages/FooterPages/WomenCell"
+import AntiRagging from "./pages/FooterPages/AntiRagging"
+import ObcCell from "./pages/FooterPages/ObcCell"
+import InternalComplaintCell from "./pages/FooterPages/InternalComplaintCell"
 
 function App() {
   return (
@@ -63,7 +83,29 @@ function App() {
           <Route path="/best-practices-distinctiveness" element={<BestPractices />} />
           <Route path="/books" element={<Books />} />
           <Route path="/research-projects" element={<ResearchProject />} />
-          <Route path="/nss" element={<Nss/>}/>
+          <Route path="/nss" element={<Nss />} />
+          <Route path="/ncc" element={<Ncc />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/international-students" element={<International />} />
+          <Route path="/student-feedback" element={<StudentFeedbackForm />} />
+          <Route path="/alumini-feedback-form" element={<AlumaniFeedback />} />
+          <Route path="/faculty-feedback" element={<FacultyFeedback />} />
+          <Route path="/employer-feedback-form" element={<EmployeeFeedback />} />
+          <Route path="/exam-committee" element={<ExamComittee />} />
+          <Route path="/rti" element={<Rti />} />
+          <Route path="/womens-cell" element={<WomenCell />} />
+          <Route path="/obc-cell-2" element={<ObcCell />} />
+          <Route path="/internal-complaint-cell" element={<InternalComplaintCell />} />
+
+
+          <Route path="/anti-ragging-policy" element={<AntiRagging />} />
+          <Route path="/sc-st-committee" element={<ScSt />} />
+          <Route path="/grievance-redressal-committee" element={<Grivence />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route path="/placements" element={<Placements />} />
+          <Route path="/earn-while-learn" element={<EarnWhileLearn />} />
+          <Route path="/media" element={<SvietInMedia />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

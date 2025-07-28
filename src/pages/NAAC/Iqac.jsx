@@ -1,5 +1,5 @@
 import Herosection from "@/components/Herosection"
-import { ArrowUp, Settings, CheckCircle } from "lucide-react"
+import { Settings, CheckCircle } from "lucide-react"
 import { useRef } from "react"
 import { Helmet } from "react-helmet";
 const qualityAssuranceActivities = [
@@ -54,11 +54,7 @@ const qualityAssuranceActivities = [
 ];
 
 export default function Iqac() {
-  const topRef = useRef(null)
 
-  const scrollToTop = () => {
-    topRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
 
   return (
     <>
@@ -67,7 +63,7 @@ export default function Iqac() {
           IQAC - SVIET
         </title>
       </Helmet>
-      <div className="min-h-screen bg-gray-50" ref={topRef}>
+      <div className="min-h-screen bg-gray-50" >
         {/* Hero Section */}
 
         <Herosection
@@ -256,7 +252,7 @@ export default function Iqac() {
           </div>
         </section>
 
-       
+
       </div>
     </>
   )

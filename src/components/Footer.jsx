@@ -11,25 +11,29 @@ import { Button } from "@/components/ui/button";
 
 const quickLinks = [
     { title: "About", href: "/about" },
-    { title: "Courses", href: "/" },
-    { title: "Contact Us", href: "/contact" },
+    { title: "Courses", href: "/computer-science-engineering" },
+    { title: "Contact Us", href: "https://www.sviet.ac.in/contact-us", target: true },
     {
         title: "Student ERP Login",
         href: "http://uj.servergi.com:8089/iSIMSVIET/Login",
+        target: true
     },
     {
         title: "Faculty ERP Login",
         href: "http://uj.servergi.com:8089/SIMWEBSVIET/Login",
+        target: true
     },
     {
         title: "E-Governance",
         href: "https://sviet.org.in/wp-content/uploads/E-Governance-Policy-_SVIET.pdf",
+        target: true
     },
-    { title: "SVGOI", href: "http://sviet.ac.in/" },
+    { title: "SVGOI", href: "http://sviet.ac.in/", target: true },
     { title: "Examination Cell", href: "/exam-committee" },
     {
         title: "Mandatory Disclosure",
         href: "https://sviet.org.in/wp-content/uploads/Mandatory-Disclosure-SVIET-1-1.pdf",
+        target: true
     },
 ];
 
@@ -38,15 +42,17 @@ const importantLinks = [
     {
         title: "IQAC",
         href: "https://sviet.org.in/wp-content/uploads/Composition-of-IQAC.pdf",
+        target: true
     },
-    { title: "NAAC", href: "http://naac.gov.in/index.php/en/" },
+    { title: "NAAC", href: "http://naac.gov.in/index.php/en/", target: true },
     {
         title: "SSR",
         href: "https://sviet.org.in/wp-content/uploads/PBCOGN114641-Latest.pdf",
+        target: true
     },
-    { title: "NAD", href: "https://nad.gov.in/" },
-    { title: "AISHE", href: "https://aishe.gov.in/" },
-    { title: "ABC", href: "https://www.abc.gov.in/about.php" },
+    { title: "NAD", href: "https://nad.gov.in/", target: true },
+    { title: "AISHE", href: "https://aishe.gov.in/", target: true },
+    { title: "ABC", href: "https://www.abc.gov.in/about.php", target: true },
 ];
 
 const statutoryCells = [
@@ -55,14 +61,14 @@ const statutoryCells = [
     { title: "Women Grievances Cell", href: "/womens-cell" },
     { title: "Anti-ragging Committee", href: "/anti-ragging-policy" },
     { title: "OBC Cell", href: "/obc-cell-2" },
-    { title: "Internal Complaints Cell", href: "/examination-cell" },
-    { title: "Women Helpline", href: "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-04-09-at-19.17.31_881ebde6.jpg" },
+    { title: "Internal Complaints Cell", href: "/internal-complaint-cell" },
+    { title: "Women Helpline", href: "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-04-09-at-19.17.31_881ebde6.jpg", target: true },
 ];
 
 const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/svietofficial.com", label: "Facebook" },
-    { icon: Instagram, href: "https://www.instagram.com/svietofficial", label: "Instagram" },
-    { icon: Youtube, href: "https://www.youtube.com/@svietchandigarh3067", label: "YouTube" },
+    { icon: Facebook, href: "https://www.facebook.com/svietofficial.com", label: "Facebook", target: true, target: true },
+    { icon: Instagram, href: "https://www.instagram.com/svietofficial", label: "Instagram", target: true },
+    { icon: Youtube, href: "https://www.youtube.com/@svietchandigarh3067", label: "YouTube", target: true },
 ];
 
 export default function Footer() {
@@ -83,7 +89,7 @@ export default function Footer() {
                         className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors bg-transparent"
                         asChild
                     >
-                        <Link to="/apply">Apply</Link>
+                        <Link target="_blank" to="https://admission.sviet.ac.in/">Apply</Link>
                     </Button>
                 </div>
             </div>
@@ -163,6 +169,7 @@ export default function Footer() {
                             <nav className="space-y-2">
                                 {quickLinks.map((link) => (
                                     <Link
+                                        target={link.target ? "_blank" : undefined}
                                         key={link.href}
                                         to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
@@ -181,6 +188,7 @@ export default function Footer() {
                             <nav className="space-y-2">
                                 {importantLinks.map((link) => (
                                     <Link
+                                        target={link.target ? "_blank" : undefined}
                                         key={link.href}
                                         to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
@@ -199,6 +207,7 @@ export default function Footer() {
                             <nav className="space-y-2">
                                 {statutoryCells.map((link) => (
                                     <Link
+                                        target={link.target ? "_blank" : undefined}
                                         key={link.href}
                                         to={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
@@ -218,6 +227,7 @@ export default function Footer() {
                                     const Icon = social.icon;
                                     return (
                                         <Link
+                                            target={social.target ? "_blank" : undefined}
                                             key={social.href}
                                             to={social.href}
                                             className="p-2 rounded-full bg-slate-700 hover:bg-blue-600 transition-colors"

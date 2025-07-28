@@ -1,10 +1,9 @@
-import Herosection from "@/components/Herosection";
 import React from "react";
+import Herosection from "@/components/Herosection";
 import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Masonry from "react-masonry-css";
-const Books = () => {
-  const images = [
+import { LazyLoadImage } from "react-lazy-load-image-component";
+const images = [
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.35-PM-1-e1708253473241-768x946.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.03-PM-e1708253519281.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.05-PM-e1708253554757-768x945.jpeg",
@@ -42,57 +41,53 @@ const Books = () => {
     "https://sviet.org.in/wp-content/uploads/handbook-ml.png",
     "https://sviet.org.in/wp-content/uploads/cloud.png",
     "https://sviet.org.in/wp-content/uploads/big-data.png",
-  ];
-  return (
-    <>
-      <Helmet>
-        <title>Books - SVIET</title>
-      </Helmet>
+];
+const Activity = () => {
+    const heading = "Activities"
+    const shortDescription = "Various activities are organized within SVIET where students get the opportunity to learn and enhance their skills."
+    return (
+        <>
+            <Helmet>
+                <title>{heading} - SVIET</title>
+            </Helmet>
+            <Herosection
+                heading={heading}
+                shortDescription={shortDescription}
+                imgSrc={"/placeholder.svg"}
+            />
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                            Photo Gallery
+                        </h2>
 
-        <Herosection
-          isIqac={false}
-          heading={"Books and Edited Chapters"}
-          shortDescription={`Books and edited chapters are compilations where individual authors contribute specific sections, curated and organized by editors.
-`}
-          imgSrc={"/placeholder.svg"}
-        />
+                        <Masonry
+                            breakpointCols={{
+                                default: 4,
+                                1100: 3,
+                                700: 2,
+                                500: 1,
+                            }}
+                            className="flex w-auto -ml-4"
+                            columnClassName="pl-4 bg-clip-padding"
+                        >
+                            {images.map((image) => (
+                                <div className="mb-4">
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        src={image}
+                                        className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                    />
+                                </div>
+                            ))}
+                        </Masonry>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+}
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-                Books and Edited Chapters
-              </h2>
-
-              <Masonry
-                breakpointCols={{
-                  default: 4,
-                  1100: 3,
-                  700: 2,
-                  500: 1,
-                }}
-                className="flex w-auto -ml-4"
-                columnClassName="pl-4 bg-clip-padding"
-              >
-                {images.map((image) => (
-                  <div className="mb-4">
-                    <LazyLoadImage
-                      effect="blur"
-                      src={image}
-                      className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                    />
-                  </div>
-                ))}
-              </Masonry>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default Books;
+export default Activity
