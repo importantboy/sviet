@@ -5,6 +5,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Masonry from "react-masonry-css";
 const Books = () => {
   const images = [
+    "/books/1.jpeg",
+    "/books/2.jpeg",
+    "/books/3.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.35-PM-1-e1708253473241-768x946.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.03-PM-e1708253519281.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.05-PM-e1708253554757-768x945.jpeg",
@@ -77,8 +80,8 @@ const Books = () => {
                 className="flex w-auto -ml-4"
                 columnClassName="pl-4 bg-clip-padding"
               >
-                {images.map((image) => (
-                  <div className="mb-4">
+                {images.map((image, index) => (
+                  <div className="mb-4" key={index}>
                     <LazyLoadImage
                       effect="blur"
                       src={image || "/placeholder.svg"}

@@ -49,6 +49,7 @@ import WomenCell from "./pages/FooterPages/WomenCell"
 import AntiRagging from "./pages/FooterPages/AntiRagging"
 import ObcCell from "./pages/FooterPages/ObcCell"
 import InternalComplaintCell from "./pages/FooterPages/InternalComplaintCell"
+import Publication from "./pages/Research/Publication"
 
 function App() {
   return (
@@ -96,8 +97,7 @@ function App() {
           <Route path="/womens-cell" element={<WomenCell />} />
           <Route path="/obc-cell-2" element={<ObcCell />} />
           <Route path="/internal-complaint-cell" element={<InternalComplaintCell />} />
-
-
+          <Route path="/publication" element={<Publication />} />
           <Route path="/anti-ragging-policy" element={<AntiRagging />} />
           <Route path="/sc-st-committee" element={<ScSt />} />
           <Route path="/grievance-redressal-committee" element={<Grivence />} />

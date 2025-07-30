@@ -3,10 +3,8 @@ tasks to do :
 responsiveness , latest notices
 
 {declaration : /}
-{publication : /}
 {patents : /}
 {collaboration : /}
-contact us : https://www.sviet.ac.in/contact-us
 
 
 done pages : 
@@ -35,3 +33,6 @@ done pages :
 # green and clean campus
 # we are internaitional
 # hr manual
+
+
+research paper " 

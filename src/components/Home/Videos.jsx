@@ -3,13 +3,35 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const videosData = [
     {
         id: 1,
+        title: "Spontania 2025",
+        videoId: "IQ_xXaaIZlY",
+        thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
+        description: "Spontania 2025: A Grand Symphony of Spirit & Soul",
+    },
+    {
+        id: 2,
+        title: "Excellence",
+        videoId: "H-C8PqxuUO4",
+        thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
+        description: "🎓 Excellence Begins with Expertise 🌟",
+    },
+    {
+        id: 8,
+        title: "Global Futures Summit 2.0",
+        videoId: "-yiKU0KLA0k",
+        thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
+        description: "Global Futures Summit 2.0 | Industry & HR Perspectives 2025",
+
+    },
+    {
+        id: 6,
         title: "PARICHAY 2K21",
         videoId: "VcUhc3SL43Q",
         thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
         description: "Freshers party celebration showcasing student talent and creativity",
     },
     {
-        id: 2,
+        id: 7,
         title: "SUPER 60",
         videoId: "7NJEu-3hTI4",
         thumbnail: "/placeholder.svg?height=200&width=350&text=SUPER+60",
@@ -32,7 +54,7 @@ const videosData = [
     {
         id: 5,
         title: "Campus Overview",
-        videoId: "CcF3eSbTJz0",
+        videoId: "nmcOsY0vIzY",
         thumbnail: "/placeholder.svg?height=200&width=350&text=Campus+Overview",
         description: "Virtual tour of our state-of-the-art facilities",
     },

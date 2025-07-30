@@ -158,7 +158,7 @@ const navigationItems = [
     {
         title: "Research",
         items: [
-            { title: "Publications", href: "/", },
+            { title: "Publications", href: "/publication", },
             { title: "Patents", href: "/" },
             { title: "Books and Edited Chapters", href: "/books" },
             { title: "Collaborations", href: "/" },

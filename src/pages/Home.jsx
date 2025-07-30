@@ -87,7 +87,7 @@ export default function HomePage() {
                             <div className="relative">
                                 <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-2xl">
                                     <iframe
-                                        src="https://www.youtube.com/embed/CcF3eSbTJz0"
+                                        src="https://www.youtube.com/embed/nmcOsY0vIzY"
                                         title="Campus Overview"
                                         className="w-full h-full"
                                         frameBorder="0"

@@ -3,6 +3,11 @@ import { Helmet } from 'react-helmet'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Masonry from 'react-masonry-css';
 const images = [
+    "/news/1.jpeg",
+    "/news/2.jpeg",
+    "/news/3.jpeg",
+    "/news/4.jpeg",
+
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-20-at-11.23.21-AM.jpeg", "https://sviet.org.in/wp-content/uploads/Prarmbh-2.jpeg"
     , "https://sviet.org.in/wp-content/uploads/Prarmbh.jpeg",
     "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-20-at-11.23.19-AM-1.jpeg",
@@ -101,8 +106,8 @@ const SvietInMedia = () => {
                                 className="flex w-auto -ml-4"
                                 columnClassName="pl-4 bg-clip-padding"
                             >
-                                {images.map((image) => (
-                                    <div className="mb-4">
+                                {images.map((image, key) => (
+                                    <div key={key} className="mb-4">
                                         <LazyLoadImage
                                             onClick={() => window.open(image)}
                                             effect="blur"
