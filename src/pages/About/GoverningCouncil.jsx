@@ -79,7 +79,7 @@ const GoverningCouncil = () => {
           </div>
 
           {/* Table View for Desktop */}
-          <div className="hidden lg:block">
+          <div className="block">
             <Card className="shadow-lg pt-0 overflow-hidden ">
               <CardContent className="p-0">
                 <Table >
@@ -117,28 +117,6 @@ const GoverningCouncil = () => {
             </Card>
           </div>
 
-          {/* Card View for Mobile/Tablet */}
-          <div className="lg:hidden grid md:grid-cols-2 gap-6">
-            {boardMembers.map((member, index) => (
-              <Card
-                key={index}
-                className="shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-
-                    <div>
-                      <h3 className="text-lg font-bold text-blue-900">
-                        {member.name}
-                      </h3>
-                      <p className="text-blue-600 font-medium">{member.position}</p>
-                    </div>
-                  </div>
-
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
     </>)

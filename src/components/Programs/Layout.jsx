@@ -133,7 +133,7 @@ export default function Layout({ heroSectionImage, overviewImg, isPg = false, la
                                     alt={courseName}
                                     className="rounded-lg shadow-xl w-full h-auto object-cover"
                                 />
-                                <div className="absolute -bottom-6 -right-6 bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                                <div className="absolute -bottom-10 -right-3  md:-bottom-6 md:-right-6 bg-blue-900 text-white p-4 rounded-lg shadow-lg">
                                     <div className="text-center">
                                         <div className="text-2xl font-bold">{data[0].value} </div>
                                         <div className="text-blue-200 text-sm">{data[1].value}</div>

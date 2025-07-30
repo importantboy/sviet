@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Users, Calendar, MapPin, Target, CheckCircle, Clock, Building, Phone, Mail } from "lucide-react"
+import { Users, Calendar, MapPin, Target, CheckCircle, Clock, Building,  } from "lucide-react"
 const boardFunctions = [
   {
     title: "Academic Oversight",
@@ -129,7 +129,7 @@ const BoardsOfManagement = () => {
             </div>
 
             {/* Table View for Desktop */}
-            <div className="hidden lg:block">
+            <div className="block">
               <Card className="shadow-lg pt-0 overflow-hidden ">
                 <CardContent className="p-0">
                   <Table >
@@ -162,28 +162,7 @@ const BoardsOfManagement = () => {
               </Card>
             </div>
 
-            {/* Card View for Mobile/Tablet */}
-            <div className="lg:hidden grid md:grid-cols-2 gap-6">
-              {boardMembers.map((member, index) => (
-                <Card
-                  key={index}
-                  className="shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center space-x-4 mb-4">
-
-                      <div>
-                        <h3 className="text-lg font-bold text-blue-900">
-                          {member.name}
-                        </h3>
-                        <p className="text-blue-600 font-medium">{member.position}</p>
-                      </div>
-                    </div>
-
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            
           </div>
         </section>
 
@@ -289,7 +268,7 @@ const BoardsOfManagement = () => {
                 </Card>
 
                 <Card className="shadow-lg pt-0 overflow-hidden">
-                  <CardHeader className= "py-4 bg-orange-50">
+                  <CardHeader className="py-4 bg-orange-50">
                     <CardTitle className="text-2xl text-orange-800 flex items-center">
                       <Calendar className="mr-3 h-6 w-6" />
                       Term Duration

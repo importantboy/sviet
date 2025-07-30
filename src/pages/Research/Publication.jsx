@@ -1,5 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Card, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 import { data } from './output'
 const Publication = () => {
@@ -19,69 +21,72 @@ const Publication = () => {
                             Publications
                         </h2>
 
+                        <section className="py-16 bg-white">
+                            <div className="container mx-auto px-4">
+                                <div className="max-w-6xl mx-auto">
 
-                        <div className="overflow-x-auto">
-                            <table className="w-full border-collapse border border-gray-300">
-                                <thead>
-                                    <tr className="bg-gray-100">
+                                    <div className="block">
+                                        <Card className="shadow-lg pt-0 overflow-hidden ">
+                                            <CardContent className="p-0">
+                                                <Table >
+                                                    <TableHeader>
+                                                        <TableRow className="bg-blue-50">
 
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            Sr. No.
-                                        </th>
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            Title of Paper
-                                        </th>
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            Name of the Author/s
-                                        </th>
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            Year
-                                        </th>
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            ISSN Number
-                                        </th>
-                                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                                            Link for Papers
-                                        </th>
+                                                            <TableHead className="font-bold py-4 px-10 text-blue-900">
+                                                                Sr. No
+                                                            </TableHead>
+
+                                                            <TableHead className="font-bold py-4  px-10 text-blue-900">
+                                                                Title of Paper
+                                                            </TableHead>
+                                                            <TableHead className="font-bold py-4 px-10 text-blue-900">
+                                                                Name of the Author/s
+                                                            </TableHead>
+                                                            <TableHead className="font-bold py-4 px-10 text-blue-900">
+                                                                Year
+                                                            </TableHead>
+                                                            <TableHead className="font-bold py-4 px-10 text-blue-900">
+                                                                ISSN Number
+                                                            </TableHead>
+                                                            <TableHead className="font-bold py-4 px-10 text-blue-900">
+                                                                Link for Papers
+                                                            </TableHead>
+                                                        </TableRow>
+                                                    </TableHeader>
+                                                    <TableBody >
+
+                                                        {data.map((item, index) => (
+                                                            <TableRow className=" hover:bg-gray-50">
+                                                                <TableCell className="font-semibold py-4 px-10">
+                                                                    {index + 1}
+                                                                </TableCell>
+                                                                <TableCell className="py-4 max-w-60 whitespace-normal break-words font-medium px-10">
+                                                                    {item['Title of Paper']}
+                                                                </TableCell>
+                                                                <TableCell className="font-semibold py-4 px-10">
+                                                                    {item['Name of the Author/s']}
+                                                                </TableCell>
+                                                                <TableCell className="font-semibold py-4 px-10">
+                                                                    {item['Year ']}
+                                                                </TableCell>
+                                                                <TableCell className="font-semibold py-4 px-10">
+                                                                    {item['ISSN Number']}
+                                                                </TableCell>
+                                                                <TableCell className="text-center text-blue-500 underline font-semibold py-4 px-10">
+                                                                    <span className='cursor-pointer' onClick={()=>window.open(`${item['Link for Papers']}`)}>
+                                                                        View
+                                                                    </span>
+                                                                </TableCell>
+                                                            </TableRow>
+                                                        ))}
+                                                    </TableBody>
+                                                </Table>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                </div></div></section>
 
 
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data.map((item, key) => (<tr key={key}>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            {key + 1}
-                                        </td>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            {item["Title of Paper"]}
-                                        </td>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            {item["Name of the Author/s"]}
-                                        </td>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            {item["Year "]}
-                                        </td>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            {item["ISSN Number"]}
-                                        </td>
-                                        <td className="border border-gray-300 px-4 py-3">
-                                            <a
-                                                className='text-blue-400 underline'
-                                                target='_blank'
-                                                href={item['Link for Papers']}
-                                            >
-                                                View
-                                            </a>
-                                        </td>
-
-
-                                    </tr>))}
-
-
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </section>

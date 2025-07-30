@@ -287,52 +287,51 @@ export default function Placements() {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = Number(entry.target.dataset.index)
 
-                        setStatsData((prevStats) => {
-                            if (!prevStats[index].hasAnimated) {
-                                const newStats = [...prevStats]
-                                newStats[index] = { ...newStats[index], hasAnimated: true }
+                    const index = Number(entry.target.dataset.index)
 
-                                const targetValueStr = newStats[index].value.replace(/[^\d.]/g, "")
-                                const targetValue = Number.parseFloat(targetValueStr)
-                                const suffix = newStats[index].value.replace(/[\d.]/g, "")
-                                const duration = 2000 // 2 seconds
-                                const steps = 60
-                                const increment = targetValue / steps
-                                const stepDuration = duration / steps
+                    setStatsData((prevStats) => {
+                        if (!prevStats[index].hasAnimated) {
+                            const newStats = [...prevStats]
+                            newStats[index] = { ...newStats[index], hasAnimated: true }
 
-                                let currentCount = 0
-                                const timer = setInterval(() => {
-                                    currentCount += increment
-                                    if (currentCount >= targetValue) {
-                                        setStatsData((innerPrevStats) => {
-                                            const innerNewStats = [...innerPrevStats]
-                                            innerNewStats[index] = {
-                                                ...innerNewStats[index],
-                                                count: targetValue,
-                                            }
-                                            return innerNewStats
-                                        })
-                                        clearInterval(timer)
-                                    } else {
-                                        setStatsData((innerPrevStats) => {
-                                            const innerNewStats = [...innerPrevStats]
-                                            innerNewStats[index] = {
-                                                ...innerNewStats[index],
-                                                count: Math.floor(currentCount),
-                                            }
-                                            return innerNewStats
-                                        })
-                                    }
-                                }, stepDuration)
-                                return newStats
-                            }
-                            return prevStats
-                        })
-                        observer.unobserve(entry.target) // Stop observing once animated
-                    }
+                            const targetValueStr = newStats[index].value.replace(/[^\d.]/g, "")
+                            const targetValue = Number.parseFloat(targetValueStr)
+                            const suffix = newStats[index].value.replace(/[\d.]/g, "")
+                            const duration = 20
+                            const steps = 20
+                            const increment = targetValue / steps
+                            const stepDuration = duration / steps
+
+                            let currentCount = 0
+                            const timer = setInterval(() => {
+                                currentCount += increment
+                                if (currentCount >= targetValue) {
+                                    setStatsData((innerPrevStats) => {
+                                        const innerNewStats = [...innerPrevStats]
+                                        innerNewStats[index] = {
+                                            ...innerNewStats[index],
+                                            count: targetValue,
+                                        }
+                                        return innerNewStats
+                                    })
+                                    clearInterval(timer)
+                                } else {
+                                    setStatsData((innerPrevStats) => {
+                                        const innerNewStats = [...innerPrevStats]
+                                        innerNewStats[index] = {
+                                            ...innerNewStats[index],
+                                            count: Math.floor(currentCount),
+                                        }
+                                        return innerNewStats
+                                    })
+                                }
+                            }, stepDuration)
+                            return newStats
+                        }
+                        return prevStats
+                    })
+                    observer.unobserve(entry.target) // Stop observing once animated
                 })
             },
             { threshold: 0.5 },
@@ -461,7 +460,7 @@ export default function Placements() {
                                     className="rounded-lg shadow-xl object-[0_10%] w-full h-auto object-cover max-h-[500px]"
                                     wrapperClassName=' w-full h-[500px] '
                                 />
-                                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                                <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-white p-4 rounded-lg shadow-lg">
                                     <div className="text-center">
                                         <p className="font-bold text-blue-900 text-sm">
                                             {directorMessage.name}
@@ -655,7 +654,7 @@ export default function Placements() {
                             </p>
                         </div>
 
-                        <div className="flex justify-center space-x-4 mb-8 overflow-x-auto pb-2">
+                        <div className="flex  space-x-4 mb-8 overflow-x-auto pb-2">
                             {placementChartsData.map((chart, index) => (
                                 <Button
                                     key={chart.id}
@@ -680,8 +679,8 @@ export default function Placements() {
                                             data={currentChart.data}
                                             margin={{
                                                 top: 5,
-                                                right: 30,
-                                                left: 20,
+                                                right: 1,
+                                                left: -30,
                                                 bottom: 5,
                                             }}
                                         >

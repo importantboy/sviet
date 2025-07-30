@@ -50,7 +50,7 @@ export default function FeedbackForm({
                 )}
                 {subHeading && <p className="text-lg text-gray-700 mb-8">{subHeading}</p>}
 
-                <Card className="shadow-lg p-6 md:p-8">
+                <Card className="shadow-lg px-0 py-6 md:p-8">
                     <CardContent>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {fields.map((field, index) => (
@@ -69,6 +69,7 @@ export default function FeedbackForm({
                                     )}
                                     {field.type === "date" && (
                                         <Input
+
                                             id={field.name}
                                             name={field.name}
                                             type="date"
@@ -95,7 +96,7 @@ export default function FeedbackForm({
                                             onValueChange={value =>
                                                 handleRadioChange(field.name, value)
                                             }
-                                            className="flex flex-col space-y-1"
+                                            className={`flex ${index % 2 == 0 ? "bg-white border-b pb-3":"bg-gray-50 rounded-md p-4"}  flex-col space-y-1`}
                                         >
                                             {field.options.map(option => (
                                                 <div

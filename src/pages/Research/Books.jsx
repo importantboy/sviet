@@ -83,6 +83,7 @@ const Books = () => {
                 {images.map((image, index) => (
                   <div className="mb-4" key={index}>
                     <LazyLoadImage
+                      onClick={() => window.open(image)}
                       effect="blur"
                       src={image || "/placeholder.svg"}
                       className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"

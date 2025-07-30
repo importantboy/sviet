@@ -41,10 +41,9 @@ const images = [
     "https://sviet.org.in/wp-content/uploads/333537140_587615529923317_3714043872433607417_n-1536x1024.jpg",
     "https://sviet.org.in/wp-content/uploads/333817201_1228727874734223_5813847537844253859_n-1536x1024.jpg",
     "https://sviet.org.in/wp-content/uploads/334435803_691821832630911_3883925620936567858_n-1536x1024.jpg",
-    "https://sviet.org.in/wp-content/uploads/363391880_684601730377523_136257783072353_n-1536x1152.jpg", "https://sviet.org.in/wp-content/uploads/363391880_684601730377523_136257783072353_n-1536x1152.jpg","https://sviet.org.in/wp-content/uploads/363386566_684609707043392_8187152458376467595_n.jpg","    https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg"
-    , "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",
-    "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",
-    "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",""
+    "https://sviet.org.in/wp-content/uploads/363391880_684601730377523_136257783072353_n-1536x1152.jpg",
+    "https://sviet.org.in/wp-content/uploads/363386566_684609707043392_8187152458376467595_n.jpg",
+    "    https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg"
 ]
 const Activity = () => {
     const heading = "Activities"

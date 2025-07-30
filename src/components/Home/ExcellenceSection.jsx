@@ -95,7 +95,7 @@ const ExcellenceSection = () => {
                 </div>
 
                 <div className="relative ">
-                    <div className="overflow-hidden mx-12">
+                    <div className="overflow-hidden mx-3 md:mx-12">
                         <div
                             className="flex py-2 transition-transform duration-500 ease-in-out "
                             style={{ transform: `translateX(-${currentExcellenceSlide * (100 / getCardsPerView())}%)` }}
@@ -103,7 +103,7 @@ const ExcellenceSection = () => {
                             {excellenceData.map((item) => (
                                 <Card
                                     key={item.id}
-                                    className="group mx-2 py-0 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm flex-shrink-0"
+                                    className="group  mx-2 py-0 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm flex-shrink-0"
                                     style={{ width: `calc(${100 / getCardsPerView()}% - 1rem)` }}
                                 >
                                     <div className="relative overflow-hidden">
@@ -129,7 +129,7 @@ const ExcellenceSection = () => {
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute left-0 -bottom-10 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentExcellenceSlide === 0}
                     >
                         <ChevronLeft className="h-6 w-6" />
@@ -137,7 +137,7 @@ const ExcellenceSection = () => {
 
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute right-0 -bottom-10 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentExcellenceSlide >= excellenceData.length - getCardsPerView()}
                     >
                         <ChevronRight className="h-6 w-6" />

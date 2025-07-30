@@ -9,7 +9,6 @@ import {
   Mail
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Helmet } from 'react-helmet'
 import Herosection from '@/components/Herosection'
 import ExcellenceSection from '@/components/Home/ExcellenceSection'
@@ -73,7 +72,6 @@ const keyHighlights = [
       "Maintaining highest standards of education with innovative teaching methodologies and research-oriented learning.",
     icon: BookOpen,
     color: "bg-blue-50 text-blue-600",
-    stats: "98% Pass Rate"
   },
   {
     title: "Industry Integration",
@@ -81,7 +79,6 @@ const keyHighlights = [
       "Strong partnerships with leading companies ensuring practical exposure and excellent placement opportunities.",
     icon: Globe,
     color: "bg-green-50 text-green-600",
-    stats: "150+ Partners"
   },
   {
     title: "Research & Innovation",
@@ -89,7 +86,6 @@ const keyHighlights = [
       "Cutting-edge research facilities and innovation labs fostering creativity and technological advancement.",
     icon: Lightbulb,
     color: "bg-purple-50 text-purple-600",
-    stats: "50+ Projects"
   },
   {
     title: "Holistic Development",
@@ -97,7 +93,6 @@ const keyHighlights = [
       "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
     icon: Heart,
     color: "bg-red-50 text-red-600",
-    stats: "360° Growth"
   }
 ]
 
@@ -234,9 +229,7 @@ const AboutSviet = () => {
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {highlight.description}
                       </p>
-                      <Badge className="bg-yellow-100 text-yellow-800">
-                        {highlight.stats}
-                      </Badge>
+                      
                     </CardContent>
                   </Card>
                 )

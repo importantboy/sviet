@@ -1,6 +1,7 @@
 import Herosection from "@/components/Herosection"
+import { Card, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Settings, CheckCircle } from "lucide-react"
-import { useRef } from "react"
 import { Helmet } from "react-helmet";
 const qualityAssuranceActivities = [
   {
@@ -137,84 +138,115 @@ export default function Iqac() {
               <p className="text-gray-700 mb-8">
                 The following member of Internal Quality Assurance cell (IQAC) to work towards realization of the goal of quality enhancement and develop a system for conscious, consistant and catalytic improvement in the overall preformance of the institution.
               </p>
+              <div className="block">
+                <Card className="shadow-lg pt-0 overflow-hidden ">
+                  <CardContent className="p-0">
+                    <Table >
+                      <TableHeader>
+                        <TableRow className="bg-blue-50">
 
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                        Position
-                      </th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
-                        Name
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Chairperson
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Dr. Pertik Garg (Principal-SVIET)                    </td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3">
-                        Administrative Officers
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Mr. Ankur Gupta (Director Finance)                    </td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3 align-top">
-                        Faculty Representative
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        <div>Ms. Vandana</div>
-                        <div>Ms. Navdeesh Kaur</div>
-                        <div>Ms. Shivani Guleria</div>
-                      </td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3">
-                        Management Representative
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Er. Vishal Garg (Director Admin & Secretarial)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Nominees from local society, students and alumini                    </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        <div>Ms. Pooja (Society Representative)</div>
-                        <div>Ronit Jai Prakash (Student Representative)</div>
-                        <div>Anam Rashid (Student Representative)</div>
-                        <div>Mr. Monarchdeep Singh Chahal (Alumni)</div>
-                      </td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-3">
-                        Employer/Industrialist Nominees                    </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        <div>Mr. Varun Garg (CEO, S-Digital Solutions),</div>
-                        <div>Mr. Tarun Singla (MD, ENERGOS TECH)</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-3">
-                        IQAC Director
-                      </td>
-                      <td className="border border-gray-300 px-4 py-3">
-                        Dr. Ashok Goyal
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                          <TableHead className="font-bold py-4 px-10 text-blue-900">
+                            Sr. No
+                          </TableHead>
+
+                          <TableHead className="font-bold py-4  px-10 text-blue-900">
+                            Position
+                          </TableHead>
+                          <TableHead className="font-bold py-4 px-10 text-blue-900">
+                            Name
+                          </TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody >
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {1}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Chairperson
+                          </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            Dr. Pertik Garg (Principal-SVIET)
+                          </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {2}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Administrative Officers
+                          </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            Mr. Ankur Gupta (Director Finance)                    </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {3}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Faculty Representative                    </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            <div>Ms. Vandana</div>
+                            <div>Ms. Navdeesh Kaur</div>
+                            <div>Ms. Shivani Guleria</div>
+                          </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {4}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Management Representative
+                          </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            Er. Vishal Garg (Director Admin & Secretarial)
+                          </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {5}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Nominees from local society, students and alumini                     </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            <div>Ms. Pooja (Society Representative)</div>
+                            <div>Ronit Jai Prakash (Student Representative)</div>
+                            <div>Anam Rashid (Student Representative)</div>
+                            <div>Mr. Monarchdeep Singh Chahal (Alumni)</div>                    </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {6}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            Employer/Industrialist Nominees                     </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            <div>Mr. Varun Garg (CEO, S-Digital Solutions),</div>
+                            <div>Mr. Tarun Singla (MD, ENERGOS TECH)</div>                    </TableCell>
+
+                        </TableRow>
+                        <TableRow className=" hover:bg-gray-50">
+                          <TableCell className="font-semibold py-4 px-10">
+                            {7}
+                          </TableCell>
+                          <TableCell className="py-4 font-medium px-10 text-blue-900">
+                            IQAC Director                     </TableCell>
+                          <TableCell className="font-semibold py-4 px-10">
+                            Dr. Ashok Goyal                    </TableCell>
+
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </CardContent>
+                </Card>
               </div>
-            </div>
-          </div>
-        </section>
+            </div></div></section>
+
 
         {/* Vision Section */}
         <section className="py-16 bg-gray-50">
@@ -243,7 +275,7 @@ export default function Iqac() {
               </div>
               <div className="relative">
                 <img
-                  src={"/Programs/vision.webp"||"/placeholder.svg?height=400&width=600"}
+                  src={"/Programs/vision.webp" || "/placeholder.svg?height=400&width=600"}
                   alt="Mission Target Achievement"
                   className="rounded-lg shadow-lg w-full"
                 />

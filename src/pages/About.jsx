@@ -183,7 +183,7 @@ const About = () => {
                                     alt="Campus Overview"
                                     className="rounded-lg shadow-xl w-full h-auto object-cover"
                                 />
-                                <div className="absolute -bottom-6 -right-6 bg-blue-900 text-white p-6 rounded-lg shadow-lg">
+                                <div className="absolute -bottom-11 -right-2 md:-bottom-6 md:-right-6 bg-blue-900 text-white p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-bold">Infinite Horizons</h3>
                                     <p className="text-blue-200">One Campus</p>
                                 </div>

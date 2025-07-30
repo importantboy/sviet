@@ -60,7 +60,7 @@ const Review = () => {
                     <p className="text-gray-600 text-base md:text-lg">Our reviews speak for us</p>
                 </div>
 
-                <div className="relative  max-w-6xl px-14 mx-auto">
+                <div className="relative  max-w-6xl px-3 md:px-14 mx-auto">
                     <div className="overflow-hidden  py-5 rounded-lg">
                         <div
                             className="flex transition-transform duration-500 ease-in-out"
@@ -101,7 +101,7 @@ const Review = () => {
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevTestimonialSlide}
-                        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute left-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentTestimonialSlide === 0}
                     >
                         <ChevronLeft className="h-6 w-6" />
@@ -109,7 +109,7 @@ const Review = () => {
 
                     <button
                         onClick={nextTestimonialSlide}
-                        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute right-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentTestimonialSlide >= testimonialsData.length - getTestimonialsPerView()}
                     >
                         <ChevronRight className="h-6 w-6" />
@@ -129,12 +129,7 @@ const Review = () => {
                         )}
                     </div>
 
-                    {/* Testimonial counter */}
-                    <div className="text-center mt-4">
-                        <span className="text-sm text-gray-500">
-                            {currentTestimonialSlide +2} of {testimonialsData.length}
-                        </span>
-                    </div>
+                    
                 </div>
             </div>
         </section>

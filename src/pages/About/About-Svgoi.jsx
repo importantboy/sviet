@@ -9,7 +9,6 @@ import {
   Mail
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Helmet } from 'react-helmet'
 import Herosection from '@/components/Herosection'
 import ExcellenceSection from '@/components/Home/ExcellenceSection'
@@ -22,7 +21,6 @@ const keyHighlights = [
       "Maintaining highest standards of education with innovative teaching methodologies and research-oriented learning.",
     icon: BookOpen,
     color: "bg-blue-50 text-blue-600",
-    stats: "98% Pass Rate"
   },
   {
     title: "Industry Integration",
@@ -30,7 +28,6 @@ const keyHighlights = [
       "Strong partnerships with leading companies ensuring practical exposure and excellent placement opportunities.",
     icon: Globe,
     color: "bg-green-50 text-green-600",
-    stats: "150+ Partners"
   },
   {
     title: "Research & Innovation",
@@ -38,7 +35,6 @@ const keyHighlights = [
       "Cutting-edge research facilities and innovation labs fostering creativity and technological advancement.",
     icon: Lightbulb,
     color: "bg-purple-50 text-purple-600",
-    stats: "50+ Projects"
   },
   {
     title: "Holistic Development",
@@ -46,58 +42,57 @@ const keyHighlights = [
       "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
     icon: Heart,
     color: "bg-red-50 text-red-600",
-    stats: "360° Growth"
   }
 ]
 const opportunitiesData = [
-    {
-        id: 1,
-        title: "Cutting-Edge Laboratories",
-        shortTitle: "Cutting-Edge Laboratories",
-        description:
-            "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
-        image: "/Home/projectbased.JPG",
-    },
-    {
-        id: 2,
-        title: "Central Library",
-        shortTitle: "Central Library",
-        description:
-            "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
-        image: "/About/library.jpeg",
-    },
-    {
-        id: 3,
-        title: "Research Laboratories",
-        shortTitle: "Research Laboratories",
-        description:
-            "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
-        image: "/Home/research.JPG",
-    },
-    {
-        id: 4,
-        title: "Scholarship Opportunities",
-        shortTitle: "Scholarship Opportunities",
-        description:
-            "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
-        image: "/About/scholership.JPG",
-    },
-    {
-        id: 5,
-        title: "Sports Facilities",
-        shortTitle: "Sports Facilities",
-        description:
-            "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
-        image: "/Home/sports.jpg",
-    },
-    {
-        id: 6,
-        title: "Industrial Collaboration",
-        shortTitle: "Industrial Collaboration",
-        description:
-            "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
-        image: "/About/collabs.jpeg",
-    },
+  {
+    id: 1,
+    title: "Cutting-Edge Laboratories",
+    shortTitle: "Cutting-Edge Laboratories",
+    description:
+      "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
+    image: "/Home/projectbased.JPG",
+  },
+  {
+    id: 2,
+    title: "Central Library",
+    shortTitle: "Central Library",
+    description:
+      "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
+    image: "/About/library.jpeg",
+  },
+  {
+    id: 3,
+    title: "Research Laboratories",
+    shortTitle: "Research Laboratories",
+    description:
+      "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
+    image: "/Home/research.JPG",
+  },
+  {
+    id: 4,
+    title: "Scholarship Opportunities",
+    shortTitle: "Scholarship Opportunities",
+    description:
+      "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
+    image: "/About/scholership.JPG",
+  },
+  {
+    id: 5,
+    title: "Sports Facilities",
+    shortTitle: "Sports Facilities",
+    description:
+      "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
+    image: "/Home/sports.jpg",
+  },
+  {
+    id: 6,
+    title: "Industrial Collaboration",
+    shortTitle: "Industrial Collaboration",
+    description:
+      "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
+    image: "/About/collabs.jpeg",
+  },
 
 ]
 
@@ -118,7 +113,7 @@ const quickInfo = [
     title: "Email Addresses",
     content: "info@sviet.org.in | admission@sviet.org.in"
   },
-  
+
 ]
 const AboutSvgoi = () => {
   return (
@@ -198,7 +193,7 @@ const AboutSvgoi = () => {
         <OppertunitiesPage opportunitiesData={opportunitiesData} heading={"SVGOI"} />
         {/* recruter */}
         <Recruter />
-      
+
         {/* Key Highlights */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -232,7 +227,7 @@ const AboutSvgoi = () => {
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {highlight.description}
                       </p>
-                     
+
                     </CardContent>
                   </Card>
                 )

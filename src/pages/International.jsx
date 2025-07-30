@@ -319,7 +319,7 @@ const International = () => {
                                     className="rounded-lg shadow-xl object-[0_10%] w-full h-auto object-cover max-h-[500px]"
                                     wrapperClassName=' w-full h-[500px] '
                                 />
-                                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                                <div className="absolute md:-bottom-6 bottom-4 -right-2 md:-right-6 bg-white p-4 rounded-lg shadow-lg">
                                     <div className="text-center">
                                         <p className="font-bold text-blue-900 text-sm">
                                             {directorMessage.name}

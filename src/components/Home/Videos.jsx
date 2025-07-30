@@ -1,19 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChevronRight, ChevronLeft } from "lucide-react";
 const videosData = [
-    {
-        id: 1,
-        title: "Spontania 2025",
-        videoId: "IQ_xXaaIZlY",
-        thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
-        description: "Spontania 2025: A Grand Symphony of Spirit & Soul",
-    },
+   
     {
         id: 2,
         title: "Excellence",
         videoId: "H-C8PqxuUO4",
         thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
         description: "🎓 Excellence Begins with Expertise 🌟",
+    },
+    {
+        id: 1,
+        title: "Spontania 2025",
+        videoId: "IQ_xXaaIZlY",
+        thumbnail: "/placeholder.svg?height=200&width=350&text=PARICHAY+2K21",
+        description: "Spontania 2025: A Grand Symphony of Spirit & Soul",
     },
     {
         id: 8,

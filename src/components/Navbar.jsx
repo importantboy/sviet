@@ -332,7 +332,7 @@ export default function Navbar() {
                                     src={"/college-logo.webp" || "/placeholder.svg"}
                                     alt="College Logo"
 
-                                    className="h-14"
+                                    className="h-10 md:h-14"
                                 />
                             </a>
                         </div>
@@ -382,15 +382,13 @@ export default function Navbar() {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="left" className="w-80 overflow-y-auto">
-                                <SheetHeader>
-                                    <SheetTitle className="text-left">Navigation</SheetTitle>
+                                <SheetHeader className={"border-b"}>
+                                    <SheetTitle className="text-left">Quick Links</SheetTitle>
                                 </SheetHeader>
-                                <div className="mt-6 space-y-2">
+                                <div className=" space-y-2 ">
                                     {/* Top nav links for mobile */}
                                     <div className="border-b pb-4 mb-4">
-                                        <h3 className="font-semibold text-sm text-gray-500 uppercase tracking-wide mb-2">
-                                            Quick Links
-                                        </h3>
+
                                         <div className="space-y-1">
                                             {topNavLinks.map(link => (
                                                 <a
