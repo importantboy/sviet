@@ -110,6 +110,8 @@ const CivilEngineeringDiploma = () => {
         <>
 
             <Layout
+                heroSectionImage={"/Programs/civil.webp"}
+                overviewImg={"/Programs/civil.JPG"}
                 affiliation={"Affiliated to PSBTE & IT, Chandigarh Approved by AICTE"}
                 programHighlights={programHighlights}
                 programOutcomes={programOutcomes}

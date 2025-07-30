@@ -16,7 +16,7 @@ const opportunitiesData = [
         shortTitle: "Cutting-Edge Laboratories",
         description:
             "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
-        image: "/projectbased.JPG",
+        image: "/Home/projectbased.JPG",
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const opportunitiesData = [
         shortTitle: "Central Library",
         description:
             "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
-        image: "/library.jpeg",
+        image: "/About/library.jpeg",
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const opportunitiesData = [
         shortTitle: "Research Laboratories",
         description:
             "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
-        image: "/research.JPG",
+        image: "/Home/research.JPG",
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const opportunitiesData = [
         shortTitle: "Scholarship Opportunities",
         description:
             "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
-        image: "/scholership.JPG",
+        image: "/About/scholership.JPG",
     },
     {
         id: 5,
@@ -48,7 +48,7 @@ const opportunitiesData = [
         shortTitle: "Sports Facilities",
         description:
             "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
-        image: "/sports.jpg",
+        image: "/Home/sports.jpg",
     },
     {
         id: 6,
@@ -56,11 +56,10 @@ const opportunitiesData = [
         shortTitle: "Industrial Collaboration",
         description:
             "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
-        image: "/collabs.jpeg",
+        image: "/About/collabs.jpeg",
     },
 
 ]
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import OppertunitiesPage from '@/components/About/Oppertunities'
@@ -127,31 +126,31 @@ const campusFacilities = [
         title: "Research Centres",
         description:
             "Our state-of-the-art research centers provide the perfect environment for students to explore and innovate. From cutting-edge laboratories to collaborative workspaces, our research facilities empower students to push the boundaries of knowledge.",
-        image: "/researchcenter.webp"
+        image: "/About/researchcenter.webp"
     },
     {
         title: "Library",
         description:
             "Our extensive library is a treasure trove of knowledge, offering students access to a vast collection of books, journals, and online resources. It provides a quiet and conducive environment for study and research.",
-        image: "/library.webp"
+        image: "/About/library.webp"
     },
     {
         title: "Labs",
         description:
             "Our well-equipped laboratories provide students with hands-on experience and practical skills in their chosen fields. From computer labs to engineering labs, our facilities support experiential learning and innovation.",
-        image: "/research.JPG"
+        image: "/Home/research.JPG"
     },
     {
         title: "Sports & Recreation Complex",
         description:
             "Our sprawling playgrounds offer students the opportunity to stay active and healthy. From sports fields to recreational areas, our campus provides a vibrant and dynamic environment for physical activity and leisure.",
-        image: "/sports.jpg"
+        image: "/Home/sports.jpg"
     },
     {
         title: "Cafeteria & Dining Facilities",
         description:
             "Hygienic and spacious dining facilities serving nutritious meals with variety of cuisines in a comfortable and clean environment.",
-        image: "/cafeteria.webp"
+        image: "/About/cafeteria.webp"
     }
 ]
 
@@ -171,7 +170,7 @@ const About = () => {
                     shortDescription={`Swami Vivekanand Group of Institutes was established in 2004 under the aegis of Sh.Raghunath Rai Memorial Education & Charitable Trust. The governing body is headed by Sh. Ashwani Garg and Sh.Ashok Garg.`}
                     btnText1={"Our Legacy"}
                     btn1Href={"/from-the-management"}
-                    imgSrc={"/placeholder.svg"}
+                    imgSrc={"/Home/AddmissionCell.jpeg" || "/placeholder.svg"}
                 />
 
                 {/* Infinite Horizons Section */}
@@ -180,7 +179,7 @@ const About = () => {
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="relative">
                                 <img
-                                    src="/placeholder.svg?height=500&width=600&text=Campus+Overview"
+                                    src={"/Home/about-auditorium.webp" || "/placeholder.svg"}
                                     alt="Campus Overview"
                                     className="rounded-lg shadow-xl w-full h-auto object-cover"
                                 />
@@ -369,10 +368,7 @@ const About = () => {
                                     <span className="text-yellow-400">Nexus Institute</span>
                                 </h2>
                                 <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                                    A vibrant cultural ecosystem where diverse traditions meet,
-                                    learn, and flourish together. Our Cultural Nexus Institute
-                                    fosters creativity, artistic expression, and cultural
-                                    understanding among students from various backgrounds.
+                                    We at SVGOI understand all these difficulties and to make the journey of our International students’ memorable one, we do all our efforts to provide them best experience.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-8">
@@ -390,7 +386,7 @@ const About = () => {
 
                             <div className="relative">
                                 <img
-                                    src="/cultural.JPG"
+                                    src={"/About/cultural.JPG" || "/placeholder.svg"}
                                     alt="Cultural Activities"
                                     className="rounded-lg shadow-xl w-full h-auto object-cover"
                                 />

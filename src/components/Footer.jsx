@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
     MapPin,
     Phone,
@@ -66,7 +65,7 @@ const statutoryCells = [
 ];
 
 const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/svietofficial.com", label: "Facebook", target: true, target: true },
+    { icon: Facebook, href: "https://www.facebook.com/svietofficial", label: "Facebook", target: true, },
     { icon: Instagram, href: "https://www.instagram.com/svietofficial", label: "Instagram", target: true },
     { icon: Youtube, href: "https://www.youtube.com/@svietchandigarh3067", label: "YouTube", target: true },
 ];
@@ -89,7 +88,7 @@ export default function Footer() {
                         className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors bg-transparent"
                         asChild
                     >
-                        <Link target="_blank" to="https://admission.sviet.ac.in/">Apply</Link>
+                        <a target="_blank" href="https://admission.sviet.ac.in/">Apply</a>
                     </Button>
                 </div>
             </div>
@@ -168,14 +167,14 @@ export default function Footer() {
                             </h3>
                             <nav className="space-y-2">
                                 {quickLinks.map((link) => (
-                                    <Link
+                                    <a
                                         target={link.target ? "_blank" : undefined}
                                         key={link.href}
-                                        to={link.href}
+                                        href={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
-                                    </Link>
+                                    </a>
                                 ))}
                             </nav>
                         </div>
@@ -187,14 +186,14 @@ export default function Footer() {
                             </h3>
                             <nav className="space-y-2">
                                 {importantLinks.map((link) => (
-                                    <Link
+                                    <a
                                         target={link.target ? "_blank" : undefined}
                                         key={link.href}
-                                        to={link.href}
+                                        href={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
-                                    </Link>
+                                    </a>
                                 ))}
                             </nav>
                         </div>
@@ -206,14 +205,14 @@ export default function Footer() {
                             </h3>
                             <nav className="space-y-2">
                                 {statutoryCells.map((link) => (
-                                    <Link
+                                    <a
                                         target={link.target ? "_blank" : undefined}
                                         key={link.href}
-                                        to={link.href}
+                                        href={link.href}
                                         className="block text-sm text-slate-300 hover:text-blue-400 transition-colors"
                                     >
                                         {link.title}
-                                    </Link>
+                                    </a>
                                 ))}
                             </nav>
                         </div>
@@ -226,15 +225,15 @@ export default function Footer() {
                                 {socialLinks.map((social) => {
                                     const Icon = social.icon;
                                     return (
-                                        <Link
+                                        <a
                                             target={social.target ? "_blank" : undefined}
                                             key={social.href}
-                                            to={social.href}
+                                            href={social.href}
                                             className="p-2 rounded-full bg-slate-700 hover:bg-blue-600 transition-colors"
                                             aria-label={social.label}
                                         >
                                             <Icon className="h-5 w-5 text-white" />
-                                        </Link>
+                                        </a>
                                     );
                                 })}
                             </div>

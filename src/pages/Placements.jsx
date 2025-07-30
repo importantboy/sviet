@@ -38,6 +38,76 @@ const youtubeVideos = [
         description: "Hear from our alumni about their enriching experiences and successful careers after SVIET.",
     },
 ]
+
+const latestPlacementDrive = [
+    {
+        id: 1,
+        imgSrc: "/Recruiters/aamil.18daa7b7.png",
+        title: "Aimil Ayouthveda Ltd",
+        description: "Aimil Ayouthveda Ltd. conducted a dynamic campus placement drive today at SVGOI for the B.Pharm 2024 batch, with 30 enthusiastic participants.The event showcased a fusion of talent and ambition, setting the stage for promising opportunities in the pharmaceutical industry.",
+        date: "08th February 2024"
+
+    },
+    {
+        id: 2,
+        imgSrc: "/Recruiters/ocean.2fd7a9db.png",
+        title: "Ocean Technologies Pvt. Ltd.",
+        description: "Ocean Technologies Pvt. Ltd. makes waves at SVIET campus recruitment drive!Exciting opportunities unfolded for B.Tech and diploma students in EE, ME, CSE, ECE, Civil, and MBA (2024) batches. ",
+        date: "01st December 2023"
+
+    },
+    {
+        id: 3,
+        imgSrc: "/Recruiters/Clicklabs.002df006.webp",
+        title: "Click Labs",
+        description: "SVGOI organized a successful placement drive today for the students of MBA and Super60 | Batch 2025 passing out by reputed company Click Labs!",
+        date: "22nd March 2024"
+
+    },
+    {
+        id: 4,
+        imgSrc: "/Recruiters/value.1541ddae.png",
+        title: "Value Prospect Consulting",
+        description: "Value Prospect Consulting’s Campus Drive at SVIET: 15 Students Land Dream Jobs! Mr. Pratik guides candidates through a rigorous 4-phase selection process. A big opportunity for the 2023, 2024, and 2025 batches.",
+        date: "04th April 2024"
+
+    },
+    {
+        id: 5,
+        imgSrc: "/Recruiters/placementday.2b5fc03a.jpg",
+        title: "Placement Day",
+        description: "After an incredible Placement Day event at SVIET, we’re thrilled to have hosted over 200 students from various colleges and universities across different states, including Government polytechnic colleges in Khuni Majra, Meham.",
+        date: "16th May 2024"
+    }, {
+        id: 6,
+        "title": "Global Futures Summit 2024",
+        "description": "Dive into our industry panel session covering market trends and cutting-edge technology! These snapshots capture the dynamic exchange between industry and academia, shaping tomorrow’s tech leaders. Join the fusion.",
+        "date": "23rd March 2024",
+        imgSrc: "/Recruiters/summit.a2de6a4f.webp"
+    },
+    {
+        id: 7,
+        imgSrc: "/Recruiters/Fair.adaf068c.jpg",
+        "title": "Pharma Career Fair 2024",
+        "description": "Today was an incredible day at SVGOI’s Pharma Career Fair 2024! Students had the chance to explore various job opportunities, network with industry leaders, and learn valuable insights about the pharmaceutical industry. The event...",
+        "date": "09th February 2024"
+    },
+    {
+        id: 8,
+        imgSrc: "/Recruiters/asdf.jpeg",
+        "title": "24x7 Software, Pune - On-Campus Placement Drive",
+        "description": "Training & Placement Cells, SVIET successfully organized an on-campus placement drive for B.Tech CSE Batch 2025, in collaboration with 24x7 Software, Pune. With over 70 student... participating.",
+        "date": "24th September 2024"
+    },
+    {
+        id: 9,
+        imgSrc: "/Recruiters/asdfasd.jpeg",
+        "title": "Skillkart Placement Drive - SVIET",
+        "description": "The Skillkart Placement Drive at SVIET was a huge success! With over 60+ enthusiastic students from B.Tech (CSE), BCA, MCA, BBA, B.Com, and MBA (Batch 2025) participating, th... day was filled with excitement and",
+        "date": "04st October 2024"
+    }
+]
+
 const placementStats = [
     { value: "3,000+", label: "Placements", icon: Briefcase },
     { value: "50 LPA", label: "Highest Package", icon: TrendingUp },
@@ -48,7 +118,7 @@ const placementStats = [
 const directorMessage = {
     name: "Mr. Shubham Garg",
     position: "Director Placements",
-    image: "/shubham.jpg",
+    image: "/Management/shubham.jpg",
     message:
         "Our aim is to provide Placements & Corporate Interface for the students and to make the students aware about the job opportunities and help them get placed. In the last fifteen years, Training & Placement Office (General) has been successfully able to place students of different courses & has invited reputed MNCs from, Social Sector, Information Technology, Manufacturing, ITES, Media, Services, Banking & Finance, etc. The Training & Placement Office (General) looks after the Campus Placements of the Engineering & Non-Engineering Courses of the College & Coordinates with the respective departmental TPO's regarding the Placement & related activities."
 }
@@ -106,143 +176,64 @@ const specialBatches = [
         name: "SUPER 60",
         description:
             "Specialized training program for top-performing students aiming for elite companies.",
-        image: "/placeholder.svg?height=200&width=300&text=SUPER+60"
+        image: "/Home/super60.JPG"
     },
     {
         name: "Google I/O Extended",
         description:
             "Exclusive workshops and sessions on Google technologies and innovations.",
-        image: "/placeholder.svg?height=200&width=300&text=Google+IO+Extended"
+        image: "/Programs/btechcse.webp"
     },
     {
         name: "Uniques",
         description:
             "Specialized training program for top-performing students aiming for elite companies.",
-        image: "/placeholder.svg?height=200&width=300&text=PARICHAY"
+        image: "/Programs/btech.JPG"
     }
 ]
 
-const studentSuccessStories = [
-    {
-        name: "Yash Khandalwal",
-        company: "Jio",
-        package: "50 LPA",
-        image: "/images/student-yash-khandalwal.png",
-        quote:
-            "SVIET provided me with the platform to achieve my dream package. The faculty and placement team were incredibly supportive."
-    },
-    {
-        name: "Prince Kumar",
-        company: "Wipro",
-        package: "10 LPA",
-        image: "/images/student-prince-kumar.png",
-        quote:
-            "The comprehensive training programs at SVIET prepared me thoroughly for the industry. I'm grateful for the opportunity to join Wipro."
-    },
-    {
-        name: "Abhay Gautam",
-        company: "Infosys",
-        package: "8.5 LPA",
-        image: "/images/student-abhay-gautam.png",
-        quote:
-            "The practical exposure and skill development at SVIET were key to my placement at Infosys. A truly enriching experience."
-    },
-    {
-        name: "Sukhmeet Kaur",
-        degree: "MBA",
-        company: "Hyundai Info Tech",
-        image: "/images/student-sukhmeet-kaur.png",
-        quote:
-            "I am happy to be a product of this esteemed institution. SVGOI not only provides a platform to enrich academically but also emphasises on the all-around development of the student. It provided a lot of opportunities for students to showcase their talents, which create a very pleasant and enriching atmosphere for students. We enjoy it a lot."
-    },
-    {
-        name: "Parveen",
-        degree: "B.Tech CSE",
-        company: "IDS Infotech",
-        image: "/images/student-parveen.png",
-        quote:
-            "I am grateful to have been given several opportunities, which enabled me to gain confidence and enough expertise to prove myself in any professional environment. With excellent tutors and innovative learning, I was able to pace myself after graduation. And I would like to thank the placement team, which provided me with the gateway to enter the professional industry."
-    },
-    {
-        name: "Shubham Raj",
-        degree: "B.Tech",
-        company: "Accenture",
-        image: "/images/student-shubham-raj.png",
-        quote:
-            "With the constant support and guidance of faculty members and placement cell, I got placed in Accenture Private Limited. SVGOI offers exposure to students through various curricular, non-curricular, and industry-related activities that help them choose their future field or industry. I am grateful to have been a part of such an institution."
-    },
-    {
-        name: "Student 1",
-        company: "TCS",
-        package: "6 LPA",
-        image: "/images/student-testimonial-1.png",
-        quote:
-            "Great Learning Experience and the college helped me to get placed in a good company."
-    },
-    {
-        name: "Student 2",
-        company: "Amazon",
-        package: "25 LPA",
-        image: "/images/student-testimonial-2.png",
-        quote: "It have broadened my horizons and helped me to achieve my dreams."
-    }
-]
 
-const topRecruiters = [
-    { name: "TCS", logo: "/images/company-tcs.png" },
-    { name: "Wipro", logo: "/images/company-wipro.png" },
-    { name: "Infosys", logo: "/images/company-infosys.png" },
-    { name: "Capgemini", logo: "/images/company-capgemini.png" },
-    { name: "HCL", logo: "/images/company-hcl.png" },
-    { name: "Cognizant", logo: "/images/company-cognizant.png" },
-    { name: "Jio", logo: "/images/company-jio.png" },
-    { name: "IBM", logo: "/images/company-ibm.png" },
-    { name: "Accenture", logo: "/images/company-accenture.png" },
-    { name: "Tech Mahindra", logo: "/images/company-tech-mahindra.png" },
-    { name: "Deloitte", logo: "/images/company-deloitte.png" },
-    { name: "Amazon", logo: "/images/company-amazon.png" },
-    { name: "Genpact", logo: "/images/company-genpact.png" },
-    { name: "HDFC Bank", logo: "/images/company-hdfc-bank.png" },
-    { name: "ICICI Bank", logo: "/images/company-icici-bank.png" },
-    { name: "Axis Bank", logo: "/images/company-axis-bank.png" },
-    { name: "Byju's", logo: "/images/company-byjus.png" },
-    { name: "NoBroker", logo: "/images/company-nobroker.png" }
-]
 
 const placementByCourseData = [
-    { name: "CSE", percentage: 90 },
-    { name: "ECE", percentage: 85 },
-    { name: "ME", percentage: 78 },
-    { name: "Civil", percentage: 70 },
-    { name: "MBA", percentage: 92 },
-    { name: "BCA", percentage: 88 },
+    { name: "Engineering", "Number Of Students": 93 },
+    { name: "Pharmacy", "Number Of Students": 95 },
+    { name: "Business Management", "Number Of Students": 89 },
+    { name: "Agriculture", "Number Of Students": 52 },
+    { name: "Computer Application", "Number Of Students": 91 },
+    { name: "Paramedical", "Number Of Students": 75 },
+    { name: "Hospitality and Catering", "Number Of Students": 87 },
+    { name: "Diploma", "Number Of Students": 50 },
+    { name: "Accounting", "Number Of Students": 55 },
+    { name: "Others", "Number Of Students": 45 },
 ]
 
 const companiesVisitedData = [
-    { year: "2020", companies: 150 },
-    { year: "2021", companies: 180 },
-    { year: "2022", companies: 220 },
-    { year: "2023", companies: 280 },
-    { year: "2024", companies: 350 },
+    { year: "2019", "Number of Companies": 143 },
+    { year: "2020", "Number of Companies": 140 },
+    { year: "2021", "Number of Companies": 203 },
+    { year: "2022", "Number of Companies": 240 },
+    { year: "2023", "Number of Companies": 255 },
 ]
 
 const packageOfferedData = [
-    { year: "2020", avgPackage: 6, highestPackage: 25 },
-    { year: "2021", avgPackage: 7.5, highestPackage: 30 },
-    { year: "2022", avgPackage: 8.2, highestPackage: 40 },
-    { year: "2023", avgPackage: 9.5, highestPackage: 45 },
-    { year: "2024", avgPackage: 10.5, highestPackage: 50 },
+    { year: "2017", "Package in LPA": 15 },
+    { year: "2018", "Package in LPA": 20 },
+    { year: "2019", "Package in LPA": 25.5 },
+    { year: "2020", "Package in LPA": 37 },
+    { year: "2021", "Package in LPA": 48 },
+    { year: "2022", "Package in LPA": 50 },
+    { year: "2023", "Package in LPA": 50 },
 ]
 
 const successRateData = [
-    { year: "2017", rate: 70 },
-    { year: "2018", rate: 75 },
-    { year: "2019", rate: 78 },
-    { year: "2020", rate: 80 },
-    { year: "2021", rate: 85 },
-    { year: "2022", rate: 88 },
-    { year: "2023", rate: 90 },
-    { year: "2024", rate: 92 },
+    { year: "2016", "Percetage Rate": 72 },
+    { year: "2017", "Percetage Rate": 82 },
+    { year: "2018", "Percetage Rate": 89 },
+    { year: "2019", "Percetage Rate": 95 },
+    { year: "2020", "Percetage Rate": 93 },
+    { year: "2021", "Percetage Rate": 96 },
+    { year: "2022", "Percetage Rate": 94 },
+    { year: "2023", "Percetage Rate": 92 },
 ]
 
 const placementChartsData = [
@@ -253,7 +244,7 @@ const placementChartsData = [
         description:
             "Consistent high placement rates across various engineering and management disciplines, reflecting the quality of our programs.",
         dataKeyX: "name",
-        dataKeyY: "percentage",
+        dataKeyY: "Number Of Students",
         barFill: "#FACC15", // yellow-400
     },
     {
@@ -263,31 +254,31 @@ const placementChartsData = [
         description:
             "Growing number of top-tier companies visiting our campus annually, indicating strong industry trust and demand for our graduates.",
         dataKeyX: "year",
-        dataKeyY: "companies",
+        dataKeyY: "Number of Companies",
         barFill: "#3B82F6", // blue-500
     },
     {
         id: "chart3",
-        title: "Package Offered to Students (LPA)",
+        title: "Industry Leading Pay Package Offered (Last 7 years)",
         data: packageOfferedData,
         description: "Analyzing the average and highest packages offered to our students, showcasing career growth.",
         dataKeyX: "year",
-        dataKeyY: "avgPackage",
-        barFill: "#10B981", // green-500
-        secondaryDataKeyY: "highestPackage",
-        secondaryBarFill: "#EF4444", // red-500
+        dataKeyY: "Package in LPA",
+        barFill: "#10B981", // red-500
     },
     {
         id: "chart4",
-        title: "Success Rate Last 8 Years",
+        title: "Success Rate (Last 8 Years)",
         data: successRateData,
         description: "Tracking the year-on-year success rate of our placements, demonstrating consistent improvement.",
         dataKeyX: "year",
-        dataKeyY: "rate",
+        dataKeyY: "Percetage Rate",
         barFill: "#8B5CF6", // purple-500
     },
 ]
 import { Button } from "@/components/ui/button"
+import Recruter from "@/components/About/Recruter"
+import Review from "@/components/Home/Review"
 export default function Placements() {
     const [currentChartIndex, setCurrentChartIndex] = useState(0)
     const currentChart = placementChartsData[currentChartIndex]
@@ -377,13 +368,13 @@ export default function Placements() {
                     btn1Href={"https://admission.sviet.ac.in/"}
                     btn1Target={true}
                     btnText1={"Apply for admission"}
-                    imgSrc={"/placeholder.svg"}
+                    imgSrc={"/About/placement.webp" || "/placeholder.webp"}
                     btn2Href={"https://www.sviet.ac.in/SVIET-Brochure-2025.pdf"}
                     btnText2={"Download Brochure"}
                 />
 
 
-              
+
 
                 {/* Placement Stats */}
                 <section
@@ -610,88 +601,12 @@ export default function Placements() {
 
 
                 {/* Top Company Recruiters */}
-                <section id="recruiters" className="py-16 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                                Our Top Company Recruiters
-                            </h2>
-                            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                                Leading national and multinational companies that trust our talent
-                            </p>
-                        </div>
 
-                        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                            {topRecruiters.map((recruiter, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white border border-gray-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center min-w-[120px] h-20"
-                                >
-                                    <img
-                                        src={recruiter.logo || "/placeholder.svg"}
-                                        alt={recruiter.name}
-                                        className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-
-                    </div>
-                </section>
+                <Recruter />
 
                 {/* Student Success Stories / Testimonials */}
-                <section
-                    id="testimonials"
-                    className="py-16 bg-gray-50"
-                >
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                                Our Students, Their Success
-                            </h2>
-                            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                                Celebrating the achievements of our talented students in top companies
-                            </p>
-                        </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {studentSuccessStories.map((student, index) => (
-                                <Card
-                                    key={index}
-                                    className="shadow-lg hover:shadow-xl transition-all duration-300"
-                                >
-                                    <CardContent className="p-6">
-                                        <div className="flex items-center mb-4">
-                                            <img
-                                                src={student.image || "/placeholder.svg"}
-                                                alt={student.name}
-                                                className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-blue-200"
-                                            />
-                                            <div>
-                                                <h3 className="text-lg font-bold text-blue-900">
-                                                    {student.name}
-                                                </h3>
-                                                {student.degree && (
-                                                    <p className="text-gray-600 text-sm">
-                                                        {student.degree}
-                                                    </p>
-                                                )}
-                                                <p className="text-blue-600 font-medium text-sm">
-                                                    {student.company}{" "}
-                                                    {student.package && `• ${student.package}`}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <blockquote className="text-gray-700 italic leading-relaxed text-sm">
-                                            "{student.quote}"
-                                        </blockquote>
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
+                <Review />
                 {/* Latest Placement Drives (from Image 2) */}
                 <section className="py-16 bg-white">
                     <div className="container mx-auto px-4">
@@ -705,62 +620,27 @@ export default function Placements() {
                         </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
-                                <img
-                                    src="/images/placement-drive-banner.png"
-                                    alt="Placement Drive"
-                                    className="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-bold text-blue-900 mb-2">
-                                        Mega Placement Drive 2024
-                                    </h3>
-                                    <p className="text-gray-700 text-sm mb-4">
-                                        Over 50 companies participated, offering diverse roles to our
-                                        graduating students.
-                                    </p>
-                                    <Badge className="bg-blue-100 text-blue-800">
-                                        Campus Recruitment
-                                    </Badge>
-                                </CardContent>
-                            </Card>
-                            <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
-                                <img
-                                    src="/placeholder.svg?height=400&width=600&text=Student+with+Offer+Letter"
-                                    alt="Student with Offer Letter"
-                                    className="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-bold text-blue-900 mb-2">
-                                        Success Stories Unveiled
-                                    </h3>
-                                    <p className="text-gray-700 text-sm mb-4">
-                                        Students celebrating their achievements with offer letters
-                                        from top companies.
-                                    </p>
-                                    <Badge className="bg-green-100 text-green-800">
-                                        Student Success
-                                    </Badge>
-                                </CardContent>
-                            </Card>
-                            <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
-                                <img
-                                    src="/placeholder.svg?height=400&width=600&text=Company+Representatives"
-                                    alt="Company Representatives"
-                                    className="w-full h-64 object-cover rounded-t-lg"
-                                />
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-bold text-blue-900 mb-2">
-                                        Industry Connect Session
-                                    </h3>
-                                    <p className="text-gray-700 text-sm mb-4">
-                                        Interactive sessions with company HRs and technical leads.
-                                    </p>
-                                    <Badge className="bg-purple-100 text-purple-800">
-                                        Industry Interaction
-                                    </Badge>
-                                </CardContent>
-                            </Card>
+                            {latestPlacementDrive.map((item) => (
+                                <Card key={item.id} className="shadow-lg py-0 overflow-hidden hover:shadow-xl transition-all duration-300">
+                                    <img
+                                        src={item.imgSrc || "/placeholder.svg"}
+                                        alt="Placement Drive"
+                                        className="w-full h-64 object-cover rounded-t-lg"
+                                    />
+                                    <CardContent className="p-6 pt-0">
+                                        <h3 className="text-xl font-bold text-blue-900 mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-gray-700 text-sm mb-4">
+                                            {item.description}
+                                        </p>
+                                        <Badge className="bg-blue-100 text-blue-800">
+                                            {item.date}
+                                        </Badge>
+                                    </CardContent>
+                                </Card>
+                            ))}
+
                         </div>
                     </div>
                 </section>

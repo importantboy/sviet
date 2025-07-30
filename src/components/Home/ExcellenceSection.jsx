@@ -6,7 +6,7 @@ const excellenceData = [
         shortTitle: "Career Development",
         description:
             "Special batches like TheUniques, SUPER-60 and ALLIED-30 assure 100% placement for students.",
-        image: "/super60.JPG",
+        image: "/Home/super60.JPG",
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ const excellenceData = [
         shortTitle: "Research Excellence",
         description:
             "Students lead research with state-of-the-art facilities. Over 100 articles published nationally and internationally.",
-        image: "/research.JPG",
+        image: "/Home/research.JPG",
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const excellenceData = [
         shortTitle: "Project Learning",
         description:
             "Engage in authentic challenges with project-based learning, fostering practical skills.",
-        image: "/projectbased.JPG",
+        image: "/Home/projectbased.JPG",
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ const excellenceData = [
         shortTitle: "Sports Excellence",
         description:
             "Excel in sports with over 30 tournament participations annually, fostering passion and skill.",
-        image: "/sports.jpg",
+        image: "/Home/sports.jpg",
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ const excellenceData = [
         shortTitle: "Innovation Hub",
         description:
             "Incubate innovative entrepreneurship with more than 15 successful startups launched at SVGOI.",
-        image: "/startups.JPG",
+        image: "/Home/startups.JPG",
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ const excellenceData = [
         shortTitle: "Global Programs",
         description:
             "Expand horizons with international tie-ups, hosting students from over 10 countries.",
-        image: "/international.JPG",
+        image: "/Home/international.JPG",
     },
 ]
 

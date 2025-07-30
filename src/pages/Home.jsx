@@ -8,6 +8,7 @@ import Review from "@/components/Home/Review"
 import Stats from "@/components/Home/Stats"
 import Herosection from "@/components/Herosection"
 import { Helmet } from "react-helmet"
+import About from "@/components/Home/About"
 
 
 export default function HomePage() {
@@ -27,19 +28,18 @@ export default function HomePage() {
                 <Herosection
                     bigHeading={false}
                     heading={"Swami Vivekanand Institute of Engineering & Technology"}
-                    shortDescription={`A Realm of Education that accomplishes you infinite career dreams
-
-Apply for Admission
-Placements`}
+                    shortDescription={`A Realm of Education that accomplishes you infinite career dreams Apply for Admission Placements`}
                     btnText1={"Apply for Admission"}
                     btn1Href={"https://admission.sviet.ac.in/"}
                     btn1Target={true}
-                    btnText2={"Placement"}
-                    btn2Href={"/placements"}
-                    imgSrc={"/6.jpeg"}
+                    btnText2={"Download Brochure"}
+                    btn2Href={"https://www.sviet.ac.in/SVIET-Brochure-2025.pdf"}
+                    btn2Target={true}
+                    imgSrc={"/Home/AddmissionCell.jpeg" || "/placeholder.svg"}
                 />
-                <Notice />
 
+                <Notice />
+                <About />
                 {/*key feature section */}
                 <ExcellenceSection />
 

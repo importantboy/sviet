@@ -36,21 +36,16 @@ const notices = [
     }
 ]
 const quickLinks = [
-    {
-        title: "Fee Structure",
-        href: "/fee-structure",
-        icon: DollarSign,
-        color: "green"
-    },
+   
     {
         title: "Application Form",
-        href: "/",
+        href: "https://sviet.org.in/wp-content/uploads/2023/07/application_form.pdf",
         icon: NotebookPen,
         color: "blue"
     },
     {
         title: "E-Brochure",
-        href: "/fee-payment",
+        href: "https://sviet.org.in/wp-content/uploads/2023/07/SVGOI-Brochure-2023.pdf",
         icon: BookText,
         color: "purple"
     },
@@ -100,13 +95,9 @@ const Notice = () => {
                                                     }`}
                                             >
                                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                                    <h3 className="font-semibold text-gray-900 flex-1">{notice.title}</h3>
+
+                                                    <h3 onClick={() => window.open(`${notice?.link ?? "https://google.com"}`, "_blank")} className="cursor-pointer font-semibold hover:text-blue-500 underline underline-offset-3 text-gray-900 flex-1">{notice.title}</h3>
                                                     <div className="flex items-center space-x-2">
-                                                        {notice.isNew && (
-                                                            <Badge variant="destructive" className="text-xs">
-                                                                NEW
-                                                            </Badge>
-                                                        )}
                                                         <Badge variant="outline" className="text-xs">
                                                             {notice.type}
                                                         </Badge>
@@ -135,7 +126,7 @@ const Notice = () => {
                             <CardHeader className="border-b shadow-md">
                                 <CardTitle className="flex items-center text-blue-900">
                                     <Bell className="mr-2 h-5 w-5" />
-                                    Latest Notices
+                                    Quick Links
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="p-4">

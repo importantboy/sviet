@@ -108,7 +108,7 @@ const BoardsOfManagement = () => {
           shortDescription={"Meet the distinguished leaders who guide SVIET's strategic direction, ensuring excellence in education, governance, and institutional development. Our Board of Management brings together expertise from academia, industry, and administration."}
           btnText1={"Meet Our Leaders"}
           btn1Href={"/from-the-management"}
-          imgSrc={"/placeholder.svg"}
+          imgSrc={"/About/boardsofmanagement.JPG" || "/placeholder.svg"}
         />
 
 
@@ -231,7 +231,7 @@ const BoardsOfManagement = () => {
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Meeting and Venue */}
               <Card className="shadow-lg pt-0 overflow-hidden ">
-                <CardHeader className=" bg-blue-50 shadow-sm">
+                <CardHeader className=" bg-blue-50 py-4 shadow-sm">
                   <CardTitle className="text-2xl  text-blue-900 flex items-center">
                     <Calendar className="mr-3 h-6 w-6" />
                     Meeting and Venue
@@ -273,7 +273,7 @@ const BoardsOfManagement = () => {
               {/* Governance Details */}
               <div className="space-y-6">
                 <Card className="pt-0 overflow-hidden shadow-lg">
-                  <CardHeader className="bg-green-50">
+                  <CardHeader className="py-4 bg-green-50">
                     <CardTitle className="text-2xl text-green-800 flex items-center">
                       <Target className="mr-3 h-6 w-6" />
                       Quorum
@@ -289,7 +289,7 @@ const BoardsOfManagement = () => {
                 </Card>
 
                 <Card className="shadow-lg pt-0 overflow-hidden">
-                  <CardHeader className="bg-orange-50">
+                  <CardHeader className= "py-4 bg-orange-50">
                     <CardTitle className="text-2xl text-orange-800 flex items-center">
                       <Calendar className="mr-3 h-6 w-6" />
                       Term Duration

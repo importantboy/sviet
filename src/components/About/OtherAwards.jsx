@@ -1,29 +1,22 @@
 import React from 'react'
 const leadingRecruiters = [
     {
-        name: "Reliance Industrial",
-        logo: "/reliance.webp",
+        name: "award1",
+        logo: "/Awards/nirf.webp",
     },
     {
-        name: "amazon",
-        logo: "/amazon.webp",
+        name: "award2",
+        logo: "/Awards/award2.webp",
     },
     {
-        name: "bank of america",
-        logo: "/boa.webp",
+        name: "award3",
+        logo: "/Awards/award3.webp",
     },
     {
-        name: "Dell",
-        logo: "/Dell.webp",
+        name: "award4",
+        logo: "/Awards/award4.webp",
     },
-    {
-        name: "hdfc",
-        logo: "/HDFC.webp",
-    },
-    {
-        name: "Tata",
-        logo: "/tata.webp",
-    },
+    
 ]
 const OtherAwards = () => {
     return (
@@ -41,7 +34,7 @@ const OtherAwards = () => {
                         {leadingRecruiters.map((recruiter, index) => (
                             <div
                                 key={index}
-                                className="bg-white border border-gray-200 rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center min-w-[150px] h-24"
+                                className="bg-white border border-gray-200 rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center min-w-[150px] h-60"
                             >
                                 <img
                                     src={recruiter.logo || "/placeholder.svg"}

@@ -70,7 +70,7 @@ export default function Iqac() {
           isIqac={true}
           heading={"IQAC"}
           shortDescription={"INTERNAL QUALITY ASSURANCE CELL"}
-          imgSrc={"/placeholder.svg"}
+          imgSrc={"/Programs/iqac.webp"}
         />
 
         {/* About IQAC Section */}
@@ -243,7 +243,7 @@ export default function Iqac() {
               </div>
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src={"/Programs/vision.webp"||"/placeholder.svg?height=400&width=600"}
                   alt="Mission Target Achievement"
                   className="rounded-lg shadow-lg w-full"
                 />

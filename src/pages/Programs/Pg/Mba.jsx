@@ -107,6 +107,8 @@ const Mba = () => {
         <>
 
             <Layout
+                heroSectionImage={"/Programs/mba.webp"}
+                overviewImg={"/Programs/management.webp"}
                 programHighlights={programHighlights}
                 programOutcomes={programOutcomes}
                 programTopics={programTopics}

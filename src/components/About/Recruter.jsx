@@ -2,27 +2,27 @@ import React from 'react'
 const leadingRecruiters = [
     {
         name: "Reliance Industrial",
-        logo: "/reliance.webp",
+        logo: "/Recruiters/reliance.webp",
     },
     {
         name: "amazon",
-        logo: "/amazon.webp",
+        logo: "/Recruiters/amazon.webp",
     },
     {
         name: "bank of america",
-        logo: "/boa.webp",
+        logo: "/Recruiters/boa.webp",
     },
     {
         name: "Dell",
-        logo: "/Dell.webp",
+        logo: "/Recruiters/Dell.webp",
     },
     {
         name: "hdfc",
-        logo: "/HDFC.webp",
+        logo: "/Recruiters/HDFC.webp",
     },
     {
         name: "Tata",
-        logo: "/tata.webp",
+        logo: "/Recruiters/tata.webp",
     },
 ]
 const Recruter = () => {

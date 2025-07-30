@@ -13,14 +13,14 @@ const Layout = ({ heading, shortDescription, imgSrc, secondImg, about, images })
             <Herosection
                 heading={heading}
                 shortDescription={shortDescription}
-                imgSrc={imgSrc}
+                imgSrc={imgSrc || "/placeholder.svg"}
             />
             <section id="overview" className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="p-8">
                             <img
-                                src={secondImg}
+                                src={secondImg || "/placeholder.svg"}
                                 alt={heading}
                                 className="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover"
                             />
@@ -60,9 +60,10 @@ const Layout = ({ heading, shortDescription, imgSrc, secondImg, about, images })
                             {images.map((image) => (
                                 <div className="mb-4">
                                     <LazyLoadImage
+                                        onClick={() => { window.open(image) }}
                                         effect="blur"
-                                        src={image}
-                                        className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                        src={image || "/placeholder.svg"}
+                                        className="w-full cursor-pointer rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
                             ))}

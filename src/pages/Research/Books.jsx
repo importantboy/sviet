@@ -57,7 +57,7 @@ const Books = () => {
           heading={"Books and Edited Chapters"}
           shortDescription={`Books and edited chapters are compilations where individual authors contribute specific sections, curated and organized by editors.
 `}
-          imgSrc={"/placeholder.svg"}
+          imgSrc={"https://images.pexels.com/photos/415078/pexels-photo-415078.jpeg"}
         />
 
         <section className="py-16 bg-white">
@@ -81,7 +81,7 @@ const Books = () => {
                   <div className="mb-4">
                     <LazyLoadImage
                       effect="blur"
-                      src={image}
+                      src={image || "/placeholder.svg"}
                       className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                     />
                   </div>

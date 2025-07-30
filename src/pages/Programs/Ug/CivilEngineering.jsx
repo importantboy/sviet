@@ -203,7 +203,8 @@ const CivilEngineering = () => {
         <>
 
             <Layout
-                
+                heroSectionImage={"/Programs/civil.webp"}
+                overviewImg={"/Programs/civil.JPG"}
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
                 programOutcomes={programOutcomes}

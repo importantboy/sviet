@@ -56,7 +56,7 @@ const opportunitiesData = [
         shortTitle: "Cutting-Edge Laboratories",
         description:
             "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
-        image: "/projectbased.JPG",
+        image: "/Home/projectbased.JPG",
     },
     {
         id: 2,
@@ -64,7 +64,7 @@ const opportunitiesData = [
         shortTitle: "Central Library",
         description:
             "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
-        image: "/library.jpeg",
+        image: "/About/library.jpeg",
     },
     {
         id: 3,
@@ -72,7 +72,7 @@ const opportunitiesData = [
         shortTitle: "Research Laboratories",
         description:
             "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
-        image: "/research.JPG",
+        image: "/Home/research.JPG",
     },
     {
         id: 4,
@@ -80,7 +80,7 @@ const opportunitiesData = [
         shortTitle: "Scholarship Opportunities",
         description:
             "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
-        image: "/scholership.JPG",
+        image: "/About/scholership.JPG",
     },
     {
         id: 5,
@@ -88,7 +88,7 @@ const opportunitiesData = [
         shortTitle: "Sports Facilities",
         description:
             "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
-        image: "/sports.jpg",
+        image: "/Home/sports.jpg",
     },
     {
         id: 6,
@@ -96,7 +96,7 @@ const opportunitiesData = [
         shortTitle: "Industrial Collaboration",
         description:
             "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
-        image: "/collabs.jpeg",
+        image: "/About/collabs.jpeg",
     },
 
 ]
@@ -136,7 +136,7 @@ const AboutSvgoi = () => {
           shortDescription={"Swami Vivekanand Group of Institutions was established in year 2004 under the aegis of Sh.Raghunath Rai Memorial Education & Charitable Trust,The governing body is headed by Sh. Ashwani Garg and Sh.Ashok Garg."}
           btnText1={"Our Legacy"}
           btn1Href={"/from-the-management"}
-          imgSrc={"/svgoi.jpeg"}
+          imgSrc={"/About/svgoi.jpeg" || "/placeholder.svg"}
         />
 
 
@@ -164,7 +164,7 @@ const AboutSvgoi = () => {
                       Quick Information
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 py-0">
                     <div className="space-y-4">
                       {quickInfo.map((info, index) => {
                         const Icon = info.icon
@@ -220,7 +220,7 @@ const AboutSvgoi = () => {
                     key={index}
                     className="shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                   >
-                    <CardContent className="p-6 text-center">
+                    <CardContent className="p-6 py-3 text-center">
                       <div
                         className={`w-16 h-16 rounded-full ${highlight.color} flex items-center justify-center mx-auto mb-4`}
                       >
@@ -232,9 +232,7 @@ const AboutSvgoi = () => {
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {highlight.description}
                       </p>
-                      <Badge className="bg-yellow-100 text-yellow-800">
-                        {highlight.stats}
-                      </Badge>
+                     
                     </CardContent>
                   </Card>
                 )

@@ -226,19 +226,19 @@ const ComputerScienceEngineering = () => {
             name: "C Programming Lab",
             description:
                 "State-of-the-art lab with latest c programming language tools and IDEs for programming.",
-            image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
+            image: "/Programs/clab.jpeg",
         },
         {
             name: "Networking Lab",
             description:
                 "Advanced networking lab with Cisco equipment for hands-on experience in network configuration and management.",
-            image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
+            image: "/Programs/network.jpeg  ",
         },
         {
             name: "Python",
             description:
                 "Specialized laboratory equipped with high-performance computing systems for Pyhton.",
-            image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
+            image: "/Programs/python.jpeg",
         }
     ]
 
@@ -247,6 +247,8 @@ const ComputerScienceEngineering = () => {
         <>
 
             <Layout
+                heroSectionImage={"/Programs/btech.JPG"}
+                overviewImg={"/Programs/btechcse.webp"}
                 laboratories={laboratories}
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
@@ -257,6 +259,7 @@ const ComputerScienceEngineering = () => {
                 fee={"52,500/- INR Per Semester"}
                 courseName={"B. Tech Computer Science Engineering"}
                 overview={"Computer science is currently one of the most crucial elements of development in the numerous commercial, technological, and administrative organisations. Users that gather information in computer science are exposed to a variety of trends’ capabilities. The Department of Computer Engineering at the Faculty of Engineering offers a four-year bachelor’s degree curriculum in computer science and engineering. The course material was specifically designed to provide students with a strong background in the field as well as analysis and in-depth understanding. In order to expose students to in-depth technical processes, the department is equipped with computer facilities and laboratories that allow students to be engaged on a personal level and in real-time processing.The department is equipped with computer labs and resources that let students participate personally and in the actual processing of the technological processes involved, exposing them to in-depth learning."}
+                
                 duration={4}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://sviet.org.in/wp-content/uploads/BTech-CSE-2021-1.pdf"

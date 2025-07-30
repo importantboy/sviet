@@ -22,7 +22,7 @@ const opportunitiesData = [
     shortTitle: "Cutting-Edge Laboratories",
     description:
       "Explore our state-of-the-art laboratories equipped with the latest technology and equipment, providing hands-on learning experiences for students to excel in their fields.",
-    image: "/projectbased.JPG",
+    image: "/Home/projectbased.JPG",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const opportunitiesData = [
     shortTitle: "Central Library",
     description:
       "Immerse yourself in a world of knowledge at our central library, boasting a vast collection of resources and a conducive learning environment to support your academic journey.",
-    image: "/library.jpeg",
+    image: "/About/library.jpeg",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const opportunitiesData = [
     shortTitle: "Research Laboratories",
     description:
       "Join the forefront of innovation through our research labs, where faculty and students collaborate on groundbreaking research projects to address real-world challenges.",
-    image: "/research.JPG",
+    image: "/Home/research.JPG",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const opportunitiesData = [
     shortTitle: "Scholarship Opportunities",
     description:
       "Fulfill your academic aspirations with our range of scholarship programs, designed to recognize and support exceptional talent across various disciplines.",
-    image: "/scholership.JPG",
+    image: "/About/scholership.JPG",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const opportunitiesData = [
     shortTitle: "Sports Facilities",
     description:
       "Unleash your potential and stay fit at our world-class sports facilities, promoting holistic development and a healthy lifestyle for all students.",
-    image: "/sports.jpg",
+    image: "/Home/sports.jpg",
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const opportunitiesData = [
     shortTitle: "Industrial Collaboration",
     description:
       "Benefit from our strong ties with industry partners, offering opportunities for internships, projects, and real-world experience to enhance your skillset and employability.",
-    image: "/collabs.jpeg",
+    image: "/About/collabs.jpeg",
   },
 
 ]
@@ -138,7 +138,7 @@ const AboutSviet = () => {
           shortDescription={"Swami Vivekanand Institute Of Engineering & Technology was established in year 2004 under the aegis of Sh.Raghunath Rai Memorial Education & Charitable Trust,The governing body is headed by Sh. Ashwani Garg and Sh.Ashok Garg."}
           btnText1={"Our Legacy"}
           btn1Href={"/from-the-management"}
-          imgSrc={"/svgoi.jpeg"}
+          imgSrc={"/About/sviet.webp" || "/placeholder.svg"}
         />
 
 
@@ -166,7 +166,7 @@ const AboutSviet = () => {
                       Quick Information
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 py-3">
                     <div className="space-y-4">
                       {quickInfo.map((info, index) => {
                         const Icon = info.icon
@@ -206,10 +206,10 @@ const AboutSviet = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                Why Choose SVGOI?
+                Why Choose SVIET?
               </h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                Discover what makes SVGOI a preferred choice for engineering
+                Discover what makes SVIET a preferred choice for engineering
                 education and career development
               </p>
             </div>

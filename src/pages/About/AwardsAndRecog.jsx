@@ -10,12 +10,15 @@ import UniversityAff from '@/components/About/UniversityAff'
 
 const majorAwards = [{
   id: 1,
+  image: "/Awards/profile.webp",
   title: "ASSOCHAM National Education Awards",
   year: "2020",
   description: "ASSOCHAM National Education Awards 2020.",
   icon: Globe,
+
 },
 {
+  image: "/Awards/2.webp",
   id: 2,
   title: "Best Engineering College in North India",
   year: "2020",
@@ -23,19 +26,15 @@ const majorAwards = [{
   icon: Star,
 },
 {
+  image: "/Awards/3.webp",
+
   id: 3,
   title: "Best Contribution Towards Education Initiative of the year - 2022",
   year: "2022",
   description: "SVGOI Awarded as Best Contribution Towards Education Initiative of the year - 2022 by INDIAN CSR AWARDS",
   icon: Target,
 },
-{
-  id: 4,
-  title: "Research Publication Excellence",
-  year: "2023",
-  description: "Recognized for significant increase in quality research publications and citations",
-  icon: Lightbulb,
-},]
+]
 
 
 
@@ -44,27 +43,27 @@ const governmentRecognitions = [
     id: 1,
     title: "Appreciation Award from Punjab Unaided college association",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sviet.org.in_awards-and-recognitions_.png-DPUQjNJwxlE27zB4bUHJAGcbsE2QJ9.jpeg",
+      "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-279x300.webp",
   },
   {
     id: 2,
     title: "Guest of Honor from National Institute for Foundation Teachers",
-    image: ""
+    image: "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-6-272x300.webp"
   },
   {
     id: 3,
     title: "Runner-Up Award in Youth Fest from IKGPTU",
-    image: ""
+    image: "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-5-178x300.webp"
   },
   {
     id: 4,
     title: "BEST ENGINEERING COLLEGE in ASSOCHAM NATIONAL EDUCATION AWARDS",
-    image: ""
+    image: "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-3-279x300.webp"
   },
   {
     id: 5,
     title: "Fellow of CHAI Award from Confederation of Horticulture Associations of India",
-    image: ""
+    image: "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-2-191x300.webp"
   }
 ]
 
@@ -74,12 +73,12 @@ const industryAwards = [
     description:
       "Dr. Indu Batra, Applied Sciences department was awarded the prestigious “ISTE North Zone Best Teacher award” at the Faculty Convention Program organized by the Indian Society of Technical Education (ISTE).",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sviet.org.in_awards-and-recognitions_.png-DPUQjNJwxlE27zB4bUHJAGcbsE2QJ9.jpeg",
+      "/Awards/WhatsApp-Image-2024-01-27-at-7.31.56-PM-300x283.webp",
   },
   {
     id: 2,
     description: "Fellow of CHAI Award from Confederation of Horticulture Associations of India",
-    image: "/placholder.svg"
+    image: "/Awards/WhatsApp-Image-2024-01-27-at-7.31.22-PM-2-191x300.webp"
   }
 ]
 
@@ -100,7 +99,7 @@ const AwardsAndRecog = () => {
         <Herosection
           heading={"Awards & Recognition"}
           shortDescription={"Celebrating our journey of excellence through prestigious awards, accreditations, and recognition from leading educational bodies, industry partners, and government institutions. Our achievements reflect our commitment to quality education and innovation."}
-          imgSrc={"/placeholder.svg"}
+          imgSrc={"/Awards/profile.webp" || "/placeholder.svg"}
           btnText1={"Our Legacy"}
           btn1Href={"/from-the-management"}
         />
@@ -131,7 +130,7 @@ const AwardsAndRecog = () => {
                       <img
                         src={award.image || "/placeholder.svg"}
                         alt={award.title}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute top-4 right-4">
@@ -183,7 +182,7 @@ const AwardsAndRecog = () => {
                     <img
                       src={recognition.image || "/placeholder.svg"}
                       alt={recognition.title}
-                      className="w-full h-48 object-cover rounded-lg mb-6"
+                      className="w-full h-60 object-cover rounded-lg mb-6"
                     />
                     <h3 className="text-xl font-bold text-blue-900 mb-4">{recognition.title}</h3>
                   </CardContent>
@@ -232,23 +231,23 @@ const AwardsAndRecog = () => {
             </div>
 
             <UniversityAff data={[
-              { year: "PTU 2018-19", status: "Affiliated", color: "from-green-500 to-green-600" },
-              { year: "PTU 2019-20", status: "Affiliated", color: "from-blue-500 to-blue-600" },
-              { year: "PTU 2020-21", status: "Affiliated", color: "from-purple-500 to-purple-600" },
-              { year: "PTU 2021-22", status: "Affiliated", color: "from-red-500 to-red-600" },
-              { year: "PTU 2022-23", status: "Affiliated", color: "from-yellow-500 to-orange-500" },
-              { year: "PTU 2023-24", status: "Affiliated", color: "from-teal-500 to-teal-600" },
-              { year: "PTU 2024-25", status: "Affiliated", color: "from-teal-500 to-teal-600" },
+              { year: "PTU 2018-19", status: "Affiliated", color: "from-green-500 to-green-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2018-19.pdf" },
+              { year: "PTU 2019-20", status: "Affiliated", color: "from-blue-500 to-blue-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2019-20.pdf" },
+              { year: "PTU 2020-21", status: "Affiliated", color: "from-purple-500 to-purple-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2020-21.pdf" },
+              { year: "PTU 2021-22", status: "Affiliated", color: "from-red-500 to-red-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2021-22.pdf" },
+              { year: "PTU 2022-23", status: "Affiliated", color: "from-yellow-500 to-orange-500", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2022-23.pdf" },
+              { year: "PTU 2023-24", status: "Affiliated", color: "from-teal-500 to-teal-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/PTU-AFFILIATION-2023-24-1.pdf" },
+              { year: "PTU 2024-25", status: "Affiliated", color: "from-teal-500 to-teal-600", link: "https://sviet.org.in/wp-content/uploads/sviet-affiliation-2024-25.pdf" },
             ]}
               UNINAME={"IKGPTU"} />
             <UniversityAff data={[
-              { year: "AICTE 2018-19", status: "Affiliated", color: "from-green-500 to-green-600" },
-              { year: "AICTE 2019-20", status: "Affiliated", color: "from-blue-500 to-blue-600" },
-              { year: "AICTE 2020-21", status: "Affiliated", color: "from-purple-500 to-purple-600" },
-              { year: "AICTE 2021-22", status: "Affiliated", color: "from-red-500 to-red-600" },
-              { year: "AICTE 2022-23", status: "Affiliated", color: "from-yellow-500 to-orange-500" },
-              { year: "AICTE 2023-24", status: "Affiliated", color: "from-teal-500 to-teal-600" },
-              { year: "AICTE 2024-25", status: "Affiliated", color: "from-teal-500 to-teal-600" },
+              { year: "AICTE 2018-19", status: "Affiliated", color: "from-green-500 to-green-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE_2018-19-SVIET.pdf" },
+              { year: "AICTE 2019-20", status: "Affiliated", color: "from-blue-500 to-blue-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE_2019-20-SVIET.pdf" },
+              { year: "AICTE 2020-21", status: "Affiliated", color: "from-purple-500 to-purple-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE_2020-21_SVIET.pdf" },
+              { year: "AICTE 2021-22", status: "Affiliated", color: "from-red-500 to-red-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE-2021-22_-SVIET.pdf" },
+              { year: "AICTE 2022-23", status: "Affiliated", color: "from-yellow-500 to-orange-500", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE-2022-23-SVIET.pdf" },
+              { year: "AICTE 2023-24", status: "Affiliated", color: "from-teal-500 to-teal-600", link: "https://sviet.org.in/wp-content/uploads/2023/11/AICTE-Letter-2023-2024-SVIET.pdf" },
+              { year: "AICTE 2024-25", status: "Affiliated", color: "from-teal-500 to-teal-600", link: "https://sviet.org.in/wp-content/uploads/EOA-Report-2024-2025-sviet.pdf" },
             ]}
               UNINAME={"AICTE"} />
           </div>

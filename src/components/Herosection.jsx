@@ -79,7 +79,7 @@ const Herosection = ({
                     <div className="relative">
                         <LazyLoadImage
                             effect="blur"
-                            src={imgSrc}
+                            src={imgSrc||"/placeholder.svg"}
                             alt="SVIET Campus"
                             className="rounded-lg shadow-2xl w-full h-auto max-h-[500px] object-cover"
                         />

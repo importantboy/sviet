@@ -2,33 +2,35 @@ import React from 'react'
 const testimonialsData = [
     {
         id: 1,
-        name: "Sukhmeet Kaur",
-        degree: "MBA",
-        company: "Hyundai Info Tech",
-        image: "/placeholder.svg?height=100&width=100&text=SK",
+        name: "Gaurav Sharma",
+        degree: "SDE",
+        image: "https://www.sviet.ac.in/_next/static/media/rahul.9757b907.webp",
         testimonial:
-            "I am happy to be a product of this esteemed institution. SVGOI not only provides a platform to enrich academically but also emphasises on the all-around development of the student. It provided a lot of opportunities for students to showcase their talents, which create a very pleasant and enriching atmosphere for students. We enjoy it a lot.",
-        rating: 5,
+            "Great learning experience and the college provided me with the opportunities needed. Truly outstanding! and really really thankful for the support",
     },
     {
         id: 2,
-        name: "Parveen",
-        degree: "B.Tech CSE",
-        company: "IDS Infotech",
-        image: "/placeholder.svg?height=100&width=100&text=P",
+        name: "Yash Khandelwal",
+        degree: "System Engineer",
+        image: "https://www.sviet.ac.in/_next/static/media/yash.cd160865.jpeg",
         testimonial:
-            "I am grateful to have been given several opportunities, which enabled me to gain confidence and enough expertise to prove myself in any professional environment. With excellent tutors and innovative learning, I was able to pace myself after graduation. And I would like to thank the placement team, which provided me with the gateway to enter the professional industry.",
-        rating: 5,
+            "It have broadened my horizons and helped me advance my career. The college and management is incredibly supportive towards their students and also providing great learning experience for all",
     },
     {
         id: 3,
-        name: "Shubham Raj",
-        degree: "B.Tech",
-        company: "Accenture",
-        image: "/placeholder.svg?height=100&width=100&text=SR",
+        name: "Adarsh Kumar",
+        degree: "Software Engineer",
+        image: "https://www.sviet.ac.in/_next/static/media/adarsh.04ca3f26.webp",
         testimonial:
-            "With the constant support and guidance of faculty members and placement cell, I got placed in Accenture Private Limited. SVGOI offers exposure to students through various curricular, non-curricular, and industry-related activities that help them choose their future field or industry. I am grateful to have been a part of such an institution.",
-        rating: 5,
+            "The program provided me with the skills and knowledge needed to excel in the field of software development. Highly recommended!",
+    },
+    {
+        id: 4,
+        name: "Admit Gautam",
+        degree: "Software Developer",
+        image: "https://www.sviet.ac.in/_next/static/media/amit.821b571f.webp",
+        testimonial:
+            "The instructors are top-notch and the curriculum is well-structured. I feel well-prepared for my career in data science.",
     },
 ]
 import { ChevronRight, ChevronLeft } from 'lucide-react'
@@ -70,7 +72,7 @@ const Review = () => {
                                     className="flex-shrink-0 px-2"
                                     style={{ width: `${100 / getTestimonialsPerView()}%` }}
                                 >
-                                    <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 mx-auto max-w-2xl">
+                                    <Card className="hover:shadow-xl py-0 transition-all duration-300 transform hover:-translate-y-2 h-80 max-h-80 mx-auto max-w-2xl">
                                         <CardContent className="p-6 md:p-8">
                                             <div className="flex items-center mb-6">
                                                 <img
@@ -81,17 +83,10 @@ const Review = () => {
                                                 <div>
                                                     <h3 className="text-lg md:text-xl font-bold text-blue-900">{testimonial.name}</h3>
                                                     <p className="text-sm md:text-base text-gray-600">{testimonial.degree}</p>
-                                                    <p className="text-sm md:text-base font-medium text-blue-600">{testimonial.company}</p>
                                                 </div>
                                             </div>
 
-                                            <div className="flex justify-center mb-4">
-                                                {[...Array(testimonial.rating)].map((_, i) => (
-                                                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                ))}
-                                            </div>
+
 
                                             <blockquote className="text-gray-700 italic leading-relaxed text-sm md:text-base text-center">
                                                 "{testimonial.testimonial}"
@@ -137,7 +132,7 @@ const Review = () => {
                     {/* Testimonial counter */}
                     <div className="text-center mt-4">
                         <span className="text-sm text-gray-500">
-                            {currentTestimonialSlide + 1} of {testimonialsData.length}
+                            {currentTestimonialSlide +2} of {testimonialsData.length}
                         </span>
                     </div>
                 </div>

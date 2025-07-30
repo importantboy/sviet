@@ -8,40 +8,39 @@ import { ChevronsRight } from 'lucide-react'
 
 const photoGalleryItems = [
     {
-        src: "/6.jpeg",
+        src: "/Home/AddmissionCell.jpeg",
         alt: "Campus Life 1",
         caption: "Departments",
         href: "https://drive.google.com/drive/u/4/folders/1s0AUtKrv9oUoCgotsB1nQaVsl-pHRp-q"
 
     },
     {
-        src: "https://utfs.io/f/db9bb4f9-5f2a-486a-b24e-c6a29435366a-w384cm.jpg",
+        src: "/Home/festad.jpeg",
         alt: "Event Highlight 1",
         href: "https://drive.google.com/drive/u/4/folders/1LQS2kFNZsnlt9NG-_Kwt6t3r5c49HR4L",
         caption: "Cultural Activities"
     },
     {
-        src: "https://utfs.io/f/d77d2e93-bb44-4f3d-8b8b-70651ff5f997-dgdqel.webp",
+        src: "/Home/event.jpeg",
         alt: "Events",
         href: "https://drive.google.com/drive/u/4/folders/1hVAhmkpLa8CEGVtI5-fTI1iMlumByxPQ",
         caption: "Events",
     },
     {
-        src: "https://utfs.io/f/a72c45ff-5623-43b0-b64f-c7062d359205-nm33wo.jpg",
+        src:"/Home/campusvibe.jpg",
         alt: "Campus Vibes",
         caption: "Campus Vibes",
         href: "https://drive.google.com/drive/u/4/folders/1kBBTxL_jS2YUtk2Cp-eECgHwSlAN7ju_"
     },
     {
-        src: "https://utfs.io/f/f3179493-2246-445d-9fcf-77eb59db9293-x2mjo0.jpeg",
+        src: "/Home/volleyball.jpeg",
         alt: "Sports",
         href: "https://drive.google.com/drive/u/4/folders/1Tgem_IXYdBdM9drUl3Pa3kwPquBMy631",
         caption: "Sports",
     },
     {
-        src: "https://utfs.io/f/4e6ea4f6-7eb8-4c00-af72-4b34097df548-26ylxr.jpg",
         alt: "T&P",
-
+        src:"/Home/tandp.jpg",
         caption: "T&P",
         href: "https://drive.google.com/drive/u/4/folders/1eyOsRmG-2m9zz7BE8-T5z3DAw7SVf4yw"
     },
@@ -119,14 +118,16 @@ const Gallery = () => {
                                             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                                                 {" "}
                                                 {/* 16:9 Aspect Ratio */}
-                                                <iframe
+                                                <video
                                                     className="absolute top-0 left-0 w-full h-full"
-                                                    src={item.embedUrl}
+                                                    src={item.embedUrl || "/placeholder.svg"}
                                                     title={item.title}
                                                     frameBorder="0"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowFullScreen
-                                                ></iframe>
+                                                    controls
+
+                                                ></video>
                                             </div>
                                             <div className="p-4">
                                                 <h3 className="text-xl font-semibold text-blue-900 mb-2">{item.title}</h3>

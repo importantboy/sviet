@@ -202,16 +202,16 @@ const MechanicalEngineering = () => {
             name: "Kinematics and Dynamics of Machine Laboratory",
             description:
                 "Advanced lab equipped with modern mechanisms and experimental setups for analyzing motion, forces, and dynamics in mechanical systems.",
-            image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
+            image: "/Programs/me-lab-1.webp",
         },
         {
             name: "Fluid Mechanics Laboratory",
-            description: "Well-equipped lab designed for studying fluid behavior, flow dynamics, and hydraulic systems through hands-on experiments and models.", image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
+            description: "Well-equipped lab designed for studying fluid behavior, flow dynamics, and hydraulic systems through hands-on experiments and models.", image: "/Programs/me-lab-2.webp",
         },
         {
             name: "Heat and Mass Transfer Laboratory",
-            description:"Modern lab featuring experimental setups to study conduction, convection, radiation, and diffusion in thermal and mass transfer processes.",
-            image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
+            description: "Modern lab featuring experimental setups to study conduction, convection, radiation, and diffusion in thermal and mass transfer processes.",
+            image: "/Programs/me-lab-3.webp",
         }
     ]
 
@@ -219,6 +219,8 @@ const MechanicalEngineering = () => {
         <>
 
             <Layout
+                overviewImg={"/Programs/me1.webp"}
+                heroSectionImage={"/Programs/me.webp"}
                 laboratories={laboratories}
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}

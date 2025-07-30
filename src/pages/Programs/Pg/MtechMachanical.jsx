@@ -172,16 +172,16 @@ const MtechMechanical = () => {
             name: "Kinematics and Dynamics of Machine Laboratory",
             description:
                 "Advanced lab equipped with modern mechanisms and experimental setups for analyzing motion, forces, and dynamics in mechanical systems.",
-            image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
+            image: "/Programs/me-lab-1.webp",
         },
         {
             name: "Fluid Mechanics Laboratory",
-            description: "Well-equipped lab designed for studying fluid behavior, flow dynamics, and hydraulic systems through hands-on experiments and models.", image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
+            description: "Well-equipped lab designed for studying fluid behavior, flow dynamics, and hydraulic systems through hands-on experiments and models.", image: "/Programs/me-lab-2.webp",
         },
         {
             name: "Heat and Mass Transfer Laboratory",
             description: "Modern lab featuring experimental setups to study conduction, convection, radiation, and diffusion in thermal and mass transfer processes.",
-            image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
+            image: "/Programs/me-lab-3.webp",
         }
     ]
 
@@ -203,6 +203,9 @@ const MtechMechanical = () => {
                 courseName={"M.tech Mechanical Engineering"}
                 overview={"The Mechanical Engineering program is one of the SVIET flagship programs which is centred on the understanding of the mechanics, dynamics and structural analysis of mechanical systems. The Faculty of Engineering offers a four year Bachelors degree in Mechanical Engineering, a program that is designed to equip every student with the fundamental of mechanics on various levels. The department has adopted a unique approach to the scope of this program, which provides the students with a comprehensive understanding of core mechanical principles such thermodynamics, material science, structural analysis and electricity. The study is made possible through the use of effective tools such as Computer Aided Design (CAD) and Computer Aided Manufacturing (CAM) amongst others."}
                 duration={2}
+                overviewImg={"/Programs/me1.webp"}
+                heroSectionImage={"/Programs/me.webp"}
+
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://ptu.ac.in/wp-content/uploads/2020/10/10-1-18%20M%20Tech%20ME%202017%20Final.pdf"
                 degree={"M.Tech ME"}

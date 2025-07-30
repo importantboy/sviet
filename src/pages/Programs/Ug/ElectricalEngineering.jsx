@@ -202,6 +202,8 @@ const ElectricalEngineering = () => {
         <>
 
             <Layout
+                heroSectionImage={"/Programs/electric.webp"}
+                overviewImg={"/Programs/Engineering-Uses-of-Electricity-1536x865.webp"}
                 programHighlights={programHighlights}
                 programEducationalObjectives={programEducationalObjectives}
                 programOutcomes={programOutcomes}

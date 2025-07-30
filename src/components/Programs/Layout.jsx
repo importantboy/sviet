@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet"
 import Recruter from "../About/Recruter"
 import { useRef } from "react"
 
-export default function Layout({ isPg = false, laboratories, programHighlights, programEducationalObjectives, programOutcomes, programSpecificOutcomes, programTopics, eligibilityCriteria, fee, affiliation, syllabusLink, overview, degree, duration, courseName }) {
+export default function Layout({ heroSectionImage, overviewImg, isPg = false, laboratories, programHighlights, programEducationalObjectives, programOutcomes, programSpecificOutcomes, programTopics, eligibilityCriteria, fee, affiliation, syllabusLink, overview, degree, duration, courseName }) {
     const data = [
         { label: "Duration", value: `${duration} Years` },
         { label: "Degree", value: degree },
@@ -53,7 +53,7 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                     btnText1={"Apply Now"}
                     btn1Target={true}
                     btn1Href={"https://admission.sviet.ac.in/"}
-                    imgSrc={"/placeholder.svg"}
+                    imgSrc={heroSectionImage || "/placeholder.svg"}
                 />
                 {/* Sticky Navigation Bar */}
                 <div className="bg-white border-b border-gray-200 shadow-sm">
@@ -90,7 +90,12 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                                 >
                                     Outcomes
                                 </button>
-
+                                <button
+                                    onClick={() => scrollToSection(placementsRef)}
+                                    className="text-sm font-medium text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors"
+                                >
+                                    Placements
+                                </button>
                                 <button
                                     onClick={() => scrollToSection(highlightsRef)}
                                     className="text-sm font-medium text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors"
@@ -103,18 +108,8 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                                 >
                                     Labs
                                 </button>}
-                                <button
-                                    onClick={() => scrollToSection(placementsRef)}
-                                    className="text-sm font-medium text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors"
-                                >
-                                    Placements
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection(activitiesRef)}
-                                    className="text-sm font-medium text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors"
-                                >
-                                    Activities
-                                </button>
+                               
+                                
                             </div>
                         </div>
                     </div>
@@ -134,7 +129,7 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                         <div className="grid lg:grid-cols-2  gap-12 items-center">
                             <div className="relative">
                                 <img
-                                    src="https://sviet.org.in/wp-content/uploads/2023/04/dfdf-768x518.jpg"
+                                    src={overviewImg || "/placeholder.svg"}
                                     alt={courseName}
                                     className="rounded-lg shadow-xl w-full h-auto object-cover"
                                 />
@@ -325,7 +320,7 @@ export default function Layout({ isPg = false, laboratories, programHighlights, 
                                     className="hover:shadow-lg transition-shadow duration-300"
                                 >
                                     <CardContent className="p-4">
-                                        <div className="flex items-center justify-center">
+                                        <div className="flex items-center text-center justify-center">
                                             <h3 className="font-semibold text-gray-900">
                                                 {topic.title}
                                             </h3>

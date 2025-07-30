@@ -87,7 +87,7 @@ const ObcCell = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                            Members of SC/ST Committee                        </h2>
+                            Members of Committee                        </h2>
 
 
                         <div className="overflow-x-auto">

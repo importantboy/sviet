@@ -67,7 +67,7 @@ const VisonAndMission = () => {
                     btnText2={"Strategic Plan"}
                     btn2Href={"https://sviet.org.in/wp-content/uploads/Strategic-Plan_0001-3.pdf"}
                     btn2Target={true}
-                    imgSrc={"/placeholder.svg"}
+                    imgSrc={"/About/vision-mission.webp" || "/placeholder.svg"}
                 />
 
                 {/* Vision & Mission Content */}

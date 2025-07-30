@@ -105,19 +105,19 @@ const Mtech = () => {
             name: "C Programming Lab",
             description:
                 "State-of-the-art lab with latest c programming language tools and IDEs for programming.",
-            image: "/placeholder.svg?height=250&width=350&text=Software+Lab",
+            image: "/Programs/clab.jpeg",
         },
         {
             name: "Networking Lab",
             description:
                 "Advanced networking lab with Cisco equipment for hands-on experience in network configuration and management.",
-            image: "/placeholder.svg?height=250&width=350&text=Network+Lab",
+            image: "/Programs/network.jpeg  ",
         },
         {
             name: "Python",
             description:
                 "Specialized laboratory equipped with high-performance computing systems for Pyhton.",
-            image: "/placeholder.svg?height=250&width=350&text=AI+ML+Lab",
+            image: "/Programs/python.jpeg",
         }
     ]
 
@@ -125,6 +125,8 @@ const Mtech = () => {
         <>
 
             <Layout
+                heroSectionImage={"/Programs/btech.JPG"}
+                overviewImg={"/Programs/btechcse.webp"}
                 laboratories={laboratories}
                 programHighlights={programHighlights}
                 programOutcomes={programOutcomes}

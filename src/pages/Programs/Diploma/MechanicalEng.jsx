@@ -107,6 +107,8 @@ const MeDiploma = () => {
         <>
 
             <Layout
+                overviewImg={"/Programs/me1.webp"}
+                heroSectionImage={"/Programs/me.webp"}
                 programHighlights={programHighlights}
                 programOutcomes={programOutcomes}
                 programTopics={programTopics}

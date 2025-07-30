@@ -8,7 +8,7 @@ const UniversityAff = ({ data, UNINAME, }) => {
         <Card className="shadow-2xl border-0 overflow-hidden">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white text-center">
                 <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-R5W0BnG0MX2G0jgHvMWBDo6YFu8cRa.png"
+                    src={"" || "/placeholder.svg"}
                     alt="IKGPTU Logo"
                     className="w-32 h-32 mx-auto mb-6 bg-white rounded-full p-4 shadow-lg"
                 />
@@ -38,6 +38,7 @@ const UniversityAff = ({ data, UNINAME, }) => {
                                 <Badge className="bg-green-100 text-green-800 font-medium">{item.status}</Badge>
                                 <div className="mt-4 pt-4 border-t border-gray-100">
                                     <Button
+                                        onClick={() => window.open(item.link)}
                                         variant="outline"
                                         size="sm"
                                         className="w-full bg-transparent hover:bg-blue-50 hover:text-blue-700 border-blue-200"

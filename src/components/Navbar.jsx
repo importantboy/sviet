@@ -1,6 +1,5 @@
 
 import * as React from "react"
-import { href, Link } from "react-router-dom"
 import { ChevronDown, Menu, Phone, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -159,10 +158,10 @@ const navigationItems = [
     {
         title: "Research",
         items: [
-            { title: "Publications", href: "/pubications", },
-            { title: "Patents", href: "/patents" },
+            { title: "Publications", href: "/", },
+            { title: "Patents", href: "/" },
             { title: "Books and Edited Chapters", href: "/books" },
-            { title: "Collaborations", href: "/mous" },
+            { title: "Collaborations", href: "/" },
             { title: "Research Projects", href: "/research-projects" },
             { title: "Earn While Learn", href: "/earn-while-learn" },
         ]
@@ -221,13 +220,13 @@ function DropdownMenuItems({ items }) {
                     return (
                         <DropdownMenuSub key={item.title}>
                             <DropdownMenuSubTrigger>
-                                <Link
+                                <a
                                     target={item.target ? "_blank" : undefined}
                                     rel={item.target ? "noopener noreferrer" : undefined}
-                                    to={item.href}
+                                    href={item.href}
                                     className="flex items-center w-full">
                                     {item.title}
-                                </Link>
+                                </a>
                             </DropdownMenuSubTrigger>
                             <DropdownMenuSubContent>
                                 <DropdownMenuItems items={item.subItems} />
@@ -237,8 +236,8 @@ function DropdownMenuItems({ items }) {
                 }
                 return (
                     <DropdownMenuItem key={item.title} asChild>
-                        <Link target={item.target ? "_blank" : undefined}
-                            rel={item.target ? "noopener noreferrer" : undefined} to={item.href}>{item.title}</Link>
+                        <a target={item.target ? "_blank" : undefined}
+                            rel={item.target ? "noopener noreferrer" : undefined} href={item.href}>{item.title}</a>
                     </DropdownMenuItem>
                 )
             })}
@@ -252,12 +251,12 @@ function MobileNavItem({ item }) {
 
     if (!item.items && !item.subItems) {
         return (
-            <Link
-                to={item.href}
+            <a
+                href={item.href}
                 className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md"
             >
                 {item.title}
-            </Link>
+            </a>
         )
     }
 
@@ -304,9 +303,9 @@ export default function Navbar() {
                     <div className="hidden md:block">
                         <nav className="flex gap-3 font-medium">
                             {topNavLinks.map(link => (
-                                <Link
+                                <a
                                     key={link.href}
-                                    to={link.href}
+                                    href={link.href}
                                     target={link.target ? "_blank" : undefined}
                                     rel={link.target ? "noopener noreferrer" : undefined}
                                     className={cn(
@@ -315,7 +314,7 @@ export default function Navbar() {
                                     )}
                                 >
                                     {link.title}
-                                </Link>
+                                </a>
                             ))}
                         </nav>
                     </div>
@@ -328,12 +327,14 @@ export default function Navbar() {
                     <div className="flex justify-between items-center py-3">
                         {/* Logo */}
                         <div className="flex items-center space-x-4">
-                            <Link to="/">
+                            <a href="/">
                                 <img
-                                    src="https://sviet.org.in/wp-content/uploads/accrediated-2.png" alt="College Logo"
+                                    src={"/college-logo.webp" || "/placeholder.svg"}
+                                    alt="College Logo"
+
                                     className="h-14"
                                 />
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Desktop Navigation */}
@@ -348,11 +349,13 @@ export default function Navbar() {
                                             )}
                                         >
                                             {
-                                                item.title !== "Placements" ? <>{item.title}<ChevronDown className="ml-1 h-4 w-4" /></> : <><Link
-                                                    className="flex items-center text-blue-900 hover:text-blue-700 font-medium hover:bg-transparent"
-                                                    to={item.href}>
-                                                    {item.title}
-                                                </Link></>
+                                                item.title !== "Placements" ? <>{item.title}<ChevronDown className="ml-1 h-4 w-4" /></> : <>
+                                                    <a
+                                                        className="flex items-center text-blue-900 hover:text-blue-700 font-medium hover:bg-transparent"
+                                                        href={item.href}>
+                                                        {item.title}
+                                                    </a>
+                                                </>
                                             }
 
                                         </Button>
@@ -390,11 +393,11 @@ export default function Navbar() {
                                         </h3>
                                         <div className="space-y-1">
                                             {topNavLinks.map(link => (
-                                                <Link
+                                                <a
                                                     target={link.target ? "_blank" : undefined}
                                                     rel={link.target ? "noopener noreferrer" : undefined}
                                                     key={link.href}
-                                                    to={link.href}
+                                                    href={link.href}
                                                     className={cn(
                                                         "block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md",
                                                         link.highlight && "text-yellow-600 font-medium"
@@ -402,7 +405,7 @@ export default function Navbar() {
                                                     onClick={() => setIsOpen(false)}
                                                 >
                                                     {link.title}
-                                                </Link>
+                                                </a>
                                             ))}
                                         </div>
                                     </div>

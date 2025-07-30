@@ -13,7 +13,7 @@ const EarnWhileLearn = () => {
             <Herosection
                 heading={"Earn While Learn"}
                 shortDescription={"Unlock opportunities to gain practical experience and earn while pursuing your education at SVIET."}
-                imgSrc={"/placeholder.svg"}
+                imgSrc={"/About/387107071_305830648865215_4324133801420386089_n.webp"}
             />
             {/* Content Section */}
             <section className="py-12 md:py-16 bg-white">
@@ -28,7 +28,7 @@ const EarnWhileLearn = () => {
                         <div className="relative">
                             <LazyLoadImage
                                 effect="blur"
-                                src="/placeholder.svg?height=400&width=600&text=The+Uniques"
+                                src="/Home/super60.JPG"
                                 alt="The Uniques"
                                 wrapperClassName="w-[600px] h-[400px]"
                                 className="rounded-lg shadow-xl w-full h-full object-cover"
@@ -45,7 +45,7 @@ const EarnWhileLearn = () => {
                         <div className="relative">
                             <LazyLoadImage
                                 effect="blur"
-                                src="/placeholder.svg?height=400&width=600&text=The+Uniques"
+                                src="/Home/uniques.webp"
                                 alt="Super 60"
                                 wrapperClassName="w-[600px] h-[400px]"
                                 className="rounded-lg shadow-xl w-full h-full object-cover"

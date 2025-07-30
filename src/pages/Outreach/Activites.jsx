@@ -4,44 +4,48 @@ import { Helmet } from "react-helmet";
 import Masonry from "react-masonry-css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 const images = [
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.35-PM-1-e1708253473241-768x946.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.03-PM-e1708253519281.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.05-PM-e1708253554757-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.05-PM-1-e1708253574548-768x948.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.07-PM-e1708253592785-768x943.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.07-PM-1-e1708253617549-768x943.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.09-PM-e1708253649414-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.09-PM-1-e1708253676879-768x939.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.23-PM-2-e1708253704379-768x943.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.20-PM-e1708253725209-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.19-PM-e1708253744483-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.18-PM-1-e1708253771661-768x948.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.18-PM-e1708253794857-768x951.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.17-PM-e1708253842605-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.14-PM-e1708253862990-768x942.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.13-PM-e1708253970241-768x940.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.10-PM-e1708254011161-768x944.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.23-PM-e1708254037633-768x939.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.32-PM-1-e1708254074950-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.34-PM-e1708254176819-768x940.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.35-PM-e1708254192224-768x931.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.26-PM-e1708254221849-768x943.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.23-PM-1-e1708254248385-768x948.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.27-PM-e1708254271437-768x944.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.26-PM-1-e1708254290923-768x949.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.28-PM-e1708254308702-768x945.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.30-PM-e1708254328505-768x943.jpeg",
-    "https://sviet.org.in/wp-content/uploads/WhatsApp-Image-2024-02-17-at-4.15.32-PM-2-e1708254350973-768x948.jpeg",
-    "https://sviet.org.in/wp-content/uploads/IMG-20240218-WA0004-e1708255025117-768x946.jpg",
-    "https://sviet.org.in/wp-content/uploads/IMG-20240218-WA0005-e1708254997972-768x939.jpg",
-    "https://sviet.org.in/wp-content/uploads/IMG-20240218-WA0006-e1708254972355-768x939.jpg",
-    "https://sviet.org.in/wp-content/uploads/IMG-20240218-WA0007-e1708254948939-768x943.jpg",
-    "https://sviet.org.in/wp-content/uploads/Screenshot-2024-03-13-at-9.34.41%E2%80%AFAM-e1710303368665-768x961.png",
-    "https://sviet.org.in/wp-content/uploads/AI.png",
-    "https://sviet.org.in/wp-content/uploads/handbook-ml.png",
-    "https://sviet.org.in/wp-content/uploads/cloud.png",
-    "https://sviet.org.in/wp-content/uploads/big-data.png",
-];
+    "https://sviet.org.in/wp-content/uploads/370556102_698932872277742_4913615132469267958_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/370556102_698932872277742_4913615132469267958_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/370040082_698930408944655_2046864550725942265_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/370040082_698930408944655_2046864550725942265_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/370040082_698930408944655_2046864550725942265_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/370040082_698930408944655_2046864550725942265_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/369872512_698931512277878_6362315003438415201_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/369872512_698931512277878_6362315003438415201_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/369856145_698929102278119_8981648310497760128_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/369274811_698932698944426_5496283153453465485_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/369274510_698931052277924_4686148509081813964_n-1536x1190.jpg",
+    "https://sviet.org.in/wp-content/uploads/428673055_824888189682209_6315433924731681925_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428671264_824889659682062_2819994907906042509_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428671264_824889659682062_2819994907906042509_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428671264_824889659682062_2819994907906042509_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428671264_824889659682062_2819994907906042509_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428704918_824890573015304_1773692209568672507_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428699502_824889073015454_7883010473954407824_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428699502_824889073015454_7883010473954407824_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428688254_824887466348948_4092351607949230932_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428688254_824887466348948_4092351607949230932_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428686596_824890763015285_4508684362716687969_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428686596_824890763015285_4508684362716687969_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428686596_824890763015285_4508684362716687969_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428673634_824889399682088_8194790663539315994_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/428673634_824889399682088_8194790663539315994_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/463483732_999260368911656_5693736811198158954_n.jpg",
+    "https://sviet.org.in/wp-content/uploads/316423870_509111617926536_5656541623125700827_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/463483732_999260368911656_5693736811198158954_n.jpg",
+    "https://sviet.org.in/wp-content/uploads/463483732_999260368911656_5693736811198158954_n.jpg",
+    "https://sviet.org.in/wp-content/uploads/463483732_999260368911656_5693736811198158954_n.jpg",
+    "https://sviet.org.in/wp-content/uploads/316687326_509112307926467_8784030396483126604_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/316166458_509113854592979_8527336557573690212_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/316134880_509112234593141_7416167744171604953_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/316134880_509112234593141_7416167744171604953_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/248871436_10158015167376721_7112711674772749521_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/248757229_10158015167476721_5919166442067087571_n.jpg", "https://sviet.org.in/wp-content/uploads/248757229_10158015167476721_5919166442067087571_n.jpg", "https://sviet.org.in/wp-content/uploads/248616025_10158015167256721_3331560127014589482_n-1536x1365.jpg", "https://sviet.org.in/wp-content/uploads/248428995_10158015167206721_3570782955798238717_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/248394281_10158015167661721_1881620418243539898_n-1536x1303.jpg", "https://sviet.org.in/wp-content/uploads/380346520_715253060645723_6361082007061343604_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/380345193_715251860645843_7981581100822277596_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/380345193_715251860645843_7981581100822277596_n-1536x1024.jpg", "https://sviet.org.in/wp-content/uploads/93c5b053-ef4e-4990-a02e-50bfce20bb26.jpg",
+    "https://sviet.org.in/wp-content/uploads/66b8a828-5fcb-40bf-a651-e4c32f1c4939.jpg",
+    "https://sviet.org.in/wp-content/uploads/333834572_3479983402270645_4056718100747366150_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/333537140_587615529923317_3714043872433607417_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/333817201_1228727874734223_5813847537844253859_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/334435803_691821832630911_3883925620936567858_n-1536x1024.jpg",
+    "https://sviet.org.in/wp-content/uploads/363391880_684601730377523_136257783072353_n-1536x1152.jpg", "https://sviet.org.in/wp-content/uploads/363391880_684601730377523_136257783072353_n-1536x1152.jpg","https://sviet.org.in/wp-content/uploads/363386566_684609707043392_8187152458376467595_n.jpg","    https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg"
+    , "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",
+    "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",
+    "https://sviet.org.in/wp-content/uploads/364056429_684610993709930_8550861362856102529_n-1536x1152.jpg",""
+]
 const Activity = () => {
     const heading = "Activities"
     const shortDescription = "Various activities are organized within SVIET where students get the opportunity to learn and enhance their skills."
@@ -53,7 +57,7 @@ const Activity = () => {
             <Herosection
                 heading={heading}
                 shortDescription={shortDescription}
-                imgSrc={"/placeholder.svg"}
+                imgSrc={"/Home/activity.webp"}
             />
 
             <section className="py-16 bg-white">
@@ -76,9 +80,10 @@ const Activity = () => {
                             {images.map((image) => (
                                 <div className="mb-4">
                                     <LazyLoadImage
+                                        onClick={() => { window.open(image) }}
                                         effect="blur"
-                                        src={image}
-                                        className="w-full rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                        src={image || "/placeholder.svg"}
+                                        className="w-full cursor-pointer rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                                     />
                                 </div>
                             ))}

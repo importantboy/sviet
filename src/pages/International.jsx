@@ -15,71 +15,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import OppertunitiesPage from '@/components/About/Oppertunities'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Review from '@/components/Home/Review'
-const studentSuccessStories = [
-    {
-        name: "Yash Khandalwal",
-        company: "Jio",
-        package: "50 LPA",
-        image: "/images/student-yash-khandalwal.png",
-        quote:
-            "SVIET provided me with the platform to achieve my dream package. The faculty and placement team were incredibly supportive."
-    },
-    {
-        name: "Prince Kumar",
-        company: "Wipro",
-        package: "10 LPA",
-        image: "/images/student-prince-kumar.png",
-        quote:
-            "The comprehensive training programs at SVIET prepared me thoroughly for the industry. I'm grateful for the opportunity to join Wipro."
-    },
-    {
-        name: "Abhay Gautam",
-        company: "Infosys",
-        package: "8.5 LPA",
-        image: "/images/student-abhay-gautam.png",
-        quote:
-            "The practical exposure and skill development at SVIET were key to my placement at Infosys. A truly enriching experience."
-    },
-    {
-        name: "Sukhmeet Kaur",
-        degree: "MBA",
-        company: "Hyundai Info Tech",
-        image: "/images/student-sukhmeet-kaur.png",
-        quote:
-            "I am happy to be a product of this esteemed institution. SVGOI not only provides a platform to enrich academically but also emphasises on the all-around development of the student. It provided a lot of opportunities for students to showcase their talents, which create a very pleasant and enriching atmosphere for students. We enjoy it a lot."
-    },
-    {
-        name: "Parveen",
-        degree: "B.Tech CSE",
-        company: "IDS Infotech",
-        image: "/images/student-parveen.png",
-        quote:
-            "I am grateful to have been given several opportunities, which enabled me to gain confidence and enough expertise to prove myself in any professional environment. With excellent tutors and innovative learning, I was able to pace myself after graduation. And I would like to thank the placement team, which provided me with the gateway to enter the professional industry."
-    },
-    {
-        name: "Shubham Raj",
-        degree: "B.Tech",
-        company: "Accenture",
-        image: "/images/student-shubham-raj.png",
-        quote:
-            "With the constant support and guidance of faculty members and placement cell, I got placed in Accenture Private Limited. SVGOI offers exposure to students through various curricular, non-curricular, and industry-related activities that help them choose their future field or industry. I am grateful to have been a part of such an institution."
-    },
-    {
-        name: "Student 1",
-        company: "TCS",
-        package: "6 LPA",
-        image: "/images/student-testimonial-1.png",
-        quote:
-            "Great Learning Experience and the college helped me to get placed in a good company."
-    },
-    {
-        name: "Student 2",
-        company: "Amazon",
-        package: "25 LPA",
-        image: "/images/student-testimonial-2.png",
-        quote: "It have broadened my horizons and helped me to achieve my dreams."
-    }
-]
+
 
 const placementStats = [
     { value: "1,000+", label: "International Students", icon: Briefcase },
@@ -166,7 +102,7 @@ const opportunitiesData = [
 const directorMessage = {
     name: "Mr. Sunil Soni",
     position: "Director of International Affairs",
-    image: "/placeholder.svg",
+    image: "/Management/sunil.webp",
     message:
         `As an educational hub, the Swami Viviekanand Group of Institutes plays host to students from across the globe. The Campus offers high quality education at affordable costs. Education which inculates global awareness is the need of the hour. Globalization demands an education system which sensitizes individuals to global issues, and enables them to think beyond borders. By offering an environment conducive to such learning, the SVGOI has emerged as a favoured destination for International Students. The Department of International Affairs at SVGOI facilitates easy acquisition of information about the various courses available at colleges, departments. The Department of International Affairs is a nodal agency that co-ordinates all the activities related to the admission of International Students. The SVGOI is one of the best institutes with well planned infrastructure. Its offer a multi and interdisciplinary educational environment, with advanced research and state of the art technological facilities. Students from all over the world are welcome here. We are happy to have these students who, we hope, will become citizens of the world and go back to their countries as international representatives, carrying knowledge and wisdom from this ancient civilization and a young and modern state back to their countries.”`
 }
@@ -257,7 +193,7 @@ const International = () => {
                     btn1Href={"https://admission.sviet.ac.in/"}
                     btn1Target={true}
                     btnText1={"Apply for admission"}
-                    imgSrc={"/international.JPG"}
+                    imgSrc={"/Home/international.JPG" || "/placeholder.svg"}
                 />
 
                 {/* Stats */}
@@ -409,55 +345,7 @@ const International = () => {
                 </section>
 
                 {/* Student Success Stories / Testimonials */}
-                <section
-                    id="testimonials"
-                    className="py-16 bg-gray-50"
-                >
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                                Earn While Learn                            </h2>
-                            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                                Our "Earn While Learn" program is designed to provide international students with a unique opportunity to gain valuable work experience while pursuing their studies.                            </p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {studentSuccessStories.map((student, index) => (
-                                <Card
-                                    key={index}
-                                    className="shadow-lg hover:shadow-xl transition-all duration-300"
-                                >
-                                    <CardContent className="p-6">
-                                        <div className="flex items-center mb-4">
-                                            <img
-                                                src={student.image || "/placeholder.svg"}
-                                                alt={student.name}
-                                                className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-blue-200"
-                                            />
-                                            <div>
-                                                <h3 className="text-lg font-bold text-blue-900">
-                                                    {student.name}
-                                                </h3>
-                                                {student.degree && (
-                                                    <p className="text-gray-600 text-sm">
-                                                        {student.degree}
-                                                    </p>
-                                                )}
-                                                <p className="text-blue-600 font-medium text-sm">
-                                                    {student.company}{" "}
-                                                    {student.package && `• ${student.package}`}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <blockquote className="text-gray-700 italic leading-relaxed text-sm">
-                                            "{student.quote}"
-                                        </blockquote>
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+               
                 <Review />
             </div>
         </>
