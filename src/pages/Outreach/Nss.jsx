@@ -7,17 +7,12 @@ const images = ["https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-
     , "https://sviet.org.in/wp-content/uploads/2023/12/DSC07356-768x432.jpg",
     "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-10-20-at-00.42.54-768x576.jpeg",
     "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-08-25-at-22.45.53-2-768x498.jpeg",
-    "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-08-25-at-22.45.53-2-768x498.jpeg",
     "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-08-25-at-21.52.41-768x512.jpeg",
     "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-10-20-at-00.42.56-1-768x576.jpeg",
     "https://sviet.org.in/wp-content/uploads/2023/12/Girl-Education-768x432.jpg",
     "https://sviet.org.in/wp-content/uploads/2023/12/DSC07332-768x432.jpg",
     "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-08-18-at-02.34.51-1-768x554.jpeg",
-    "https://sviet.org.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-08-18-at-02.34.51-1-768x554.jpeg",
     "https://sviet.org.in/wp-content/uploads/2023/12/Langar-e1702543639763-768x711.jpg",
-    "https://sviet.org.in/wp-content/uploads/2023/12/Langar-e1702543639763-768x711.jpg",
-    "https://sviet.org.in/wp-content/uploads/2023/12/IMG_1091-768x512.jpg",
-    "https://sviet.org.in/wp-content/uploads/2023/12/IMG_1091-768x512.jpg",
     "https://sviet.org.in/wp-content/uploads/2023/12/IMG_1091-768x512.jpg"
 ]
 const Nss = () => {

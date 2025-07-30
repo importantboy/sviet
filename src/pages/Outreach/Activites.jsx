@@ -76,8 +76,8 @@ const Activity = () => {
                             className="flex w-auto -ml-4"
                             columnClassName="pl-4 bg-clip-padding"
                         >
-                            {images.map((image) => (
-                                <div className="mb-4">
+                            {images.map((image,key) => (
+                                <div className="mb-4" key={key}>
                                     <LazyLoadImage
                                         onClick={() => { window.open(image) }}
                                         effect="blur"

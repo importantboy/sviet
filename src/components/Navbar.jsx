@@ -287,8 +287,8 @@ export default function Navbar() {
         <>
             {/* Top Header */}
             <div className="bg-blue-900 text-white py-2 px-4">
-                <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2">
-                    <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4">
+                <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-sm gap-2">
+                    <div className="flex flex-col lg:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4">
                         <span className="flex items-center">
                             <Phone className="h-4 w-4 mr-1" />
                             1800 120 1200
@@ -300,7 +300,7 @@ export default function Navbar() {
                             </a>
                         </span>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden lg:block">
                         <nav className="flex gap-3 font-medium">
                             {topNavLinks.map(link => (
                                 <a

@@ -40,7 +40,7 @@ const About = () => {
                     About The {" "}
                     <span className="text-yellow-500">SVGOI</span>
                 </h2>
-               
+
             </div>
             <div className="container  mx-auto px-4">
                 <div className="flex items-center flex-col md:flex-row ">

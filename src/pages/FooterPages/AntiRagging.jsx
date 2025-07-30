@@ -98,7 +98,7 @@ const AntiRagging = () => {
                         </h2>
                         <div className="space-y-4 text-gray-700">
                             {protocols.map(item => (
-                                <div id={item.id} className="flex items-start gap-3">
+                                <div  key={item.id} className="flex items-start gap-3">
                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                     <p>
                                         {item.text}
@@ -125,7 +125,7 @@ const AntiRagging = () => {
                                         </h2>
                                         <div className="space-y-4 text-gray-700">
                                             {minors.map(item => (
-                                                <div id={item.id} className="flex items-start gap-3">
+                                                <div key={item.id} className="flex items-start gap-3">
                                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                                     <p>
                                                         {item.text}
@@ -145,7 +145,7 @@ const AntiRagging = () => {
                                         </h2>
                                         <div className="space-y-4 text-gray-700">
                                             {majors.map(item => (
-                                                <div id={item.id} className="flex items-start gap-3">
+                                                <div key={item.id} className="flex items-start gap-3">
                                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                                     <p>
                                                         {item.text}

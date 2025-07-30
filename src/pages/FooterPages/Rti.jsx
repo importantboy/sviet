@@ -102,7 +102,8 @@ const Rti = () => {
                         </h2>
                         <div className="space-y-4 text-gray-700">
                             {qualityAssuranceActivities.map(item => (
-                                <div id={item.id} className="flex items-start gap-3">
+
+                                <div key={item.id} className="flex items-start gap-3">
                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                     <p>
                                         {item.text}

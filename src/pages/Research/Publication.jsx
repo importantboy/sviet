@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
+const ITEMS_PER_PAGE = 10;
 import { data } from './output'
+import { FastForward, StepBack, StepForward } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 const Publication = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
+    const currentData = data.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+    );
+
+    const goToPage = (pageNum) => {
+        if (pageNum >= 1 && pageNum <= totalPages) {
+            setCurrentPage(pageNum);
+        }
+    };
     return (
         <>
             <Helmet>
@@ -55,11 +71,9 @@ const Publication = () => {
                                                     </TableHeader>
                                                     <TableBody >
 
-                                                        {data.map((item, index) => (
-                                                            <TableRow className=" hover:bg-gray-50">
-                                                                <TableCell className="font-semibold py-4 px-10">
-                                                                    {index + 1}
-                                                                </TableCell>
+                                                        {currentData.map((item, index) => (
+                                                            <TableRow key={index} className=" hover:bg-gray-50">
+                                                                <TableCell className="font-semibold py-4 px-10">{(currentPage - 1) * ITEMS_PER_PAGE + index + 1}</TableCell>
                                                                 <TableCell className="py-4 max-w-60 whitespace-normal break-words font-medium px-10">
                                                                     {item['Title of Paper']}
                                                                 </TableCell>
@@ -73,7 +87,7 @@ const Publication = () => {
                                                                     {item['ISSN Number']}
                                                                 </TableCell>
                                                                 <TableCell className="text-center text-blue-500 underline font-semibold py-4 px-10">
-                                                                    <span className='cursor-pointer' onClick={()=>window.open(`${item['Link for Papers']}`)}>
+                                                                    <span className='cursor-pointer' onClick={() => window.open(`${item['Link for Papers']}`)}>
                                                                         View
                                                                     </span>
                                                                 </TableCell>
@@ -83,14 +97,65 @@ const Publication = () => {
                                                 </Table>
                                             </CardContent>
                                         </Card>
+                                        {/* Pagination Controls with Instruction */}
+
+                                        <div className="mt-6 px-4">
+                                            <p className="text-sm text-gray-600 mb-3 text-center lg:text-left">
+                                                👉 Scroll left or right if the table is cut off on your screen.
+                                            </p>
+
+                                            <div className="flex flex-wrap justify-center lg:justify-between items-center gap-4">
+                                                <div className="flex gap-2 flex-wrap">
+                                                    <Button
+                                                        onClick={() => goToPage(1)}
+                                                        variant={"ghost"}
+
+                                                        disabled={currentPage === 1}
+                                                        className=" disabled:cursor-not-allowed"
+                                                    >
+                                                        <FastForward className="rotate-180" />
+                                                    </Button>
+                                                    <Button
+                                                        variant={"ghost"}
+
+                                                        onClick={() => goToPage(currentPage - 1)}
+                                                        disabled={currentPage === 1}
+                                                        className="disabled:cursor-not-allowed"
+                                                    >
+                                                        <StepBack />
+                                                    </Button>
+
+                                                    <Badge variant={"outline"}>
+
+                                                        {currentPage} of {totalPages}
+                                                    </Badge>
+
+                                                    <Button
+                                                        variant={"ghost"}
+                                                        onClick={() => goToPage(currentPage + 1)}
+                                                        disabled={currentPage === totalPages}
+                                                        className="disabled:cursor-not-allowed"
+                                                    >
+                                                        <StepForward />
+                                                    </Button>
+                                                    <Button
+                                                        variant={"ghost"}
+
+                                                        onClick={() => goToPage(totalPages)}
+                                                        disabled={currentPage === totalPages}
+                                                        className="disabled:cursor-not-allowed"
+                                                    >
+                                                        <FastForward />
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
-                                </div></div></section>
-
-
-                    </div>
-                </div>
-            </section>
-
+                                </div>
+                            </div></section>
+                    </div></div></section>
         </>
     )
 }

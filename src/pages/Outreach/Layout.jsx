@@ -18,11 +18,11 @@ const Layout = ({ heading, shortDescription, imgSrc, secondImg, about, images })
             <section id="overview" className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="p-8">
+                        <div className="px-8 md:px-0">
                             <img
                                 src={secondImg || "/placeholder.svg"}
                                 alt={heading}
-                                className="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover"
+                                className=" rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover md:object-contain"
                             />
                         </div>
 
@@ -57,8 +57,8 @@ const Layout = ({ heading, shortDescription, imgSrc, secondImg, about, images })
                             className="flex w-auto -ml-4"
                             columnClassName="pl-4 bg-clip-padding"
                         >
-                            {images.map((image) => (
-                                <div className="mb-4">
+                            {images.map((image, KEY) => (
+                                <div className="mb-4" key={KEY}>
                                     <LazyLoadImage
                                         onClick={() => { window.open(image) }}
                                         effect="blur"

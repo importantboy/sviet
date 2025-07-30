@@ -93,7 +93,7 @@ const WomenCell = () => {
                         </h2>
                         <div className="space-y-4 text-gray-700">
                             {objectives.map(item => (
-                                <div id={item.id} className="flex items-start gap-3">
+                                <div key={item.id} className="flex items-start gap-3">
                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                     <p>
                                         {item.text}
@@ -113,7 +113,7 @@ const WomenCell = () => {
                         </h2>
                         <div className="space-y-4 text-gray-700">
                             {roles.map(item => (
-                                <div id={item.id} className="flex items-start gap-3">
+                                <div key={item.id} className="flex items-start gap-3">
                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                     <p>
                                         {item.text}
@@ -133,7 +133,7 @@ const WomenCell = () => {
                             PROCEDURE FOR THE COMPLAINT                        </h2>
                         <div className="space-y-4 text-gray-700">
                             {complaints.map(item => (
-                                <div id={item.id} className="flex items-start gap-3">
+                                <div key={item.id} className="flex items-start gap-3">
                                     <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                                     <p>
                                         {item.text}

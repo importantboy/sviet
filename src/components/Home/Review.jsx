@@ -109,14 +109,14 @@ const Review = () => {
 
                     <button
                         onClick={nextTestimonialSlide}
-                        className="absolute right-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute h-fit right-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentTestimonialSlide >= testimonialsData.length - getTestimonialsPerView()}
                     >
                         <ChevronRight className="h-6 w-6" />
                     </button>
 
                     {/* Carousel indicators */}
-                    <div className="flex justify-center mt-6 space-x-2">
+                    <div className="flex h-fit justify-center mt-6 space-x-2">
                         {Array.from({ length: Math.ceil(testimonialsData.length - getTestimonialsPerView() + 1) }).map(
                             (_, index) => (
                                 <button

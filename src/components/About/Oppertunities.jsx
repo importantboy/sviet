@@ -83,7 +83,7 @@ const OppertunitiesPage = ({ bigText = false, heading = false, opportunitiesData
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute h-fit left-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentExcellenceSlide === 0}
                     >
                         <ChevronLeft className="h-6 w-6" />
@@ -91,7 +91,7 @@ const OppertunitiesPage = ({ bigText = false, heading = false, opportunitiesData
 
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute h-fit right-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentExcellenceSlide >= opportunitiesData.length - getCardsPerView()}
                     >
                         <ChevronRight className="h-6 w-6" />
