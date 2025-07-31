@@ -22,8 +22,6 @@ import MtechElec from "./pages/Programs/Pg/MtechElec"
 import MtechMechanical from "./pages/Programs/Pg/MtechMachanical"
 import Mca from "./pages/Programs/Pg/Mca"
 import Mba from "./pages/Programs/Pg/Mba"
-import MeDiploma from "./pages/Programs/Diploma/MechanicalEng"
-import CivilEngineeringDiploma from "./pages/Programs/Diploma/CivilEngineering"
 import Iqac from "./pages/NAAC/Iqac"
 import BestPractices from "./pages/NAAC/BestPractices"
 import Books from "./pages/Research/Books"
@@ -78,8 +76,6 @@ function App() {
           <Route path="/mtech-me" element={<MtechMechanical />} />
           <Route path="/mca" element={<Mca />} />
           <Route path="/business-administration" element={<Mba />} />
-          <Route path="/mechanical-engineering-diploma" element={<MeDiploma />} />
-          <Route path="/civil-engineering-diploma" element={<CivilEngineeringDiploma />} />
           <Route path="/iqac" element={<Iqac />} />
           <Route path="/best-practices-distinctiveness" element={<BestPractices />} />
           <Route path="/books" element={<Books />} />

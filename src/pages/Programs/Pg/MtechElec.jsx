@@ -6,7 +6,7 @@ const MtechElec = () => {
 
         {
             id: 1,
-            title: "Postgraduate Admission (ME/M.Tech)",
+            title: "Postgraduate Admission (Electronics)",
             description: "Eligibility criteria for admission into ME/M.Tech programs",
             requirements: [
                 "Passed BE/B.Tech or equivalent examination",
@@ -97,12 +97,12 @@ const MtechElec = () => {
                 eligibilityCriteria={eligibilityCriteria}
                 fee={"37,500/- INR Per Semester"}
                 isPg={true}
-                courseName={"M.Tech- Electronics"}
-                overview={"SVIET aims to encourage research and innovation in Electronics & Communication and allied areas. The objective of the M.Tech. Program in Electronics and Communication Engineering (ECE) is to give students great opportunities for research and development, as everyday consumers need new devices to support them in daily life. The department prepares the students in such a manner so that they can explore their scientific temperament and come out with novel ideas that can be further put into practice to achieve matchless results. Under the banner of M.Tech. ECE, the students are taught the advanced theoretical and practical postulates of electronics and communication..M.Tech. Graduates in Electronics and Communication can get lucrative job opportunities in some of the popular companies like TCS, Wipro, Siemens, Infosys, etc. Also, students can get incredible job opportunities in the government sector like ISRO, C-DAC, DRDO, and VSSC."}
+                courseName={"Electronics"}
+                overview={"SVIET aims to encourage research and innovation in Electronics & Communication and allied areas. The objective of the Electronics and Communication Engineering (ECE) is to give students great opportunities for research and development, as everyday consumers need new devices to support them in daily life. The department prepares the students in such a manner so that they can explore their scientific temperament and come out with novel ideas that can be further put into practice to achieve matchless results. Under the banner of M.Tech. ECE, the students are taught the advanced theoretical and practical postulates of electronics and communication..M.Tech. Graduates in Electronics and Communication can get lucrative job opportunities in some of the popular companies like TCS, Wipro, Siemens, Infosys, etc. Also, students can get incredible job opportunities in the government sector like ISRO, C-DAC, DRDO, and VSSC."}
                 duration={2}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://ptu.ac.in/wp-content/uploads/2020/10/6-12-18M_tech_ECE__Scheme_and_Syllabus_Final.pdf"
-                degree={"M.Tech ECE"}
+                degree={"ECE"}
             />
         </>
     )

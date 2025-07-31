@@ -6,8 +6,8 @@ const Mtech = () => {
 
         {
             id: 1,
-            title: "Postgraduate Admission (ME/M.Tech)",
-            description: "Eligibility criteria for admission into ME/M.Tech programs",
+            title: "Postgraduate Admission (Computer Science Engineering)",
+            description: "Eligibility criteria for admission into Computer Science Engineering programs",
             requirements: [
                 "Passed BE/B.Tech or equivalent examination",
                 "Minimum 50% marks in the qualifying exam (45% for SC/ST/SEBC candidates)"
@@ -134,12 +134,12 @@ const Mtech = () => {
                 eligibilityCriteria={eligibilityCriteria}
                 fee={"37,500/- INR Per Semester"}
                 isPg={true}
-                courseName={"M.Tech Computer Science Engineering"}
-                overview={"With the growing scope of digital technologies and the significance of computer systems in the world today, the demand for experts who are skilled in the ability to develop and utilise digital systems has also grown. The Department of Computer Science and Engineering has set benchmarks in equipping students with the vital skill sets required to navigate the modern era of digitalisation. With the significance of technology in today’s world, Parul University’s 2 year M.Tech program in Computer Engineering is designed in such a manner which provides students with the most specialized understanding of the advanced elements of computing. The scope of study includes Data Science, Artificial Intelligence, Internet of things, Cloud Computing and Security and Networking. The students who pursue this program are actively engaged in cutting edge research in the various aspects of computing to ensure regular innovation which contributes to the sustainable development of India and the World."}
+                courseName={"Computer Science Engineering"}
+                overview={"With the growing scope of digital technologies and the significance of computer systems in the world today, the demand for experts who are skilled in the ability to develop and utilise digital systems has also grown. The Department of Computer Science and Engineering has set benchmarks in equipping students with the vital skill sets required to navigate the modern era of digitalisation. With the significance of technology in today’s world, Parul University’s 2 year Computer Engineering is designed in such a manner which provides students with the most specialized understanding of the advanced elements of computing. The scope of study includes Data Science, Artificial Intelligence, Internet of things, Cloud Computing and Security and Networking. The students who pursue this program are actively engaged in cutting edge research in the various aspects of computing to ensure regular innovation which contributes to the sustainable development of India and the World."}
                 duration={2}
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://ptu.ac.in/wp-content/uploads/2020/10/1-5-18%20M%20Tech%20CSE%20Batch%202018.pdf"
-                degree={"M.Tech CSE"}
+                degree={"CSE"}
             />
         </>
     )

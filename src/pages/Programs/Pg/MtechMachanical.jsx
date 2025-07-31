@@ -6,7 +6,7 @@ const MtechMechanical = () => {
 
         {
             id: 1,
-            title: "Postgraduate Admission (ME/M.Tech)",
+            title: "Postgraduate Admission (Mechanical Engineering)",
             description: "Eligibility criteria for admission into ME/M.Tech programs",
             requirements: [
                 "Passed BE/B.Tech or equivalent examination",
@@ -200,7 +200,7 @@ const MtechMechanical = () => {
                 eligibilityCriteria={eligibilityCriteria}
                 fee={"37,500/- INR Per Semester"}
                 programSpecificOutcomes={programSpecificOutcomes}
-                courseName={"M.tech Mechanical Engineering"}
+                courseName={"Mechanical Engineering"}
                 overview={"The Mechanical Engineering program is one of the SVIET flagship programs which is centred on the understanding of the mechanics, dynamics and structural analysis of mechanical systems. The Faculty of Engineering offers a four year Bachelors degree in Mechanical Engineering, a program that is designed to equip every student with the fundamental of mechanics on various levels. The department has adopted a unique approach to the scope of this program, which provides the students with a comprehensive understanding of core mechanical principles such thermodynamics, material science, structural analysis and electricity. The study is made possible through the use of effective tools such as Computer Aided Design (CAD) and Computer Aided Manufacturing (CAM) amongst others."}
                 duration={2}
                 overviewImg={"/Programs/me1.webp"}
@@ -208,7 +208,7 @@ const MtechMechanical = () => {
 
                 affiliation={"Affiliated to IKGPTU, Jalandhar Approved by AICTE"}
                 syllabusLink="https://ptu.ac.in/wp-content/uploads/2020/10/10-1-18%20M%20Tech%20ME%202017%20Final.pdf"
-                degree={"M.Tech ME"}
+                degree={"Mechanical Engineering"}
             />
         </>
     )

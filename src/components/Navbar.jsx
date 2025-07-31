@@ -53,56 +53,52 @@ const navigationItems = [
         title: "Programs",
         items: [
             {
-                title: "U.G",
+                title: "Undergraduate (UG)",
                 subItems: [
+
                     {
-                        title: "B. Tech",
-                        subItems: [
-                            {
-                                title: "Computer Science Engineering",
-                                href: "/computer-science-engineering"
-                            },
-                            {
-                                title: "Civil Engineering",
-                                href: "/civil-engineering"
-                            },
-                            {
-                                title: "Mechanical Engineering",
-                                href: "/mechanical-engineering"
-                            },
-                            {
-                                title: "Electrical Engineering",
-                                href: "/electrical-engineering"
-                            },
-                            {
-                                title: "Electronics and Communication Engineering",
-                                href: "/ece"
-                            },
-                            {
-                                title: "Computer Science & Design",
-                                href: "/csd"
-                            }
-                        ]
+                        title: "Computer Science Engineering",
+                        href: "/computer-science-engineering"
                     },
+                    {
+                        title: "Civil Engineering",
+                        href: "/civil-engineering"
+                    },
+                    {
+                        title: "Mechanical Engineering",
+                        href: "/mechanical-engineering"
+                    },
+                    {
+                        title: "Electrical Engineering",
+                        href: "/electrical-engineering"
+                    },
+                    {
+                        title: "Electronics and Communication Engineering",
+                        href: "/ece"
+                    },
+                    {
+                        title: "Computer Science & Design",
+                        href: "/csd"
+                    }
 
                 ]
             },
             {
-                title: "P.G",
+                title: "Postgraduate (PG)",
                 subItems: [
                     {
                         title: "M. Tech",
                         subItems: [
                             {
-                                title: "M.Tech– Computer Science & Engineering",
+                                title: "Computer Science & Engineering",
                                 href: "/m-tech"
                             },
                             {
-                                title: "M.Tech– Electronics and Communication Engineering",
+                                title: "Electronics and Communication Engineering",
                                 href: "/m-tech-electronics"
                             },
                             {
-                                title: "M. Tech Mechanical Engineering",
+                                title: "Mechanical Engineering",
                                 href: "/mtech-me"
                             },
 
@@ -121,23 +117,7 @@ const navigationItems = [
 
                 ]
             },
-            {
-                title: "Diploma",
-                subItems: [
-                    {
-                        title: "Mechanical Engineering – Diploma",
-                        href: "/mechanical-engineering-diploma",
 
-                    },
-                    {
-                        title: "Civil Engineering – Diploma",
-                        href: "/civil-engineering-diploma",
-
-                    },
-
-
-                ]
-            },
         ]
     },
     {
