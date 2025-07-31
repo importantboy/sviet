@@ -1,7 +1,7 @@
 import Layout from '@/components/Programs/Layout'
 import React from 'react'
 
-const Csd = () => {
+const Ai = () => {
     const eligibilityCriteria = [
         {
             id: 1,
@@ -243,4 +243,4 @@ const Csd = () => {
     )
 }
 
-export default Csd
+export default Ai

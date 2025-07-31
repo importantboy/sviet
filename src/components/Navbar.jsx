@@ -53,7 +53,7 @@ const navigationItems = [
         title: "Programs",
         items: [
             {
-                title: "Undergraduate (UG)",
+                title: "Under Graduate (UG)",
                 subItems: [
 
                     {
@@ -77,14 +77,14 @@ const navigationItems = [
                         href: "/ece"
                     },
                     {
-                        title: "Computer Science & Design",
-                        href: "/csd"
+                        title: "Artificial Intelligence",
+                        href: "/ai"
                     }
 
                 ]
             },
             {
-                title: "Postgraduate (PG)",
+                title: "Post Graduate (PG)",
                 subItems: [
                     {
                         title: "M. Tech",

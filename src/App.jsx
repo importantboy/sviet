@@ -16,7 +16,7 @@ import CivilEngineering from "./pages/Programs/Ug/CivilEngineering"
 import MechanicalEngineering from "./pages/Programs/Ug/MechanicalEngineering"
 import ElectricalEngineering from "./pages/Programs/Ug/ElectricalEngineering"
 import Ece from "./pages/Programs/Ug/Ece"
-import Csd from "./pages/Programs/Ug/Csd"
+import Ai from "./pages/Programs/Ug/Ai"
 import Mtech from "./pages/Programs/Pg/Mtech"
 import MtechElec from "./pages/Programs/Pg/MtechElec"
 import MtechMechanical from "./pages/Programs/Pg/MtechMachanical"
@@ -70,7 +70,7 @@ function App() {
           <Route path="/mechanical-engineering" element={<MechanicalEngineering />} />
           <Route path="/electrical-engineering" element={<ElectricalEngineering />} />
           <Route path="/ece" element={<Ece />} />
-          <Route path="/csd" element={<Csd />} />
+          <Route path="/ai" element={<Ai />} />
           <Route path="/m-tech" element={<Mtech />} />
           <Route path="/m-tech-electronics" element={<MtechElec />} />
           <Route path="/mtech-me" element={<MtechMechanical />} />
