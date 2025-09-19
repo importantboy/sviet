@@ -1,164 +1,126 @@
-import React, { useEffect, useState } from 'react'
-const excellenceData = [
-    {
-        id: 1,
-        title: "Special Initiatives",
-        shortTitle: "Career Development",
-        description:
-            "Special batches like TheUniques, SUPER-60 and ALLIED-30 assure 100% placement for students.",
-        image: "/Home/super60.JPG",
-    },
-    {
-        id: 2,
-        title: "Research",
-        shortTitle: "Research Excellence",
-        description:
-            "Students lead research with state-of-the-art facilities. Over 100 articles published nationally and internationally.",
-        image: "/Home/research.JPG",
-    },
-    {
-        id: 3,
-        title: "Project Based Learning",
-        shortTitle: "Project Learning",
-        description:
-            "Engage in authentic challenges with project-based learning, fostering practical skills.",
-        image: "/Home/projectbased.JPG",
-    },
-    {
-        id: 4,
-        title: "Sporting Excellence",
-        shortTitle: "Sports Excellence",
-        description:
-            "Excel in sports with over 30 tournament participations annually, fostering passion and skill.",
-        image: "/Home/sports.jpg",
-    },
-    {
-        id: 5,
-        title: "Start-Ups",
-        shortTitle: "Innovation Hub",
-        description:
-            "Incubate innovative entrepreneurship with more than 15 successful startups launched at SVGOI.",
-        image: "/Home/startups.JPG",
-    },
-    {
-        id: 6,
-        title: "Global Exposure",
-        shortTitle: "Global Programs",
-        description:
-            "Expand horizons with international tie-ups, hosting students from over 10 countries.",
-        image: "/Home/international.JPG",
-    },
-]
+import React, { useEffect, useState } from "react";
+import {
+  BookOpen,
+  Heart,
+  Globe,
+  Lightbulb,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
-import { ChevronRight, ChevronLeft } from 'lucide-react'
+const keyHighlights = [
+  {
+    title: "Programs",
+    description:
+      "Maintaining highest standards of education with innovative teaching methodologies and research-oriented learning.",
+    icon: BookOpen,
+    color: "bg-blue-50 text-blue-600",
+    link: "#",
+  },
+  {
+    title: "syllabus",
+    description:
+      "Strong partnerships with leading companies ensuring practical exposure and excellent placement opportunities.",
+    icon: Globe,
+    color: "bg-green-50 text-green-600",
+    link: "#",
+  },
+  {
+    title: "notes",
+    description:
+      "Cutting-edge research facilities and innovation labs fostering creativity and technological advancement.",
+    icon: Lightbulb,
+    color: "bg-purple-50 text-purple-600",
+    link: "#",
+  },
+  {
+    title: "notices",
+    description:
+      "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
+    icon: Heart,
+    color: "bg-red-50 text-red-600",
+    link: "#",
+  },
+  {
+    title: "assignments",
+    description:
+      "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
+    icon: Heart,
+    color: "bg-red-50 text-red-600",
+    link: "#",
+  },
+  {
+    title: "previsous year papers",
+    description:
+      "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
+    icon: Heart,
+    color: "bg-red-50 text-red-600",
+    link: "#",
+  },
+  {
+    title: "sample paper",
+    description:
+      "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
+    icon: Heart,
+    color: "bg-red-50 text-red-600",
+    link: "#",
+  },
+];
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ExcellenceSection = () => {
-    const [currentExcellenceSlide, setCurrentExcellenceSlide] = useState(0)
 
-    const getCardsPerView = () => {
-        if (typeof window !== "undefined") {
-            if (window.innerWidth < 768) return 1 // Mobile: 1 card
-            if (window.innerWidth < 1024) return 2 // Tablet: 2 cards
-            return 3 // Desktop: 3 cards
-        }
-        return 3 // Default for SSR
-    }
-    const nextSlide = () => {
-        const maxSlide = excellenceData.length - getCardsPerView()
-        setCurrentExcellenceSlide((prev) => Math.min(prev + 1, maxSlide))
-    }
+  return (
+    <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+            Discover More
+          </h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Discover what makes our institution a leader in education, research,
+            and student development
+          </p>
+        </div>
 
-    const prevSlide = () => {
-        setCurrentExcellenceSlide((prev) => Math.max(prev - 1, 0))
-    }
+        <div className="
+              grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center
+        place-items-stretch
+        ">
+          {keyHighlights.map((highlight, index) => {
+            const Icon = highlight.icon;
+            return (
+              <Card
+                key={index}
+                className="shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <CardContent className="p-6 text-center">
+                  <div
+                    className={`w-16 h-16 rounded-full ${highlight.color} flex items-center justify-center mx-auto mb-4`}
+                  >
+                    <Icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-900 mb-3 capitalize">
+                    {highlight.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {highlight.description}
+                  </p>
 
-    // Handle window resize
-    useEffect(() => {
-        const handleResize = () => {
-            // Reset to first slide on resize to prevent layout issues
-            setCurrentExcellenceSlide(0)
-        }
+                  <a
+                    href={highlight.link}
+                    className="text-blue-900 hover:text-blue-600 hover:underline transition-all"
+                  >
+                    Read more
+                  </a>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener("resize", handleResize)
-    }, [])
-
-    return (
-        <section className="py-12 md:py-16 bg-gradient-to-br  from-blue-50 to-indigo-100">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Excellence in Every Dimension</h2>
-                    <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                        Discover what makes our institution a leader in education, research, and student development
-                    </p>
-                </div>
-
-                <div className="relative ">
-                    <div className="overflow-hidden mx-3 md:mx-12">
-                        <div
-                            className="flex py-2 transition-transform duration-500 ease-in-out "
-                            style={{ transform: `translateX(-${currentExcellenceSlide * (100 / getCardsPerView())}%)` }}
-                        >
-                            {excellenceData.map((item) => (
-                                <Card
-                                    key={item.id}
-                                    className="group mx-2 py-0 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm flex-shrink-0"
-                                    style={{ width: `calc(${100 / getCardsPerView()}% - 1rem)` }}
-                                >
-                                    <div className="relative overflow-hidden">
-                                        <img
-                                            src={item.image || "/placeholder.svg"}
-                                            alt={item.shortTitle}
-                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                                        <div className="absolute bottom-4 left-4 text-white">
-                                            <h3 className="text-xl font-bold">{item.title}</h3>
-                                        </div>
-                                    </div>
-                                    <CardContent className="p-6">
-                                        <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-
-                                    </CardContent>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Navigation Buttons */}
-                    <button
-                        onClick={prevSlide}
-                        className="absolute h-fit left-0 -bottom-10 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled={currentExcellenceSlide === 0}
-                    >
-                        <ChevronLeft className="h-6 w-6" />
-                    </button>
-
-                    <button
-                        onClick={nextSlide}
-                        className="absolute h-fit right-0 -bottom-10 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled={currentExcellenceSlide >= excellenceData.length - getCardsPerView()}
-                    >
-                        <ChevronRight className="h-6 w-6" />
-                    </button>
-
-                    {/* Carousel indicators */}
-                    <div className="flex justify-center mt-8 space-x-2">
-                        {Array.from({ length: Math.ceil(excellenceData.length - getCardsPerView() + 1) }).map((_, index) => (
-                            <button
-                                key={index}
-                                className={`w-3 h-3 rounded-full transition-colors ${currentExcellenceSlide === index ? "bg-blue-600" : "bg-gray-300"
-                                    }`}
-                                onClick={() => setCurrentExcellenceSlide(index)}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    )
-}
-
-export default ExcellenceSection
+export default ExcellenceSection;

@@ -37,8 +37,8 @@ const About = () => {
             <div className='flex justify-center mb-3'>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-blue-900 ">
-                    About The {" "}
-                    <span className="text-yellow-500">SVGOI</span>
+                    About Our {" "}
+                    <span className="text-yellow-500">Department</span>
                 </h2>
 
             </div>

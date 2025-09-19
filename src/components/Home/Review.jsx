@@ -101,7 +101,7 @@ const Review = () => {
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevTestimonialSlide}
-                        className="absolute left-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="absolute  h-fit left-0 -bottom-9 md:top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition-all duration-200 z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={currentTestimonialSlide === 0}
                     >
                         <ChevronLeft className="h-6 w-6" />
