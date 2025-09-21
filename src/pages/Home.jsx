@@ -27,7 +27,7 @@ export default function HomePage() {
 
                 <Herosection
                     bigHeading={false}
-                    heading={"Swami Vivekanand Institute of Engineering & Technology"}
+                    heading={"Department of Computer Applications"}
                     shortDescription={`A Realm of Education that accomplishes you infinite career dreams Apply for Admission Placements`}
                     btnText1={"Apply for Admission"}
                     btn1Href={"https://admission.sviet.ac.in/"}
