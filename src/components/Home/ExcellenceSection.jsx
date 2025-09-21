@@ -7,7 +7,11 @@ import {
   MapPin,
   Phone,
   Mail,
+  MailPlus,
+  Notebook,
+  Layers
 } from "lucide-react";
+
 
 const keyHighlights = [
   {
@@ -38,31 +42,23 @@ const keyHighlights = [
     title: "notices",
     description:
       "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
-    icon: Heart,
-    color: "bg-red-50 text-red-600",
+    icon: MailPlus,
+    color: "bg-orange-50 text-orange-600",
     link: "#",
   },
   {
     title: "assignments",
     description:
       "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
-    icon: Heart,
-    color: "bg-red-50 text-red-600",
+    icon: Notebook,
+    color: "bg-pink-50 text-pink-600",
     link: "#",
   },
   {
     title: "previsous year papers",
     description:
       "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
-    icon: Heart,
-    color: "bg-red-50 text-red-600",
-    link: "#",
-  },
-  {
-    title: "sample paper",
-    description:
-      "Comprehensive personality development focusing on leadership skills, ethics, and social responsibility.",
-    icon: Heart,
+    icon: Layers,
     color: "bg-red-50 text-red-600",
     link: "#",
   },
@@ -84,7 +80,7 @@ const ExcellenceSection = () => {
         </div>
 
         <div className="
-              grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center
+              grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-4 justify-items-center
         place-items-stretch
         ">
           {keyHighlights.map((highlight, index) => {

@@ -32,8 +32,6 @@ import Placements from "./pages/Placements"
 import EarnWhileLearn from "./pages/Research/EarnWhileLearn"
 import Ncc from "./pages/Outreach/Ncc"
 import Activity from "./pages/Outreach/Activites"
-import SvietInMedia from "./pages/TopNav/SvietInMedia"
-import Gallery from "./pages/TopNav/Gallery"
 import International from "./pages/International"
 import StudentFeedbackForm from "./pages/Feedback/StudentForm"
 import AlumaniFeedback from "./pages/Feedback/AlumaniFeedback"
@@ -82,7 +80,6 @@ function App() {
           <Route path="/research-projects" element={<ResearchProject />} />
           <Route path="/nss" element={<Nss />} />
           <Route path="/ncc" element={<Ncc />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/international-students" element={<International />} />
           <Route path="/student-feedback" element={<StudentFeedbackForm />} />
           <Route path="/alumini-feedback-form" element={<AlumaniFeedback />} />
@@ -100,7 +97,6 @@ function App() {
           <Route path="/activity" element={<Activity />} />
           <Route path="/placements" element={<Placements />} />
           <Route path="/earn-while-learn" element={<EarnWhileLearn />} />
-          <Route path="/media" element={<SvietInMedia />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

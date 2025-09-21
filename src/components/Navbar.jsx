@@ -275,38 +275,6 @@ export default function Navbar() {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-blue-900 text-white py-2 px-4">
-        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-sm gap-2">
-          <div className="flex flex-col lg:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4">
-            <span className="flex items-center">
-              <Phone className="h-4 w-4 mr-1" />
-              1800 120 1200
-            </span>
-            <span className="flex items-center">
-              <Mail className="h-4 w-4 mr-1" />
-              <a href="mailto:info@sviet.org.in">info@sviet.org.in</a>
-            </span>
-          </div>
-          <div className="hidden lg:block">
-            <nav className="flex gap-3 font-medium">
-              {topNavLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target={link.target ? "_blank" : undefined}
-                  rel={link.target ? "noopener noreferrer" : undefined}
-                  className={cn(
-                    "hover:border-b border-white transition-colors",
-                    link.highlight && "text-yellow-300 hover:border-yellow-300"
-                  )}
-                >
-                  {link.title}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">
