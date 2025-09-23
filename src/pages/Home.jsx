@@ -1,5 +1,3 @@
-
-
 import { useEffect } from "react"
 import Notice from "@/components/Home/Notice"
 import ExcellenceSection from "@/components/Home/ExcellenceSection"
