@@ -20,7 +20,7 @@ const Herosection = ({
   imgSrc,
   images = ['/About/boardsofmanagement.JPG' , '/About/cafeteria.webp' , '/About/library.jpeg' ],
   autoPlay = true,
-  intervalMs = 5000,
+  intervalMs = 2000,
   showControls = true,
   gradientClass = "bg-gradient-to-br from-blue-950 to-blue-800",
 }) => {

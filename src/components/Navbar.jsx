@@ -1,7 +1,9 @@
-import * as React from "react";
-import { ChevronDown, Menu, Phone, Mail } from "lucide-react";
+"use client"
 
-import { Button } from "@/components/ui/button";
+import * as React from "react"
+import { ChevronDown, Menu } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,21 +12,10 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { cn } from "@/lib/utils";
-import { href } from "react-router-dom";
+} from "@/components/ui/dropdown-menu"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { cn } from "@/lib/utils"
 
 const navigationItems = [
   {
@@ -53,63 +44,28 @@ const navigationItems = [
   },
   {
     title: "Programs Offered",
-    items: [
-      {
-        title: "Under Graduate (UG)",
-        subItems: [
-          {
-            title: "Bachelor Of Computer Applications (BCA)",
-            href: "/computer-science-engineering",
-          },
-          {
-            title: "Computer Science Engineering",
-            href: "/computer-science-engineering",
-          },
-        ],
-      },
-      {
-        title: "Post Graduate (PG)",
-        subItems: [
-          {
-            title: "Master of Computer Applications (MCA)",
-            href: "/mca",
-          },
-        ],
-      },
-    ],
+    href: "/programs-offered",
   },
   {
     title: "Syllabus",
-    items: [
-      { title: "BCA", href: "/iqac" },
-
-      { title: "MCA", href: "/" },
-    ],
+    href: "/syllabus",
   },
   {
     title: "Notes",
-    items: [
-      { title: "Publications", href: "/publication" },
-      { title: "Patents", href: "/" },
-      { title: "Books and Edited Chapters", href: "/books" },
-      { title: "Collaborations", href: "/" },
-      { title: "Research Projects", href: "/research-projects" },
-      { title: "Earn While Learn", href: "/earn-while-learn" },
-    ],
+    href: "/notes",
   },
   {
     title: "Assignments / Practicals",
-    href: "#",
+    href: "/assignments-practicals",
   },
   {
     title: "PYQ's",
-    href: "#",
+    href: "/pyqs",
   },
   {
     title: "Datesheet's",
-    href: "#",
+    href: "/datesheets",
   },
-
   {
     title: "More",
     items: [
@@ -162,9 +118,7 @@ const navigationItems = [
       },
       {
         title: "We are International",
-        subItems: [
-          { title: "International Students", href: "/international-students" },
-        ],
+        subItems: [{ title: "International Students", href: "/international-students" }],
       },
       {
         title: "HR Manual",
@@ -177,7 +131,7 @@ const navigationItems = [
     title: "Placements",
     href: "/placements",
   },
-];
+]
 
 const topNavLinks = [
   { title: "Sviet In Media", href: "/media" },
@@ -193,7 +147,7 @@ const topNavLinks = [
     highlight: true,
     target: true,
   },
-];
+]
 
 // Recursive component for dropdown menu items
 function DropdownMenuItems({ items }) {
@@ -217,7 +171,7 @@ function DropdownMenuItems({ items }) {
                 <DropdownMenuItems items={item.subItems} />
               </DropdownMenuSubContent>
             </DropdownMenuSub>
-          );
+          )
         }
         return (
           <DropdownMenuItem key={item.title} asChild>
@@ -229,36 +183,31 @@ function DropdownMenuItems({ items }) {
               {item.title}
             </a>
           </DropdownMenuItem>
-        );
+        )
       })}
     </>
-  );
+  )
 }
 
 // Mobile navigation recursive component
 function MobileNavItem({ item }) {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   if (!item.items && !item.subItems) {
     return (
-      <a
-        href={item.href}
-        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md"
-      >
+      <a href={item.href} className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md">
         {item.title}
       </a>
-    );
+    )
   }
 
-  const itemsToRender = item.items || item.subItems;
+  const itemsToRender = item.items || item.subItems
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
       <CollapsibleTrigger className="flex w-full items-center justify-between px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md">
         {item.title}
-        <ChevronDown
-          className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")}
-        />
+        <ChevronDown className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")} />
       </CollapsibleTrigger>
       <CollapsibleContent className="pl-4 space-y-1">
         {itemsToRender.map((subItem, index) => (
@@ -266,11 +215,11 @@ function MobileNavItem({ item }) {
         ))}
       </CollapsibleContent>
     </Collapsible>
-  );
+  )
 }
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <>
@@ -283,11 +232,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <a href="/">
-                <img
-                  src={"/college-logo.webp" || "/placeholder.svg"}
-                  alt="College Logo"
-                  className="h-10 md:h-14"
-                />
+                <img src={"/college-logo.webp" || "/placeholder.svg"} alt="College Logo" className="h-10 md:h-14" />
               </a>
             </div>
 
@@ -299,7 +244,7 @@ export default function Navbar() {
                     <Button
                       variant="ghost"
                       className={cn(
-                        "flex items-center text-blue-900 hover:text-blue-700 font-medium hover:bg-transparent"
+                        "flex items-center text-blue-900 hover:text-blue-700 font-medium hover:bg-transparent",
                       )}
                     >
                       {item.items ? (
@@ -331,11 +276,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="lg:hidden bg-transparent"
-                >
+                <Button variant="outline" size="icon" className="lg:hidden bg-transparent">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
@@ -356,7 +297,7 @@ export default function Navbar() {
                           href={link.href}
                           className={cn(
                             "block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 rounded-md",
-                            link.highlight && "text-yellow-600 font-medium"
+                            link.highlight && "text-yellow-600 font-medium",
                           )}
                           onClick={() => setIsOpen(false)}
                         >
@@ -377,5 +318,5 @@ export default function Navbar() {
         </div>
       </nav>
     </>
-  );
+  )
 }

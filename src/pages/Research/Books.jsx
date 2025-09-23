@@ -60,7 +60,7 @@ const Books = () => {
           heading={"Books and Edited Chapters"}
           shortDescription={`Books and edited chapters are compilations where individual authors contribute specific sections, curated and organized by editors.
 `}
-          imgSrc={"https://images.pexels.com/photos/415078/pexels-photo-415078.jpeg"}
+          imgsrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/pexels-photo-415078-rGQIfULnZ5xrJbr6lRpCSaUyZdRl80.jpeg"
         />
 
         <section className="py-16 bg-white">

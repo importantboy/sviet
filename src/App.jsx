@@ -46,6 +46,12 @@ import AntiRagging from "./pages/FooterPages/AntiRagging"
 import ObcCell from "./pages/FooterPages/ObcCell"
 import InternalComplaintCell from "./pages/FooterPages/InternalComplaintCell"
 import Publication from "./pages/Research/Publication"
+import ProgramsOffered from "./pages/ProgramsOffered"
+import Syllabus from "./pages/Syllabus"
+import Notes from "./pages/Notes"
+import AssignmentsPracticals from "./pages/AssignmentsPracticals"
+import PYQs from "./pages/PYQs"
+import Datesheets from "./pages/Datesheets"
 
 function App() {
   return (
@@ -63,6 +69,12 @@ function App() {
           <Route path="/finance-committee-2" element={<FinanceCommittee />} />
           <Route path="/from-the-management" element={<FromTheDeskOfMangmnt />} />
           <Route path="/awards-and-recognitions" element={<AwardsAndRecog />} />
+          <Route path="/programs-offered" element={<ProgramsOffered />} />
+          <Route path="/syllabus" element={<Syllabus />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/assignments-practicals" element={<AssignmentsPracticals />} />
+          <Route path="/pyqs" element={<PYQs />} />
+          <Route path="/datesheets" element={<Datesheets />} />
           <Route path="/computer-science-engineering" element={<ComputerScienceEngineering />} />
           <Route path="/civil-engineering" element={<CivilEngineering />} />
           <Route path="/mechanical-engineering" element={<MechanicalEngineering />} />
