@@ -21,14 +21,14 @@ const Herosection = ({
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h1 className={`${bigHeading ? "text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" : "text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"}`}>
+                        <h1 className={`${bigHeading ? "text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" : "text-center text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"}`}>
                             {heading}{" "}
                         </h1>
-                        <p className="text-xl text-blue-100 leading-relaxed">
+                        <p className="text-xl text-center text-blue-100 leading-relaxed">
                             {shortDescription}
                         </p>
                         {!isIqac ? (
-                            <div className="flex  gap-4">
+                            <div className="flex flex-col items-center lg:flex-row  gap-4 justify-center ">
                                 <Link
                                     className="cursor-pointer"
                                     to={btn1Href ? btn1Href : "/"}

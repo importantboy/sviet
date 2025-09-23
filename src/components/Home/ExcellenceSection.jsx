@@ -9,9 +9,8 @@ import {
   Mail,
   MailPlus,
   Notebook,
-  Layers
+  Layers,
 } from "lucide-react";
-
 
 const keyHighlights = [
   {
@@ -63,9 +62,9 @@ const keyHighlights = [
     link: "#",
   },
 ];
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ExcellenceSection = () => {
-
   return (
     <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4">
@@ -79,10 +78,14 @@ const ExcellenceSection = () => {
           </p>
         </div>
 
-        <div className="
-              grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-4 justify-items-center
+        <div
+          className="
+              grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(400px,1fr))]
+              
+              gap-4 justify-items-center
         place-items-stretch
-        ">
+        "
+        >
           {keyHighlights.map((highlight, index) => {
             const Icon = highlight.icon;
             return (
